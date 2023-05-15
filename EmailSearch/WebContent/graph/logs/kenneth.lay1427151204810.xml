@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emailLog>
+  <states>states
+    <theState start="1470">
+      <theTimePeriod firstMail="301101" lastMail="291101" id="0" numMails="35"/>
+      <theTimePeriod firstMail="031201" lastMail="301101" id="1" numMails="35"/>
+      <theTimePeriod firstMail="051201" lastMail="031201" id="2" numMails="29"/>
+      <theTimePeriod firstMail="061201" lastMail="051201" id="3" numMails="17"/>
+      <theTimePeriod firstMail="101201" lastMail="061201" id="4" numMails="26"/>
+      <theTimePeriod firstMail="121201" lastMail="101201" id="5" numMails="22"/>
+      <theTimePeriod firstMail="131201" lastMail="121201" id="6" numMails="13"/>
+      <theTimePeriod firstMail="211201" lastMail="131201" id="7" numMails="7"/>
+      <theTimePeriod firstMail="221201" lastMail="211201" id="8" numMails="3"/>
+      <theTimePeriod firstMail="281201" lastMail="221201" id="9" numMails="11"/>
+      <theTimePeriod firstMail="281201" lastMail="281201" id="10" numMails="3"/>
+      <theTimePeriod firstMail="040102" lastMail="281201" id="11" numMails="23"/>
+      <theTimePeriod firstMail="050102" lastMail="040102" id="12" numMails="14"/>
+      <theTimePeriod firstMail="100102" lastMail="060102" id="13" numMails="35"/>
+      <theTimePeriod firstMail="110102" lastMail="100102" id="14" numMails="22"/>
+      <theTimePeriod firstMail="150102" lastMail="110102" id="15" numMails="35"/>
+      <theTimePeriod firstMail="170102" lastMail="150102" id="16" numMails="35"/>
+      <theTimePeriod firstMail="170102" lastMail="170102" id="17" numMails="5"/>
+      <theTimePeriod firstMail="180102" lastMail="170102" id="18" numMails="16"/>
+      <theTimePeriod firstMail="210102" lastMail="180102" id="19" numMails="13"/>
+    </theState> 
+    <theState start="22370">
+      <theTimePeriod firstMail="010601" lastMail="310501" id="0" numMails="18"/>
+      <theTimePeriod firstMail="040601" lastMail="010601" id="1" numMails="28"/>
+      <theTimePeriod firstMail="070601" lastMail="050601" id="2" numMails="35"/>
+      <theTimePeriod firstMail="080601" lastMail="070601" id="3" numMails="20"/>
+      <theTimePeriod firstMail="140901" lastMail="080601" id="4" numMails="27"/>
+      <theTimePeriod firstMail="190901" lastMail="140901" id="5" numMails="15"/>
+      <theTimePeriod firstMail="210901" lastMail="190901" id="6" numMails="17"/>
+      <theTimePeriod firstMail="210901" lastMail="210901" id="7" numMails="18"/>
+      <theTimePeriod firstMail="240901" lastMail="210901" id="8" numMails="19"/>
+      <theTimePeriod firstMail="250901" lastMail="240901" id="9" numMails="9"/>
+      <theTimePeriod firstMail="250901" lastMail="250901" id="10" numMails="10"/>
+      <theTimePeriod firstMail="260901" lastMail="250901" id="11" numMails="9"/>
+      <theTimePeriod firstMail="260901" lastMail="260901" id="12" numMails="9"/>
+      <theTimePeriod firstMail="270901" lastMail="260901" id="13" numMails="11"/>
+      <theTimePeriod firstMail="280901" lastMail="270901" id="14" numMails="21"/>
+      <theTimePeriod firstMail="011001" lastMail="280901" id="15" numMails="28"/>
+      <theTimePeriod firstMail="041001" lastMail="021001" id="16" numMails="18"/>
+      <theTimePeriod firstMail="091001" lastMail="041001" id="17" numMails="34"/>
+      <theTimePeriod firstMail="111001" lastMail="091001" id="18" numMails="30"/>
+      <theTimePeriod firstMail="151001" lastMail="121001" id="19" numMails="23"/>
+    </theState> 
+    <theState start="33930">
+      <theTimePeriod firstMail="210600" lastMail="260500" id="0" numMails="18"/>
+      <theTimePeriod firstMail="170700" lastMail="270600" id="1" numMails="14"/>
+      <theTimePeriod firstMail="210800" lastMail="240700" id="2" numMails="19"/>
+      <theTimePeriod firstMail="190900" lastMail="220800" id="3" numMails="34"/>
+      <theTimePeriod firstMail="290900" lastMail="200900" id="4" numMails="18"/>
+      <theTimePeriod firstMail="091000" lastMail="021000" id="5" numMails="20"/>
+      <theTimePeriod firstMail="021100" lastMail="101000" id="6" numMails="35"/>
+      <theTimePeriod firstMail="201100" lastMail="061100" id="7" numMails="24"/>
+      <theTimePeriod firstMail="271100" lastMail="201100" id="8" numMails="13"/>
+      <theTimePeriod firstMail="301100" lastMail="271100" id="9" numMails="11"/>
+      <theTimePeriod firstMail="150301" lastMail="011200" id="10" numMails="35"/>
+      <theTimePeriod firstMail="030401" lastMail="160301" id="11" numMails="29"/>
+      <theTimePeriod firstMail="180401" lastMail="030401" id="12" numMails="13"/>
+      <theTimePeriod firstMail="300401" lastMail="190401" id="13" numMails="10"/>
+      <theTimePeriod firstMail="140501" lastMail="010501" id="14" numMails="16"/>
+      <theTimePeriod firstMail="080601" lastMail="160501" id="15" numMails="10"/>
+      <theTimePeriod firstMail="270901" lastMail="120901" id="16" numMails="16"/>
+      <theTimePeriod firstMail="301001" lastMail="041001" id="17" numMails="30"/>
+      <theTimePeriod firstMail="171101" lastMail="051101" id="18" numMails="18"/>
+      <theTimePeriod firstMail="180102" lastMail="021201" id="19" numMails="17"/>
+      <theFilter isPerson="1" tagId="rosalee.fleming"/>
+    </theState> 
+    <theState start="42263">
+      <theTimePeriod firstMail="260901" lastMail="250901" id="0" numMails="18"/>
+      <theTimePeriod firstMail="270901" lastMail="260901" id="1" numMails="28"/>
+      <theTimePeriod firstMail="270901" lastMail="270901" id="2" numMails="11"/>
+      <theTimePeriod firstMail="280901" lastMail="280901" id="3" numMails="13"/>
+      <theTimePeriod firstMail="021001" lastMail="280901" id="4" numMails="20"/>
+      <theTimePeriod firstMail="041001" lastMail="021001" id="5" numMails="13"/>
+      <theTimePeriod firstMail="081001" lastMail="041001" id="6" numMails="31"/>
+      <theTimePeriod firstMail="091001" lastMail="091001" id="7" numMails="17"/>
+      <theTimePeriod firstMail="111001" lastMail="091001" id="8" numMails="13"/>
+      <theTimePeriod firstMail="121001" lastMail="111001" id="9" numMails="13"/>
+      <theTimePeriod firstMail="161001" lastMail="121001" id="10" numMails="34"/>
+      <theTimePeriod firstMail="191001" lastMail="161001" id="11" numMails="32"/>
+      <theTimePeriod firstMail="191001" lastMail="191001" id="12" numMails="4"/>
+      <theTimePeriod firstMail="231001" lastMail="191001" id="13" numMails="35"/>
+      <theTimePeriod firstMail="241001" lastMail="231001" id="14" numMails="25"/>
+      <theTimePeriod firstMail="251001" lastMail="241001" id="15" numMails="32"/>
+      <theTimePeriod firstMail="251001" lastMail="251001" id="16" numMails="12"/>
+      <theTimePeriod firstMail="261001" lastMail="251001" id="17" numMails="22"/>
+      <theTimePeriod firstMail="291001" lastMail="261001" id="18" numMails="17"/>
+      <theTimePeriod firstMail="291001" lastMail="291001" id="19" numMails="9"/>
+    </theState> 
+  </states>
+  <tagEvents>tagEvents
+    <tagSelected type="2" timeStamp="31481" tagId="economic" isPerson="0" />
+    <tagSelected type="0" timeStamp="31618" tagId="economic" isPerson="0" />
+    <tagSelected type="2" timeStamp="31626" tagId="rosalee.fleming" isPerson="1" />
+    <tagSelected type="1" timeStamp="32084" tagId="rosalee.fleming" isPerson="1" />
+    <tagSelected type="2" timeStamp="32154" tagId="participation" isPerson="0" />
+    <tagSelected type="0" timeStamp="32284" tagId="participation" isPerson="0" />
+    <tagSelected type="0" timeStamp="32792" tagId="rosalee.fleming" isPerson="1" />
+    <tagSelected type="2" timeStamp="47448" tagId="dbrock" isPerson="1" />
+    <tagSelected type="0" timeStamp="47542" tagId="dbrock" isPerson="1" />
+    <tagSelected type="2" timeStamp="47550" tagId="no.address" isPerson="1" />
+    <tagSelected type="0" timeStamp="47731" tagId="no.address" isPerson="1" />
+    <tagSelected type="2" timeStamp="47740" tagId="rosalee.fleming" isPerson="1" />
+    <tagSelected type="0" timeStamp="47878" tagId="rosalee.fleming" isPerson="1" />
+  </tagEvents>
+  <timeEvents>timeEvents
+    <timeSelected type="1" timeId="5" timeStamp="3016"/>
+    <timeSelected type="0" timeId="5" timeStamp="4875"/>
+    <timeSelected type="1" timeId="6" timeStamp="4878"/>
+    <timeSelected type="1" timeId="9" timeStamp="4938"/>
+    <timeSelected type="0" timeId="6" timeStamp="4936"/>
+    <timeSelected type="1" timeId="10" timeStamp="5037"/>
+    <timeSelected type="0" timeId="9" timeStamp="5035"/>
+    <timeSelected type="0" timeId="10" timeStamp="5226"/>
+    <timeSelected type="1" timeId="11" timeStamp="5231"/>
+    <timeSelected type="0" timeId="11" timeStamp="6985"/>
+    <timeSelected type="1" timeId="12" timeStamp="6988"/>
+    <timeSelected type="0" timeId="12" timeStamp="7055"/>
+    <timeSelected type="1" timeId="14" timeStamp="7056"/>
+    <timeSelected type="0" timeId="14" timeStamp="8624"/>
+    <timeSelected type="1" timeId="15" timeStamp="8626"/>
+    <timeSelected type="0" timeId="15" timeStamp="8684"/>
+    <timeSelected type="1" timeId="16" timeStamp="8686"/>
+    <timeSelected type="0" timeId="16" timeStamp="9989"/>
+    <timeSelected type="1" timeId="15" timeStamp="9991"/>
+    <timeSelected type="0" timeId="15" timeStamp="10064"/>
+    <timeSelected type="1" timeId="13" timeStamp="10065"/>
+    <timeSelected type="0" timeId="13" timeStamp="10134"/>
+    <timeSelected type="1" timeId="12" timeStamp="10136"/>
+    <timeSelected type="0" timeId="12" timeStamp="10256"/>
+    <timeSelected type="1" timeId="13" timeStamp="10257"/>
+    <timeSelected type="0" timeId="13" timeStamp="10332"/>
+    <timeSelected type="1" timeId="14" timeStamp="10334"/>
+    <timeSelected type="0" timeId="14" timeStamp="10453"/>
+    <timeSelected type="1" timeId="13" timeStamp="10455"/>
+    <timeSelected type="0" timeId="13" timeStamp="10578"/>
+    <timeSelected type="1" timeId="12" timeStamp="10580"/>
+    <timeSelected type="0" timeId="12" timeStamp="10704"/>
+    <timeSelected type="1" timeId="11" timeStamp="10705"/>
+    <timeSelected type="0" timeId="11" timeStamp="13674"/>
+    <timeSelected type="1" timeId="13" timeStamp="14149"/>
+    <timeSelected type="0" timeId="13" timeStamp="14227"/>
+    <timeSelected type="1" timeId="14" timeStamp="14229"/>
+    <timeSelected type="0" timeId="14" timeStamp="14325"/>
+    <timeSelected type="1" timeId="15" timeStamp="14327"/>
+    <timeSelected type="0" timeId="15" timeStamp="14446"/>
+    <timeSelected type="1" timeId="14" timeStamp="14448"/>
+    <timeSelected type="0" timeId="14" timeStamp="15715"/>
+    <timeSelected type="1" timeId="4" timeStamp="17304"/>
+    <timeSelected type="0" timeId="4" timeStamp="17372"/>
+    <timeSelected type="1" timeId="3" timeStamp="17374"/>
+    <timeSelected type="0" timeId="3" timeStamp="18392"/>
+    <timeSelected type="1" timeId="2" timeStamp="34575"/>
+    <timeSelected type="0" timeId="2" timeStamp="35145"/>
+    <timeSelected type="1" timeId="1" timeStamp="43342"/>
+    <timeSelected type="0" timeId="1" timeStamp="44758"/>
+    <timeSelected type="1" timeId="15" timeStamp="44763"/>
+    <timeSelected type="0" timeId="15" timeStamp="44980"/>
+    <timeSelected type="1" timeId="16" timeStamp="44982"/>
+    <timeSelected type="0" timeId="16" timeStamp="45156"/>
+    <timeSelected type="1" timeId="17" timeStamp="45158"/>
+    <timeSelected type="0" timeId="17" timeStamp="45313"/>
+    <timeSelected type="1" timeId="19" timeStamp="45314"/>
+    <timeSelected type="0" timeId="19" timeStamp="46167"/>
+    <timeSelected type="1" timeId="19" timeStamp="46336"/>
+    <timeSelected type="0" timeId="19" timeStamp="46455"/>
+    <timeSelected type="1" timeId="17" timeStamp="46460"/>
+    <timeSelected type="0" timeId="17" timeStamp="46625"/>
+    <timeSelected type="1" timeId="16" timeStamp="46627"/>
+    <timeSelected type="0" timeId="16" timeStamp="46748"/>
+    <timeSelected type="1" timeId="15" timeStamp="46751"/>
+    <timeSelected type="0" timeId="15" timeStamp="46912"/>
+    <timeSelected type="1" timeId="13" timeStamp="46915"/>
+    <timeSelected type="0" timeId="13" timeStamp="47071"/>
+    <timeSelected type="1" timeId="10" timeStamp="47073"/>
+    <timeSelected type="0" timeId="10" timeStamp="47218"/>
+    <timeSelected type="1" timeId="8" timeStamp="47224"/>
+    <timeSelected type="0" timeId="8" timeStamp="48082"/>
+    <timeSelected type="1" timeId="1" timeStamp="49953"/>
+    <timeSelected type="0" timeId="1" timeStamp="50074"/>
+  </timeEvents>
+  <tagsShown>tagsShown
+    <tagSet timeStamp="3026">
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="sally.keepers"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="ealvittor"/>
+      <theTag isPerson="1" tagID="cindy.olson"/>
+      <theTag isPerson="1" tagID="news"/>
+      <theTag isPerson="1" tagID="creedon"/>
+    </tagSet>
+    <tagSet timeStamp="4730">
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="4738">
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="sally.keepers"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="ealvittor"/>
+      <theTag isPerson="1" tagID="cindy.olson"/>
+      <theTag isPerson="1" tagID="news"/>
+      <theTag isPerson="1" tagID="creedon"/>
+    </tagSet>
+    <tagSet timeStamp="4885">
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="nshaw"/>
+      <theTag isPerson="1" tagID="cindy.olson"/>
+      <theTag isPerson="1" tagID="news"/>
+      <theTag isPerson="1" tagID="president"/>
+      <theTag isPerson="1" tagID="breakingnews"/>
+      <theTag isPerson="1" tagID="wms"/>
+      <theTag isPerson="1" tagID="hattie.carrington"/>
+    </tagSet>
+    <tagSet timeStamp="4944">
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="cindy.olson"/>
+      <theTag isPerson="1" tagID="kdrouet"/>
+      <theTag isPerson="1" tagID="pablo.acevedo"/>
+      <theTag isPerson="1" tagID="danesmommy0702"/>
+      <theTag isPerson="1" tagID="royalty"/>
+      <theTag isPerson="1" tagID="ezzy622"/>
+      <theTag isPerson="1" tagID="sostrow"/>
+    </tagSet>
+    <tagSet timeStamp="5042">
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="pravas"/>
+    </tagSet>
+    <tagSet timeStamp="5241">
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="coa"/>
+    </tagSet>
+    <tagSet timeStamp="6915">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="6925">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="preparation"/>
+      <theTag isPerson="0" tagID="midst"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="coa"/>
+    </tagSet>
+    <tagSet timeStamp="6996">
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="demise"/>
+      <theTag isPerson="0" tagID="controversy"/>
+      <theTag isPerson="0" tagID="expense"/>
+      <theTag isPerson="0" tagID="savior"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="mailings"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="ealvittor"/>
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+    </tagSet>
+    <tagSet timeStamp="7066">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="jharwood"/>
+    </tagSet>
+    <tagSet timeStamp="8520">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="jharwood"/>
+    </tagSet>
+    <tagSet timeStamp="8512">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="8635">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="coa"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="lblanchard"/>
+    </tagSet>
+    <tagSet timeStamp="8694">
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="subsidiary"/>
+      <theTag isPerson="0" tagID="subscriber"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="sally.keepers"/>
+      <theTag isPerson="1" tagID="robyn"/>
+    </tagSet>
+    <tagSet timeStamp="9834">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="9842">
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="subsidiary"/>
+      <theTag isPerson="0" tagID="subscriber"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="sally.keepers"/>
+      <theTag isPerson="1" tagID="robyn"/>
+    </tagSet>
+    <tagSet timeStamp="9998">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="coa"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="lblanchard"/>
+    </tagSet>
+    <tagSet timeStamp="10073">
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="subscriber"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mailings"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="coa"/>
+      <theTag isPerson="1" tagID="news"/>
+      <theTag isPerson="1" tagID="cindy.stark"/>
+      <theTag isPerson="1" tagID="cheryltd"/>
+    </tagSet>
+    <tagSet timeStamp="10145">
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="demise"/>
+      <theTag isPerson="0" tagID="controversy"/>
+      <theTag isPerson="0" tagID="expense"/>
+      <theTag isPerson="0" tagID="savior"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="mailings"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="ealvittor"/>
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+    </tagSet>
+    <tagSet timeStamp="10264">
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="subscriber"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mailings"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="coa"/>
+      <theTag isPerson="1" tagID="news"/>
+      <theTag isPerson="1" tagID="cindy.stark"/>
+      <theTag isPerson="1" tagID="cheryltd"/>
+    </tagSet>
+    <tagSet timeStamp="10340">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="jharwood"/>
+    </tagSet>
+    <tagSet timeStamp="10463">
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="subscriber"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mailings"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="coa"/>
+      <theTag isPerson="1" tagID="news"/>
+      <theTag isPerson="1" tagID="cindy.stark"/>
+      <theTag isPerson="1" tagID="cheryltd"/>
+    </tagSet>
+    <tagSet timeStamp="10587">
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="demise"/>
+      <theTag isPerson="0" tagID="controversy"/>
+      <theTag isPerson="0" tagID="expense"/>
+      <theTag isPerson="0" tagID="savior"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="mailings"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="ealvittor"/>
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+    </tagSet>
+    <tagSet timeStamp="10713">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="preparation"/>
+      <theTag isPerson="0" tagID="midst"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="coa"/>
+    </tagSet>
+    <tagSet timeStamp="11281">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="11289">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="preparation"/>
+      <theTag isPerson="0" tagID="midst"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="coa"/>
+    </tagSet>
+    <tagSet timeStamp="13690">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="14163">
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="subscriber"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mailings"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="coa"/>
+      <theTag isPerson="1" tagID="news"/>
+      <theTag isPerson="1" tagID="cindy.stark"/>
+      <theTag isPerson="1" tagID="cheryltd"/>
+    </tagSet>
+    <tagSet timeStamp="14242">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="jharwood"/>
+    </tagSet>
+    <tagSet timeStamp="14346">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="coa"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="lblanchard"/>
+    </tagSet>
+    <tagSet timeStamp="14461">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="jharwood"/>
+    </tagSet>
+    <tagSet timeStamp="15251">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="15268">
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="jharwood"/>
+    </tagSet>
+    <tagSet timeStamp="15729">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="17316">
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="length"/>
+      <theTag isPerson="0" tagID="memorandum"/>
+      <theTag isPerson="0" tagID="candor"/>
+      <theTag isPerson="0" tagID="instruction"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="mschopper"/>
+      <theTag isPerson="1" tagID="amccarty"/>
+      <theTag isPerson="1" tagID="jharwood"/>
+      <theTag isPerson="1" tagID="stanley.horton"/>
+      <theTag isPerson="1" tagID="liz.taylor"/>
+      <theTag isPerson="1" tagID="muaa"/>
+    </tagSet>
+    <tagSet timeStamp="17382">
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="legislation"/>
+      <theTag isPerson="0" tagID="length"/>
+      <theTag isPerson="0" tagID="conjunction"/>
+      <theTag isPerson="0" tagID="expense"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="sally.keepers"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="coa"/>
+      <theTag isPerson="1" tagID="ealvittor"/>
+      <theTag isPerson="1" tagID="cindy.olson"/>
+      <theTag isPerson="1" tagID="mark.koenig"/>
+    </tagSet>
+    <tagSet timeStamp="18232">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="18244">
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="legislation"/>
+      <theTag isPerson="0" tagID="length"/>
+      <theTag isPerson="0" tagID="conjunction"/>
+      <theTag isPerson="0" tagID="expense"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="sally.keepers"/>
+      <theTag isPerson="1" tagID="lynda.l.phinney"/>
+      <theTag isPerson="1" tagID="coa"/>
+      <theTag isPerson="1" tagID="ealvittor"/>
+      <theTag isPerson="1" tagID="cindy.olson"/>
+      <theTag isPerson="1" tagID="mark.koenig"/>
+    </tagSet>
+    <tagSet timeStamp="18406">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="register"/>
+      <theTag isPerson="0" tagID="importance"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="relevant"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="japan"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="enron_update"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="32039">
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="fleming"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="reminder"/>
+      <theTag isPerson="0" tagID="convenience"/>
+      <theTag isPerson="0" tagID="initiative"/>
+      <theTag isPerson="0" tagID="conduct"/>
+      <theTag isPerson="0" tagID="uncertainty"/>
+      <theTag isPerson="0" tagID="heather"/>
+      <theTag isPerson="0" tagID="creation"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="jeffrey.garten"/>
+      <theTag isPerson="1" tagID="sally.keepers"/>
+      <theTag isPerson="1" tagID="joannie.williamson"/>
+      <theTag isPerson="1" tagID="robyn"/>
+      <theTag isPerson="1" tagID="paula.rieker"/>
+    </tagSet>
+    <tagSet timeStamp="34592">
+      <theTag isPerson="1" tagID="katherine.brown"/>
+      <theTag isPerson="1" tagID="tori.wells"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="rob.bradley"/>
+      <theTag isPerson="1" tagID="cindy.olson"/>
+      <theTag isPerson="1" tagID="maureen.mcvicker"/>
+    </tagSet>
+    <tagSet timeStamp="35159">
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="katherine.brown"/>
+      <theTag isPerson="1" tagID="tori.wells"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="jeffrey.garten"/>
+    </tagSet>
+    <tagSet timeStamp="46181">
+      <theTag isPerson="1" tagID="7414"/>
+      <theTag isPerson="1" tagID="1247601"/>
+      <theTag isPerson="1" tagID="2586207"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="brown_mary_jo"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="leonardo.pacheco"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+    </tagSet>
+    <tagSet timeStamp="46350">
+      <theTag isPerson="1" tagID="brown_mary_jo"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="stelzer"/>
+      <theTag isPerson="1" tagID="richarde"/>
+      <theTag isPerson="1" tagID="scenicmo"/>
+      <theTag isPerson="1" tagID="jcenter"/>
+    </tagSet>
+    <tagSet timeStamp="46493">
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="brown_mary_jo"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="paula.rieker"/>
+      <theTag isPerson="1" tagID="lblanchard"/>
+    </tagSet>
+    <tagSet timeStamp="46642">
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="ealvittor"/>
+      <theTag isPerson="1" tagID="cindy.olson"/>
+      <theTag isPerson="1" tagID="mark.koenig"/>
+    </tagSet>
+    <tagSet timeStamp="46770">
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="brown_mary_jo"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+    </tagSet>
+    <tagSet timeStamp="46953">
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="info"/>
+    </tagSet>
+    <tagSet timeStamp="47106">
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="terrie.james"/>
+    </tagSet>
+    <tagSet timeStamp="47244">
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+      <theTag isPerson="1" tagID="joannie.williamson"/>
+      <theTag isPerson="1" tagID="paula.rieker"/>
+      <theTag isPerson="1" tagID="cindy.olson"/>
+    </tagSet>
+    <tagSet timeStamp="48095">
+      <theTag isPerson="1" tagID="7414"/>
+      <theTag isPerson="1" tagID="1247601"/>
+      <theTag isPerson="1" tagID="2586207"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="brown_mary_jo"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="leonardo.pacheco"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+    </tagSet>
+    <tagSet timeStamp="50013">
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="confidential"/>
+      <theTag isPerson="0" tagID="economy"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="fleming"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="leonardo.pacheco"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="event"/>
+      <theTag isPerson="1" tagID="40enron"/>
+    </tagSet>
+    <tagSet timeStamp="50083">
+      <theTag isPerson="0" tagID="chairman"/>
+      <theTag isPerson="0" tagID="forum"/>
+      <theTag isPerson="0" tagID="limited"/>
+      <theTag isPerson="0" tagID="participation"/>
+      <theTag isPerson="0" tagID="confidential"/>
+      <theTag isPerson="0" tagID="economy"/>
+      <theTag isPerson="0" tagID="content"/>
+      <theTag isPerson="0" tagID="fleming"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="analyst"/>
+      <theTag isPerson="0" tagID="economics"/>
+      <theTag isPerson="1" tagID="7414"/>
+      <theTag isPerson="1" tagID="1247601"/>
+      <theTag isPerson="1" tagID="2586207"/>
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="no.address"/>
+      <theTag isPerson="1" tagID="brown_mary_jo"/>
+      <theTag isPerson="1" tagID="svarga"/>
+      <theTag isPerson="1" tagID="leonardo.pacheco"/>
+      <theTag isPerson="1" tagID="mrslinda"/>
+      <theTag isPerson="1" tagID="dbrock"/>
+    </tagSet>
+  </tagsShown>
+  <emailEvents>emailEvents
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="19" emailID="2490" timeStamp="1480"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="19" emailID="2491" timeStamp="1478"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="19" emailID="2492" timeStamp="1475"/>
+    <emailSelect type="0" isSeen="0" order="5" timePeriod="19" emailID="2487" timeStamp="1544"/>
+    <emailSelect type="0" isSeen="0" order="6" timePeriod="19" emailID="2486" timeStamp="1548"/>
+    <emailSelect type="0" isSeen="0" order="7" timePeriod="19" emailID="2485" timeStamp="1550"/>
+    <emailSelect type="0" isSeen="0" order="8" timePeriod="19" emailID="2484" timeStamp="1552"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="19" emailID="2489" timeStamp="1496"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="19" emailID="2488" timeStamp="1501"/>
+    <emailSelect type="0" isSeen="0" order="9" timePeriod="19" emailID="2483" timeStamp="1555"/>
+    <emailSelect type="0" isSeen="0" order="11" timePeriod="19" emailID="2481" timeStamp="1580"/>
+    <emailSelect type="0" isSeen="0" order="10" timePeriod="19" emailID="2482" timeStamp="1578"/>
+    <emailSelect type="2" isSeen="0" order="4" timePeriod="5" emailID="2253" timeStamp="3661"/>
+    <emailSelect type="2" isSeen="0" order="5" timePeriod="5" emailID="2252" timeStamp="3776"/>
+    <emailSelect type="2" isSeen="0" order="6" timePeriod="5" emailID="2251" timeStamp="3955"/>
+    <emailSelect type="2" isSeen="0" order="7" timePeriod="5" emailID="2250" timeStamp="4121"/>
+    <emailSelect type="2" isSeen="0" order="8" timePeriod="5" emailID="2249" timeStamp="4231"/>
+    <emailSelect type="2" isSeen="0" order="9" timePeriod="5" emailID="2248" timeStamp="4304"/>
+    <emailSelect type="2" isSeen="0" order="10" timePeriod="5" emailID="2247" timeStamp="4443"/>
+    <emailSelect type="2" isSeen="0" order="12" timePeriod="5" emailID="2245" timeStamp="4518"/>
+    <emailSelect type="2" isSeen="0" order="12" timePeriod="11" emailID="2305" timeStamp="5782"/>
+    <emailSelect type="2" isSeen="0" order="11" timePeriod="11" emailID="2306" timeStamp="5957"/>
+    <emailSelect type="2" isSeen="0" order="10" timePeriod="11" emailID="2307" timeStamp="6016"/>
+    <emailSelect type="2" isSeen="0" order="9" timePeriod="11" emailID="2308" timeStamp="6238"/>
+    <emailSelect type="2" isSeen="0" order="8" timePeriod="11" emailID="2309" timeStamp="6354"/>
+    <emailSelect type="2" isSeen="0" order="7" timePeriod="11" emailID="2310" timeStamp="6476"/>
+    <emailSelect type="2" isSeen="0" order="6" timePeriod="11" emailID="2311" timeStamp="6666"/>
+    <emailSelect type="2" isSeen="0" order="7" timePeriod="14" emailID="2381" timeStamp="7509"/>
+    <emailSelect type="2" isSeen="0" order="8" timePeriod="14" emailID="2380" timeStamp="7743"/>
+    <emailSelect type="2" isSeen="0" order="9" timePeriod="14" emailID="2379" timeStamp="7880"/>
+    <emailSelect type="2" isSeen="0" order="10" timePeriod="14" emailID="2378" timeStamp="8059"/>
+    <emailSelect type="2" isSeen="0" order="11" timePeriod="14" emailID="2377" timeStamp="8232"/>
+    <emailSelect type="2" isSeen="0" order="12" timePeriod="14" emailID="2376" timeStamp="8293"/>
+    <emailSelect type="2" isSeen="0" order="13" timePeriod="14" emailID="2375" timeStamp="8419"/>
+    <emailSelect type="2" isSeen="0" order="18" timePeriod="16" emailID="2440" timeStamp="9092"/>
+    <emailSelect type="2" isSeen="0" order="17" timePeriod="16" emailID="2441" timeStamp="9321"/>
+    <emailSelect type="2" isSeen="0" order="16" timePeriod="16" emailID="2442" timeStamp="9448"/>
+    <emailSelect type="2" isSeen="0" order="3" timePeriod="3" emailID="2206" timeStamp="17645"/>
+    <emailSelect type="2" isSeen="0" order="4" timePeriod="3" emailID="2205" timeStamp="17762"/>
+    <emailSelect type="2" isSeen="0" order="5" timePeriod="3" emailID="2204" timeStamp="17837"/>
+    <emailSelect type="2" isSeen="0" order="6" timePeriod="3" emailID="2203" timeStamp="17914"/>
+    <emailSelect type="2" isSeen="0" order="7" timePeriod="3" emailID="2202" timeStamp="17986"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="19" emailID="1585" timeStamp="22373"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="19" emailID="1584" timeStamp="22386"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="19" emailID="1581" timeStamp="22397"/>
+    <emailSelect type="0" isSeen="0" order="6" timePeriod="19" emailID="1579" timeStamp="22404"/>
+    <emailSelect type="0" isSeen="0" order="7" timePeriod="19" emailID="1578" timeStamp="22406"/>
+    <emailSelect type="0" isSeen="0" order="8" timePeriod="19" emailID="1577" timeStamp="22409"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="19" emailID="1582" timeStamp="22394"/>
+    <emailSelect type="0" isSeen="0" order="9" timePeriod="19" emailID="1576" timeStamp="22416"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="19" emailID="1583" timeStamp="22388"/>
+    <emailSelect type="0" isSeen="0" order="10" timePeriod="19" emailID="1575" timeStamp="22418"/>
+    <emailSelect type="0" isSeen="0" order="11" timePeriod="19" emailID="1574" timeStamp="22422"/>
+    <emailSelect type="0" isSeen="0" order="5" timePeriod="19" emailID="1580" timeStamp="22400"/>
+    <emailSelect type="1" isSeen="0" order="15" timePeriod="19" emailID="1570" timeStamp="32040"/>
+    <emailSelect type="1" isSeen="0" order="21" timePeriod="19" emailID="1564" timeStamp="32043"/>
+    <emailSelect type="1" isSeen="0" order="3" timePeriod="18" emailID="1559" timeStamp="32045"/>
+    <emailSelect type="1" isSeen="0" order="12" timePeriod="18" emailID="1550" timeStamp="32048"/>
+    <emailSelect type="1" isSeen="0" order="22" timePeriod="18" emailID="1540" timeStamp="32049"/>
+    <emailSelect type="1" isSeen="0" order="3" timePeriod="17" emailID="1529" timeStamp="32056"/>
+    <emailSelect type="1" isSeen="0" order="2" timePeriod="17" emailID="1530" timeStamp="32053"/>
+    <emailSelect type="1" isSeen="0" order="15" timePeriod="17" emailID="1517" timeStamp="32059"/>
+    <emailSelect type="1" isSeen="0" order="17" timePeriod="17" emailID="1515" timeStamp="32064"/>
+    <emailSelect type="1" isSeen="0" order="26" timePeriod="17" emailID="1506" timeStamp="32065"/>
+    <emailSelect type="1" isSeen="0" order="0" timePeriod="16" emailID="1498" timeStamp="32067"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="19" emailID="2483" timeStamp="33933"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="19" emailID="2482" timeStamp="33937"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="19" emailID="2459" timeStamp="33939"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="19" emailID="2458" timeStamp="33942"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="19" emailID="2441" timeStamp="33945"/>
+    <emailSelect type="0" isSeen="0" order="6" timePeriod="19" emailID="2346" timeStamp="33951"/>
+    <emailSelect type="0" isSeen="0" order="5" timePeriod="19" emailID="2423" timeStamp="33948"/>
+    <emailSelect type="0" isSeen="0" order="7" timePeriod="19" emailID="2310" timeStamp="33975"/>
+    <emailSelect type="0" isSeen="0" order="8" timePeriod="19" emailID="2300" timeStamp="33978"/>
+    <emailSelect type="0" isSeen="0" order="9" timePeriod="19" emailID="2289" timeStamp="33982"/>
+    <emailSelect type="0" isSeen="0" order="10" timePeriod="19" emailID="2251" timeStamp="33984"/>
+    <emailSelect type="0" isSeen="0" order="11" timePeriod="19" emailID="2240" timeStamp="33988"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="19" emailID="1790" timeStamp="42275"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="19" emailID="1789" timeStamp="42278"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="19" emailID="1787" timeStamp="42286"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="19" emailID="1788" timeStamp="42281"/>
+    <emailSelect type="0" isSeen="0" order="6" timePeriod="19" emailID="1785" timeStamp="42291"/>
+    <emailSelect type="0" isSeen="0" order="7" timePeriod="19" emailID="1784" timeStamp="42293"/>
+    <emailSelect type="0" isSeen="0" order="5" timePeriod="19" emailID="1786" timeStamp="42288"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="19" emailID="1791" timeStamp="42272"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="18" emailID="1780" timeStamp="42312"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="18" emailID="1782" timeStamp="42305"/>
+    <emailSelect type="0" isSeen="0" order="8" timePeriod="19" emailID="1783" timeStamp="42303"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="18" emailID="1781" timeStamp="42310"/>
+  </emailEvents>
+  <doubleClicks>doubleClicks
+    <doubleClick order="7" timePeriod="11" date="030102" attachment="0" timeStamp="11146">
+      <theTag isPerson="1" tagID="rosalee.fleming"/>
+      <theTag isPerson="1" tagID="lblanchard"/>
+      <theTag isPerson="1" tagID=".cynthia"/>
+      <theTag isPerson="1" tagID=".eva"/>
+      <theTag isPerson="1" tagID=".richard"/>
+      <theTag isPerson="1" tagID="ag"/>
+      <theTag isPerson="1" tagID=".martin"/>
+      <theTag isPerson="1" tagID=".jack"/>
+      <theTag isPerson="1" tagID=".vivian"/>
+      <theTag isPerson="1" tagID=".gregory"/>
+      <theTag isPerson="1" tagID="frank"/>
+      <theTag isPerson="1" tagID=".earl"/>
+      <theTag isPerson="1" tagID=".gabrielle"/>
+      <theTag isPerson="1" tagID=".harry"/>
+      <theTag isPerson="1" tagID=".frank"/>
+      <theTag isPerson="1" tagID=".floretta"/>
+      <theTag isPerson="1" tagID=".dennis"/>
+      <theTag isPerson="1" tagID="ase"/>
+      <theTag isPerson="1" tagID="g..hampshirecowan"/>
+      <theTag isPerson="1" tagID=".vernon"/>
+      <theTag isPerson="1" tagID="l.beverly"/>
+      <theTag isPerson="1" tagID="g..nallo"/>
+    </doubleClick>
+    <doubleClick order="10" timePeriod="14" date="100102" attachment="0" timeStamp="15074">
+      <theTag isPerson="1" tagID="svarga"/>
+    </doubleClick>
+    <doubleClick order="8" timePeriod="19" date="291001" attachment="0" timeStamp="52142">
+      <theTag isPerson="0" tagID="confidential"/>
+      <theTag isPerson="0" tagID="individual"/>
+      <theTag isPerson="1" tagID="beau"/>
+      <theTag isPerson="1" tagID="info"/>
+      <theTag isPerson="1" tagID="mark.lay"/>
+      <theTag isPerson="1" tagID="mark"/>
+      <theTag isPerson="1" tagID="ase"/>
+    </doubleClick>
+  </doubleClicks>
+  <sessionID id="deneme"/>
+  <end timeStamp="54288" success="1"/>
+</emailLog>

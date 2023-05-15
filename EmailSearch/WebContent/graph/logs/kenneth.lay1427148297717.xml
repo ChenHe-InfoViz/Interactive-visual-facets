@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emailLog>
+  <states>states
+    <theState start="2266">
+      <theTimePeriod firstMail="301101" lastMail="291101" id="0" numMails="35"/>
+      <theTimePeriod firstMail="031201" lastMail="301101" id="1" numMails="35"/>
+      <theTimePeriod firstMail="051201" lastMail="031201" id="2" numMails="29"/>
+      <theTimePeriod firstMail="061201" lastMail="051201" id="3" numMails="17"/>
+      <theTimePeriod firstMail="101201" lastMail="061201" id="4" numMails="26"/>
+      <theTimePeriod firstMail="121201" lastMail="101201" id="5" numMails="22"/>
+      <theTimePeriod firstMail="131201" lastMail="121201" id="6" numMails="13"/>
+      <theTimePeriod firstMail="211201" lastMail="131201" id="7" numMails="7"/>
+      <theTimePeriod firstMail="221201" lastMail="211201" id="8" numMails="3"/>
+      <theTimePeriod firstMail="281201" lastMail="221201" id="9" numMails="11"/>
+      <theTimePeriod firstMail="281201" lastMail="281201" id="10" numMails="3"/>
+      <theTimePeriod firstMail="040102" lastMail="281201" id="11" numMails="23"/>
+      <theTimePeriod firstMail="050102" lastMail="040102" id="12" numMails="14"/>
+      <theTimePeriod firstMail="100102" lastMail="060102" id="13" numMails="35"/>
+      <theTimePeriod firstMail="110102" lastMail="100102" id="14" numMails="22"/>
+      <theTimePeriod firstMail="150102" lastMail="110102" id="15" numMails="35"/>
+      <theTimePeriod firstMail="170102" lastMail="150102" id="16" numMails="35"/>
+      <theTimePeriod firstMail="170102" lastMail="170102" id="17" numMails="5"/>
+      <theTimePeriod firstMail="180102" lastMail="170102" id="18" numMails="16"/>
+      <theTimePeriod firstMail="210102" lastMail="180102" id="19" numMails="13"/>
+    </theState> 
+    <theState start="19313">
+      <theTimePeriod firstMail="051201" lastMail="051201" id="0" numMails="1"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="1" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="2" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="3" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="4" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="5" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="6" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="7" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="8" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="9" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="10" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="11" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="12" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="13" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="14" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="15" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="16" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="17" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="18" numMails="0"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="19" numMails="0"/>
+      <theFilter isPerson="0" tagId="kathy_janeway"/>
+    </theState> 
+    <theState start="25084">
+      <theTimePeriod firstMail="141101" lastMail="131101" id="0" numMails="35"/>
+      <theTimePeriod firstMail="141101" lastMail="141101" id="1" numMails="6"/>
+      <theTimePeriod firstMail="161101" lastMail="141101" id="2" numMails="35"/>
+      <theTimePeriod firstMail="271101" lastMail="171101" id="3" numMails="6"/>
+      <theTimePeriod firstMail="291101" lastMail="281101" id="4" numMails="10"/>
+      <theTimePeriod firstMail="301101" lastMail="291101" id="5" numMails="35"/>
+      <theTimePeriod firstMail="021201" lastMail="301101" id="6" numMails="35"/>
+      <theTimePeriod firstMail="041201" lastMail="031201" id="7" numMails="35"/>
+      <theTimePeriod firstMail="051201" lastMail="051201" id="8" numMails="14"/>
+      <theTimePeriod firstMail="081201" lastMail="051201" id="9" numMails="31"/>
+      <theTimePeriod firstMail="101201" lastMail="091201" id="10" numMails="8"/>
+      <theTimePeriod firstMail="141201" lastMail="101201" id="11" numMails="35"/>
+      <theTimePeriod firstMail="221201" lastMail="201201" id="12" numMails="9"/>
+      <theTimePeriod firstMail="251201" lastMail="241201" id="13" numMails="2"/>
+      <theTimePeriod firstMail="281201" lastMail="261201" id="14" numMails="11"/>
+      <theTimePeriod firstMail="311201" lastMail="291201" id="15" numMails="4"/>
+      <theTimePeriod firstMail="030102" lastMail="020102" id="16" numMails="11"/>
+      <theTimePeriod firstMail="060102" lastMail="040102" id="17" numMails="22"/>
+      <theTimePeriod firstMail="090102" lastMail="070102" id="18" numMails="33"/>
+      <theTimePeriod firstMail="110102" lastMail="100102" id="19" numMails="22"/>
+    </theState> 
+  </states>
+  <tagEvents>tagEvents
+  </tagEvents>
+  <timeEvents>timeEvents
+  </timeEvents>
+  <tagsShown>tagsShown
+  </tagsShown>
+  <emailEvents>emailEvents
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="19" emailID="2492" timeStamp="2271"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="19" emailID="2491" timeStamp="2276"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="19" emailID="2490" timeStamp="2279"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="19" emailID="2489" timeStamp="2299"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="19" emailID="2488" timeStamp="2301"/>
+    <emailSelect type="0" isSeen="0" order="5" timePeriod="19" emailID="2487" timeStamp="2306"/>
+    <emailSelect type="0" isSeen="0" order="6" timePeriod="19" emailID="2486" timeStamp="2345"/>
+    <emailSelect type="0" isSeen="0" order="7" timePeriod="19" emailID="2485" timeStamp="2348"/>
+    <emailSelect type="0" isSeen="0" order="8" timePeriod="19" emailID="2484" timeStamp="2352"/>
+    <emailSelect type="0" isSeen="0" order="10" timePeriod="19" emailID="2482" timeStamp="2359"/>
+    <emailSelect type="0" isSeen="0" order="11" timePeriod="19" emailID="2481" timeStamp="2362"/>
+    <emailSelect type="0" isSeen="0" order="12" timePeriod="19" emailID="2480" timeStamp="2365"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="18" emailID="2479" timeStamp="2367"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="18" emailID="2478" timeStamp="2370"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="18" emailID="2477" timeStamp="2373"/>
+    <emailSelect type="0" isSeen="0" order="9" timePeriod="19" emailID="2483" timeStamp="2357"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="18" emailID="2476" timeStamp="2376"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="18" emailID="2475" timeStamp="2379"/>
+    <emailSelect type="0" isSeen="0" order="5" timePeriod="18" emailID="2474" timeStamp="2381"/>
+    <emailSelect type="0" isSeen="0" order="8" timePeriod="18" emailID="2471" timeStamp="2388"/>
+    <emailSelect type="0" isSeen="0" order="6" timePeriod="18" emailID="2473" timeStamp="2383"/>
+    <emailSelect type="0" isSeen="0" order="11" timePeriod="18" emailID="2468" timeStamp="2397"/>
+    <emailSelect type="0" isSeen="0" order="9" timePeriod="18" emailID="2470" timeStamp="2393"/>
+    <emailSelect type="0" isSeen="0" order="13" timePeriod="18" emailID="2466" timeStamp="2403"/>
+    <emailSelect type="0" isSeen="0" order="12" timePeriod="18" emailID="2467" timeStamp="2400"/>
+    <emailSelect type="0" isSeen="0" order="7" timePeriod="18" emailID="2472" timeStamp="2385"/>
+    <emailSelect type="0" isSeen="0" order="14" timePeriod="18" emailID="2465" timeStamp="2407"/>
+    <emailSelect type="0" isSeen="0" order="15" timePeriod="18" emailID="2464" timeStamp="2409"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="17" emailID="2463" timeStamp="2411"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="17" emailID="2462" timeStamp="4095"/>
+    <emailSelect type="6" isSeen="0" order="2" timePeriod="17" emailID="2461" timeStamp="4103"/>
+    <emailSelect type="6" isSeen="0" order="4" timePeriod="17" emailID="2459" timeStamp="4114"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="16" emailID="2458" timeStamp="4116"/>
+    <emailSelect type="6" isSeen="0" order="3" timePeriod="17" emailID="2460" timeStamp="4108"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="16" emailID="2457" timeStamp="4120"/>
+    <emailSelect type="6" isSeen="0" order="2" timePeriod="16" emailID="2456" timeStamp="4140"/>
+    <emailSelect type="6" isSeen="0" order="3" timePeriod="16" emailID="2455" timeStamp="4144"/>
+    <emailSelect type="6" isSeen="0" order="4" timePeriod="16" emailID="2454" timeStamp="4177"/>
+    <emailSelect type="0" isSeen="0" order="10" timePeriod="18" emailID="2469" timeStamp="2395"/>
+    <emailSelect type="6" isSeen="0" order="5" timePeriod="16" emailID="2453" timeStamp="4183"/>
+    <emailSelect type="6" isSeen="0" order="7" timePeriod="16" emailID="2451" timeStamp="4319"/>
+    <emailSelect type="6" isSeen="0" order="8" timePeriod="16" emailID="2450" timeStamp="4325"/>
+    <emailSelect type="6" isSeen="0" order="9" timePeriod="16" emailID="2449" timeStamp="4331"/>
+    <emailSelect type="6" isSeen="0" order="10" timePeriod="16" emailID="2448" timeStamp="4334"/>
+    <emailSelect type="6" isSeen="0" order="12" timePeriod="16" emailID="2446" timeStamp="4341"/>
+    <emailSelect type="6" isSeen="0" order="13" timePeriod="16" emailID="2445" timeStamp="4344"/>
+    <emailSelect type="6" isSeen="0" order="15" timePeriod="16" emailID="2443" timeStamp="4350"/>
+    <emailSelect type="6" isSeen="0" order="11" timePeriod="16" emailID="2447" timeStamp="4339"/>
+    <emailSelect type="6" isSeen="0" order="14" timePeriod="16" emailID="2444" timeStamp="4347"/>
+    <emailSelect type="6" isSeen="0" order="6" timePeriod="16" emailID="2452" timeStamp="4317"/>
+    <emailSelect type="6" isSeen="0" order="16" timePeriod="16" emailID="2442" timeStamp="4489"/>
+    <emailSelect type="6" isSeen="0" order="17" timePeriod="16" emailID="2441" timeStamp="4494"/>
+    <emailSelect type="6" isSeen="0" order="19" timePeriod="16" emailID="2439" timeStamp="4500"/>
+    <emailSelect type="6" isSeen="0" order="18" timePeriod="16" emailID="2440" timeStamp="4497"/>
+    <emailSelect type="6" isSeen="0" order="20" timePeriod="16" emailID="2438" timeStamp="4503"/>
+    <emailSelect type="6" isSeen="0" order="24" timePeriod="16" emailID="2434" timeStamp="4518"/>
+    <emailSelect type="6" isSeen="0" order="25" timePeriod="16" emailID="2433" timeStamp="4520"/>
+    <emailSelect type="6" isSeen="0" order="22" timePeriod="16" emailID="2436" timeStamp="4511"/>
+    <emailSelect type="6" isSeen="0" order="23" timePeriod="16" emailID="2435" timeStamp="4514"/>
+    <emailSelect type="6" isSeen="0" order="21" timePeriod="16" emailID="2437" timeStamp="4506"/>
+    <emailSelect type="6" isSeen="0" order="26" timePeriod="16" emailID="2432" timeStamp="5990"/>
+    <emailSelect type="6" isSeen="0" order="29" timePeriod="16" emailID="2429" timeStamp="5999"/>
+    <emailSelect type="6" isSeen="0" order="27" timePeriod="16" emailID="2431" timeStamp="5993"/>
+    <emailSelect type="6" isSeen="0" order="28" timePeriod="16" emailID="2430" timeStamp="5996"/>
+    <emailSelect type="6" isSeen="0" order="30" timePeriod="16" emailID="2428" timeStamp="6002"/>
+    <emailSelect type="6" isSeen="0" order="31" timePeriod="16" emailID="2427" timeStamp="6014"/>
+    <emailSelect type="6" isSeen="0" order="32" timePeriod="16" emailID="2426" timeStamp="6018"/>
+    <emailSelect type="6" isSeen="0" order="34" timePeriod="16" emailID="2424" timeStamp="6025"/>
+    <emailSelect type="6" isSeen="0" order="33" timePeriod="16" emailID="2425" timeStamp="6021"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="15" emailID="2423" timeStamp="6029"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="15" emailID="2422" timeStamp="6114"/>
+    <emailSelect type="6" isSeen="0" order="2" timePeriod="15" emailID="2421" timeStamp="6117"/>
+    <emailSelect type="6" isSeen="0" order="3" timePeriod="15" emailID="2420" timeStamp="6124"/>
+    <emailSelect type="6" isSeen="0" order="4" timePeriod="15" emailID="2419" timeStamp="6127"/>
+    <emailSelect type="6" isSeen="0" order="6" timePeriod="15" emailID="2417" timeStamp="6135"/>
+    <emailSelect type="6" isSeen="0" order="5" timePeriod="15" emailID="2418" timeStamp="6132"/>
+    <emailSelect type="6" isSeen="0" order="8" timePeriod="15" emailID="2415" timeStamp="6142"/>
+    <emailSelect type="6" isSeen="0" order="9" timePeriod="15" emailID="2414" timeStamp="6149"/>
+    <emailSelect type="6" isSeen="0" order="7" timePeriod="15" emailID="2416" timeStamp="6140"/>
+    <emailSelect type="6" isSeen="0" order="10" timePeriod="15" emailID="2413" timeStamp="6155"/>
+    <emailSelect type="6" isSeen="0" order="11" timePeriod="15" emailID="2412" timeStamp="6464"/>
+    <emailSelect type="6" isSeen="0" order="12" timePeriod="15" emailID="2411" timeStamp="6467"/>
+    <emailSelect type="6" isSeen="0" order="13" timePeriod="15" emailID="2410" timeStamp="6473"/>
+    <emailSelect type="6" isSeen="0" order="14" timePeriod="15" emailID="2409" timeStamp="6485"/>
+    <emailSelect type="6" isSeen="0" order="15" timePeriod="15" emailID="2408" timeStamp="6491"/>
+    <emailSelect type="6" isSeen="0" order="16" timePeriod="15" emailID="2407" timeStamp="6494"/>
+    <emailSelect type="6" isSeen="0" order="17" timePeriod="15" emailID="2406" timeStamp="6497"/>
+    <emailSelect type="6" isSeen="0" order="18" timePeriod="15" emailID="2405" timeStamp="6500"/>
+    <emailSelect type="6" isSeen="0" order="19" timePeriod="15" emailID="2404" timeStamp="6504"/>
+    <emailSelect type="6" isSeen="0" order="20" timePeriod="15" emailID="2403" timeStamp="6507"/>
+    <emailSelect type="6" isSeen="0" order="21" timePeriod="15" emailID="2402" timeStamp="7008"/>
+    <emailSelect type="6" isSeen="0" order="22" timePeriod="15" emailID="2401" timeStamp="7011"/>
+    <emailSelect type="6" isSeen="0" order="23" timePeriod="15" emailID="2400" timeStamp="7014"/>
+    <emailSelect type="6" isSeen="0" order="24" timePeriod="15" emailID="2399" timeStamp="7016"/>
+    <emailSelect type="6" isSeen="0" order="25" timePeriod="15" emailID="2398" timeStamp="7019"/>
+    <emailSelect type="6" isSeen="0" order="26" timePeriod="15" emailID="2397" timeStamp="7023"/>
+    <emailSelect type="6" isSeen="0" order="27" timePeriod="15" emailID="2396" timeStamp="7026"/>
+    <emailSelect type="6" isSeen="0" order="28" timePeriod="15" emailID="2395" timeStamp="7028"/>
+    <emailSelect type="6" isSeen="0" order="29" timePeriod="15" emailID="2394" timeStamp="7032"/>
+    <emailSelect type="6" isSeen="0" order="30" timePeriod="15" emailID="2393" timeStamp="7036"/>
+    <emailSelect type="6" isSeen="0" order="31" timePeriod="15" emailID="2392" timeStamp="7103"/>
+    <emailSelect type="6" isSeen="0" order="32" timePeriod="15" emailID="2391" timeStamp="7108"/>
+    <emailSelect type="6" isSeen="0" order="33" timePeriod="15" emailID="2390" timeStamp="7113"/>
+    <emailSelect type="6" isSeen="0" order="34" timePeriod="15" emailID="2389" timeStamp="7119"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="14" emailID="2388" timeStamp="7126"/>
+    <emailSelect type="6" isSeen="0" order="2" timePeriod="14" emailID="2386" timeStamp="7134"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="14" emailID="2387" timeStamp="7131"/>
+    <emailSelect type="6" isSeen="0" order="4" timePeriod="14" emailID="2384" timeStamp="7159"/>
+    <emailSelect type="6" isSeen="0" order="5" timePeriod="14" emailID="2383" timeStamp="7162"/>
+    <emailSelect type="6" isSeen="0" order="3" timePeriod="14" emailID="2385" timeStamp="7137"/>
+    <emailSelect type="6" isSeen="0" order="6" timePeriod="14" emailID="2382" timeStamp="7777"/>
+    <emailSelect type="6" isSeen="0" order="7" timePeriod="14" emailID="2381" timeStamp="7780"/>
+    <emailSelect type="6" isSeen="0" order="9" timePeriod="14" emailID="2379" timeStamp="7788"/>
+    <emailSelect type="6" isSeen="0" order="10" timePeriod="14" emailID="2378" timeStamp="7791"/>
+    <emailSelect type="6" isSeen="0" order="11" timePeriod="14" emailID="2377" timeStamp="7798"/>
+    <emailSelect type="6" isSeen="0" order="12" timePeriod="14" emailID="2376" timeStamp="7803"/>
+    <emailSelect type="6" isSeen="0" order="13" timePeriod="14" emailID="2375" timeStamp="7809"/>
+    <emailSelect type="6" isSeen="0" order="14" timePeriod="14" emailID="2374" timeStamp="7815"/>
+    <emailSelect type="6" isSeen="0" order="15" timePeriod="14" emailID="2373" timeStamp="7821"/>
+    <emailSelect type="6" isSeen="0" order="8" timePeriod="14" emailID="2380" timeStamp="7785"/>
+    <emailSelect type="6" isSeen="0" order="16" timePeriod="14" emailID="2372" timeStamp="8583"/>
+    <emailSelect type="6" isSeen="0" order="17" timePeriod="14" emailID="2371" timeStamp="8586"/>
+    <emailSelect type="6" isSeen="0" order="18" timePeriod="14" emailID="2370" timeStamp="8591"/>
+    <emailSelect type="6" isSeen="0" order="19" timePeriod="14" emailID="2369" timeStamp="8595"/>
+    <emailSelect type="6" isSeen="0" order="20" timePeriod="14" emailID="2368" timeStamp="8597"/>
+    <emailSelect type="6" isSeen="0" order="21" timePeriod="14" emailID="2367" timeStamp="8603"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="13" emailID="2366" timeStamp="8606"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="13" emailID="2365" timeStamp="8609"/>
+    <emailSelect type="6" isSeen="0" order="2" timePeriod="13" emailID="2364" timeStamp="8617"/>
+    <emailSelect type="6" isSeen="0" order="3" timePeriod="13" emailID="2363" timeStamp="8622"/>
+    <emailSelect type="6" isSeen="0" order="4" timePeriod="13" emailID="2362" timeStamp="8811"/>
+    <emailSelect type="6" isSeen="0" order="5" timePeriod="13" emailID="2361" timeStamp="8816"/>
+    <emailSelect type="6" isSeen="0" order="6" timePeriod="13" emailID="2360" timeStamp="8822"/>
+    <emailSelect type="6" isSeen="0" order="7" timePeriod="13" emailID="2359" timeStamp="8827"/>
+    <emailSelect type="6" isSeen="0" order="8" timePeriod="13" emailID="2358" timeStamp="8832"/>
+    <emailSelect type="6" isSeen="0" order="9" timePeriod="13" emailID="2357" timeStamp="8837"/>
+    <emailSelect type="6" isSeen="0" order="10" timePeriod="13" emailID="2356" timeStamp="8843"/>
+    <emailSelect type="6" isSeen="0" order="11" timePeriod="13" emailID="2355" timeStamp="8849"/>
+    <emailSelect type="6" isSeen="0" order="12" timePeriod="13" emailID="2354" timeStamp="8852"/>
+    <emailSelect type="6" isSeen="0" order="13" timePeriod="13" emailID="2353" timeStamp="8855"/>
+    <emailSelect type="6" isSeen="0" order="14" timePeriod="13" emailID="2352" timeStamp="8927"/>
+    <emailSelect type="6" isSeen="0" order="15" timePeriod="13" emailID="2351" timeStamp="8929"/>
+    <emailSelect type="6" isSeen="0" order="16" timePeriod="13" emailID="2350" timeStamp="8935"/>
+    <emailSelect type="6" isSeen="0" order="17" timePeriod="13" emailID="2349" timeStamp="8940"/>
+    <emailSelect type="6" isSeen="0" order="18" timePeriod="13" emailID="2348" timeStamp="8947"/>
+    <emailSelect type="6" isSeen="0" order="19" timePeriod="13" emailID="2347" timeStamp="8952"/>
+    <emailSelect type="6" isSeen="0" order="20" timePeriod="13" emailID="2346" timeStamp="8955"/>
+    <emailSelect type="6" isSeen="0" order="21" timePeriod="13" emailID="2345" timeStamp="8959"/>
+    <emailSelect type="6" isSeen="0" order="22" timePeriod="13" emailID="2344" timeStamp="8962"/>
+    <emailSelect type="6" isSeen="0" order="23" timePeriod="13" emailID="2343" timeStamp="8965"/>
+    <emailSelect type="6" isSeen="0" order="24" timePeriod="13" emailID="2342" timeStamp="9010"/>
+    <emailSelect type="6" isSeen="0" order="25" timePeriod="13" emailID="2341" timeStamp="9015"/>
+    <emailSelect type="6" isSeen="0" order="27" timePeriod="13" emailID="2339" timeStamp="9025"/>
+    <emailSelect type="6" isSeen="0" order="26" timePeriod="13" emailID="2340" timeStamp="9021"/>
+    <emailSelect type="6" isSeen="0" order="29" timePeriod="13" emailID="2337" timeStamp="9035"/>
+    <emailSelect type="6" isSeen="0" order="30" timePeriod="13" emailID="2336" timeStamp="9038"/>
+    <emailSelect type="6" isSeen="0" order="31" timePeriod="13" emailID="2335" timeStamp="9042"/>
+    <emailSelect type="6" isSeen="0" order="32" timePeriod="13" emailID="2334" timeStamp="9045"/>
+    <emailSelect type="6" isSeen="0" order="33" timePeriod="13" emailID="2333" timeStamp="9049"/>
+    <emailSelect type="6" isSeen="0" order="28" timePeriod="13" emailID="2338" timeStamp="9032"/>
+    <emailSelect type="6" isSeen="0" order="34" timePeriod="13" emailID="2332" timeStamp="9105"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="12" emailID="2331" timeStamp="9110"/>
+    <emailSelect type="6" isSeen="0" order="2" timePeriod="12" emailID="2329" timeStamp="9118"/>
+    <emailSelect type="6" isSeen="0" order="3" timePeriod="12" emailID="2328" timeStamp="9121"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="12" emailID="2330" timeStamp="9115"/>
+    <emailSelect type="6" isSeen="0" order="4" timePeriod="12" emailID="2327" timeStamp="9124"/>
+    <emailSelect type="6" isSeen="0" order="5" timePeriod="12" emailID="2326" timeStamp="9130"/>
+    <emailSelect type="6" isSeen="0" order="7" timePeriod="12" emailID="2324" timeStamp="9138"/>
+    <emailSelect type="6" isSeen="0" order="6" timePeriod="12" emailID="2325" timeStamp="9134"/>
+    <emailSelect type="6" isSeen="0" order="8" timePeriod="12" emailID="2323" timeStamp="9141"/>
+    <emailSelect type="6" isSeen="0" order="9" timePeriod="12" emailID="2322" timeStamp="9199"/>
+    <emailSelect type="6" isSeen="0" order="10" timePeriod="12" emailID="2321" timeStamp="9202"/>
+    <emailSelect type="6" isSeen="0" order="11" timePeriod="12" emailID="2320" timeStamp="9207"/>
+    <emailSelect type="6" isSeen="0" order="12" timePeriod="12" emailID="2319" timeStamp="9212"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="11" emailID="2317" timeStamp="9220"/>
+    <emailSelect type="6" isSeen="0" order="13" timePeriod="12" emailID="2318" timeStamp="9217"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="11" emailID="2316" timeStamp="9223"/>
+    <emailSelect type="6" isSeen="0" order="2" timePeriod="11" emailID="2315" timeStamp="9229"/>
+    <emailSelect type="6" isSeen="0" order="4" timePeriod="11" emailID="2313" timeStamp="9236"/>
+    <emailSelect type="6" isSeen="0" order="3" timePeriod="11" emailID="2314" timeStamp="9232"/>
+    <emailSelect type="6" isSeen="0" order="5" timePeriod="11" emailID="2312" timeStamp="11093"/>
+    <emailSelect type="6" isSeen="0" order="6" timePeriod="11" emailID="2311" timeStamp="11095"/>
+    <emailSelect type="6" isSeen="0" order="7" timePeriod="11" emailID="2310" timeStamp="11099"/>
+    <emailSelect type="6" isSeen="0" order="8" timePeriod="11" emailID="2309" timeStamp="11106"/>
+    <emailSelect type="6" isSeen="0" order="9" timePeriod="11" emailID="2308" timeStamp="11112"/>
+    <emailSelect type="6" isSeen="0" order="10" timePeriod="11" emailID="2307" timeStamp="11118"/>
+    <emailSelect type="6" isSeen="0" order="11" timePeriod="11" emailID="2306" timeStamp="11123"/>
+    <emailSelect type="6" isSeen="0" order="12" timePeriod="11" emailID="2305" timeStamp="11129"/>
+    <emailSelect type="6" isSeen="0" order="13" timePeriod="11" emailID="2304" timeStamp="11135"/>
+    <emailSelect type="6" isSeen="0" order="14" timePeriod="11" emailID="2303" timeStamp="11140"/>
+    <emailSelect type="6" isSeen="0" order="15" timePeriod="11" emailID="2302" timeStamp="11262"/>
+    <emailSelect type="6" isSeen="0" order="18" timePeriod="11" emailID="2299" timeStamp="11273"/>
+    <emailSelect type="6" isSeen="0" order="20" timePeriod="11" emailID="2297" timeStamp="11278"/>
+    <emailSelect type="6" isSeen="0" order="17" timePeriod="11" emailID="2300" timeStamp="11270"/>
+    <emailSelect type="6" isSeen="0" order="16" timePeriod="11" emailID="2301" timeStamp="11267"/>
+    <emailSelect type="6" isSeen="0" order="22" timePeriod="11" emailID="2295" timeStamp="11284"/>
+    <emailSelect type="6" isSeen="0" order="21" timePeriod="11" emailID="2296" timeStamp="11281"/>
+    <emailSelect type="6" isSeen="0" order="19" timePeriod="11" emailID="2298" timeStamp="11276"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="10" emailID="2293" timeStamp="11289"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="10" emailID="2294" timeStamp="11286"/>
+    <emailSelect type="6" isSeen="0" order="2" timePeriod="10" emailID="2292" timeStamp="11349"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="9" emailID="2291" timeStamp="11352"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="9" emailID="2290" timeStamp="11359"/>
+    <emailSelect type="6" isSeen="0" order="2" timePeriod="9" emailID="2289" timeStamp="11364"/>
+    <emailSelect type="6" isSeen="0" order="3" timePeriod="9" emailID="2288" timeStamp="11370"/>
+    <emailSelect type="6" isSeen="0" order="4" timePeriod="9" emailID="2287" timeStamp="11379"/>
+    <emailSelect type="6" isSeen="0" order="5" timePeriod="9" emailID="2286" timeStamp="11384"/>
+    <emailSelect type="6" isSeen="0" order="6" timePeriod="9" emailID="2285" timeStamp="11390"/>
+    <emailSelect type="6" isSeen="0" order="8" timePeriod="9" emailID="2283" timeStamp="11398"/>
+    <emailSelect type="6" isSeen="0" order="7" timePeriod="9" emailID="2284" timeStamp="11393"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="0" emailID="2192" timeStamp="19317"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="19" emailID="2387" timeStamp="25151"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="19" emailID="2386" timeStamp="25219"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="19" emailID="2385" timeStamp="25288"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="19" emailID="2384" timeStamp="25305"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="19" emailID="2383" timeStamp="25308"/>
+    <emailSelect type="0" isSeen="0" order="5" timePeriod="19" emailID="2382" timeStamp="25312"/>
+    <emailSelect type="0" isSeen="0" order="6" timePeriod="19" emailID="2381" timeStamp="25314"/>
+    <emailSelect type="0" isSeen="0" order="8" timePeriod="19" emailID="2379" timeStamp="25320"/>
+    <emailSelect type="0" isSeen="0" order="10" timePeriod="19" emailID="2377" timeStamp="25325"/>
+    <emailSelect type="0" isSeen="0" order="7" timePeriod="19" emailID="2380" timeStamp="25316"/>
+    <emailSelect type="0" isSeen="0" order="9" timePeriod="19" emailID="2378" timeStamp="25323"/>
+    <emailSelect type="0" isSeen="0" order="11" timePeriod="19" emailID="2376" timeStamp="25328"/>
+    <emailSelect type="0" isSeen="0" order="12" timePeriod="19" emailID="2375" timeStamp="25330"/>
+    <emailSelect type="0" isSeen="0" order="14" timePeriod="19" emailID="2373" timeStamp="25334"/>
+    <emailSelect type="0" isSeen="0" order="15" timePeriod="19" emailID="2372" timeStamp="25335"/>
+    <emailSelect type="0" isSeen="0" order="16" timePeriod="19" emailID="2371" timeStamp="25337"/>
+    <emailSelect type="0" isSeen="0" order="17" timePeriod="19" emailID="2370" timeStamp="25339"/>
+    <emailSelect type="0" isSeen="0" order="19" timePeriod="19" emailID="2368" timeStamp="25342"/>
+    <emailSelect type="0" isSeen="0" order="20" timePeriod="19" emailID="2367" timeStamp="25344"/>
+    <emailSelect type="0" isSeen="0" order="18" timePeriod="19" emailID="2369" timeStamp="25341"/>
+    <emailSelect type="0" isSeen="0" order="21" timePeriod="19" emailID="2366" timeStamp="25346"/>
+    <emailSelect type="0" isSeen="0" order="13" timePeriod="19" emailID="2374" timeStamp="25332"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="18" emailID="2365" timeStamp="25348"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="18" emailID="2364" timeStamp="25349"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="18" emailID="2362" timeStamp="25353"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="18" emailID="2361" timeStamp="25355"/>
+    <emailSelect type="0" isSeen="0" order="6" timePeriod="18" emailID="2359" timeStamp="25358"/>
+    <emailSelect type="0" isSeen="0" order="5" timePeriod="18" emailID="2360" timeStamp="25356"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="18" emailID="2363" timeStamp="25351"/>
+    <emailSelect type="0" isSeen="0" order="7" timePeriod="18" emailID="2358" timeStamp="25361"/>
+  </emailEvents>
+  <doubleClicks>doubleClicks
+    <doubleClick order="13" timePeriod="19" date="100102" attachment="0" timeStamp="28966">
+      <theTag isPerson="1" tagID="schedule"/>
+      <theTag isPerson="1" tagID="events"/>
+      <theTag isPerson="1" tagID="array"/>
+      <theTag isPerson="1" tagID="mail"/>
+      <theTag isPerson="1" tagID="ag"/>
+      <theTag isPerson="1" tagID="ld"/>
+    </doubleClick>
+    <doubleClick order="15" timePeriod="19" date="100102" attachment="0" timeStamp="36329">
+      <theTag isPerson="1" tagID="announcements.enron"/>
+      <theTag isPerson="1" tagID="ag"/>
+      <theTag isPerson="1" tagID="questions"/>
+      <theTag isPerson="1" tagID="ld"/>
+    </doubleClick>
+  </doubleClicks>
+  <sessionID id="asd"/>
+  <end timeStamp="37897" success="1"/>
+</emailLog>

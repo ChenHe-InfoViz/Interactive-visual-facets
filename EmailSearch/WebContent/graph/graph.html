@@ -1,0 +1,5592 @@
+
+<html>
+<head>
+<title>Email Search Graph</title>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=0" />
+<script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+<script src="js/kinetic-v4.7.4.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/underscore.js"></script>
+<script defer>
+if(getCookie("username")=="") {window.location.replace('index.html');}
+else if(getCookie("username")!="" && checkIndex(getCookie("username")) == "false" ) 
+{
+	setCookie("username","",1);
+	//alert("Inbox not found you will be directed to main page");
+	//window.location.replace('index.html');
+}
+$('#imgloader').show();
+///// SET SessionID here ///////////////////////////////////////////////////////////////////////
+
+var sessionid=getCookie("sessionid");
+if(sessionid!="" && sessionid!=null){
+    $('#startlog').hide();
+    $('#savelog').show();
+}
+
+else{
+    $('#startlog').show();
+    $('#savelog').hide();
+}
+
+
+
+/*
+if(sessionid!=""&&sessionid!=null)
+{
+	if(confirm("Do you want to update the name of existing sessionID: "+getCookie("sessionid")))
+	{
+		sessionid = prompt("Please enter new sessionID");
+		setCookie("sessionid",sessionid,1);
+	}
+}
+*/
+/*
+while(sessionid==""||sessionid==null)
+{
+	sessionid = prompt("Please enter new sessionID");
+	setCookie("sessionid",sessionid,1);
+}
+*/
+////////////////////////////////////////////////////////////////////////////////////////////////
+//// params for ajax
+var msgidrequest;
+var keywordrequest;
+var personrequest;
+
+//// params for stages and layers
+var mainStage;
+var mainLayer;
+var contentStage;
+var contentLayer;
+var noOfDisplayed = 12;
+
+/// params for user authentication
+var keyword;
+var user;
+var query = new Array();
+var querytype = new Array();
+var allSuggestions = new Array();
+
+var uniqueness=3;
+
+/// Data for TimeFrames, Nodes
+var noOfTimeFrame =20;
+var maxNodes = 35;
+var timeXStart;
+var timeXEnd;
+var TimeFrame = new Array();
+var TimeFrameBackGround = new Array();
+var TimeFrameObj = new Array();
+var TimeFrameTitle = new Array();
+var TimeFrameTitleText = new Array();
+var HorizontalLines = new Array();
+var activeHorizontalLine = null;
+var nodePositions;
+var nodePositionsReverse;
+var ENodes = new Array();
+var ENodesObj = new Array();
+var temp_ENodes = new Array();
+var temp_ENodesObj = new Array();
+var multiKey_ENodes = new Array();
+var multiKey_ENodesObj = new Array();
+var highlightedENodesObj = new Array();
+
+/// Data for Keywords, Persons
+var EKeywordsText = new Array();
+var EPersonsText = new Array();
+var EKeywordsObj = new Array();
+var EPersonsObj = new Array();
+var temp_DisplayedKeywords = new Array();
+var temp_DisplayedPersons = new Array();
+var temp_DisplayedKeywordsText = new Array();
+var temp_DisplayedPersonsText = new Array();
+var temp_temp_DisplayedKeywords = new Array();
+var temp_temp_DisplayedPersons = new Array();
+var temp_temp_DisplayedKeywordsText = new Array();
+var temp_temp_DisplayedPersonsText = new Array();
+var isCallTemporaryDisplay = false;
+var EKeywordList = new Array();
+var EKeywordTextList = new Array();
+var thetag_forstatechange = "";
+
+
+/// Data for Content Layer
+var DisplayedENodes = new Array();
+var DisplayedENodesBackGround = new Array();
+var DisplayedENodesText = new Array();
+var DisplayedENodesTextDate = new Array();
+var DisplayedENodesTextFrom = new Array();
+var DisplayedENodesTextSubject = new Array();
+var DisplayedENodesTextAttachment = new Array();
+var DisplayedENodesLineFrom = new Array();
+var DisplayedENodesLineTo = new Array();
+var DisplayedENodesColor = new Array();
+var DisplayedENodesGhost = new Array();
+
+var scrollBar;
+
+/// Data upper left text appearance;
+var selectedObj = new Array();
+
+/// Circle follows cursor
+var circlecursor;
+var linecursor;
+
+/// data for hidden period
+var biggestmsgid;
+var smallestmsgid;
+var biggestdate;
+var smallestdate;
+var expandableMonth = new Array();
+var beforeIndicator = null;
+var afterIndicator = null;
+var isHiddenPieceSelected = false;
+var typeHiddenPieceSelected = '';
+var textIndicator;
+var rectIndicator;
+var selectedhiddenpiece = "";
+var selectedExpTime = null;
+var dateSuggestions =  new Array();
+
+///visual params
+var visMode = getCookie("visMode");
+var keywordPersonFontSize=20;
+var monthFontSize=14;
+var monthTopPadding=4;
+var keywordPersonMeasure;
+var contentFontSize;
+var keywordY;
+var personY;
+var mainBG_Y;	
+var measureUnit;
+var betweenLimits;
+var fancyFont = ['Inconsolata', 'Tahoma', 'monospace'];
+var fancyFontStyle = 'bold';
+
+var sideMargin;
+var smallmonthsize = 5;
+var ratioMainStage=0.65;
+var ratioUpperBar = 0.047;
+var ratioMenuBar = 0.03;
+var yearMargin = 2;
+var beforeAfterY;
+var beforeAfterHeight;
+var lowerLimit;
+var upperLimit;
+var deathLimit;
+var filterBar;
+var monthHeight=30;
+var monthWidth=60;
+var monthMargin=0;
+var cursorMargin = 60;
+var contentTopMargin;
+
+var tagMargin =4;
+
+//color parameters
+var blueColor = '#2E9AFE';
+var faintedLightBlue = '#2E9AFE';
+var faintedBlue = '#1b4057';
+var colorMonth = '#E8DDDD';
+var colorMonth2 = '#DDDDE8';
+var colorMonthButton = 'grey';
+var colorYear = 'grey';
+var colorLightBlue='#C0F5FF';
+
+var gradientMail = [0, '#F4F4F4', 1, '#E4E4E4'];
+var gradientMonth = [0, '#EEEEEE', 1, '#AAAAAA'];
+
+var colorKeywordText = 'white';
+var colorPersonText = '111111';
+
+//var colorKeywordBackground = '#DDDDEE';
+var colorKeywordBackground = '111111';
+var colorPersonBackground= 'white';
+
+var unSeenNode = 'black';
+var seenNode = '#BDBDBD';
+var backgroundColor='#333333';
+
+var timeColorSelected = '#FFFFFF';
+var timeColor = '#EFEFEF';
+
+var colorcode = [];
+for(var i=0; i<noOfDisplayed; i++){
+    colorcode.push("hsl(310," + Math.floor(100-i*(90/noOfDisplayed)) + "\%," + Math.floor(30+i*(45/noOfDisplayed))+ "\%)");
+}
+
+/// extra params
+var _screenWidth;
+var _screenHeight;
+var activeShape=null;
+var lastDist = 0;
+var isKeywordReady = false;
+var isMouseClick = false;
+
+var timeSelected = null;
+var timeSelectedOld = null;
+var timeLocked = null;
+var justLocked = null;
+var isTimeChange = false;
+
+var keywordIsPressed = false;
+var personIsPressed = false;
+var timeFrameLocked = -1;
+var selectedENodes = new Array();
+var selectedENodesAttachedImg = new Array();
+var selectedkeyword = null;
+var selectedperson = null;
+var selectedto = false;
+var selectedfrom = false;
+var senderLines = new Array();
+var recipientLines = new Array();
+var allLines = new Array();
+var originalPos = null;
+var popup_data=null;
+
+var popUpWin;
+var timeOut;
+
+/*
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET","general.xml",false);
+xmlhttp.send();
+var xmlDoc=xmlhttp.responseXML; 
+var rootPath = xmlDoc.getElementsByTagName("PATH")[0].childNodes[0].nodeValue;
+*/
+
+
+var rootPath = "/Users/chenhe/eclipse-workspace/EmailSearch/WebContent/graph/";
+//var rootPath = "tomcat7/webapps/EmailSearch/";
+var timestamp = getCookie("timestamp");
+
+$(document).ready( function() {
+    _screenWidth = window.innerWidth;
+	_screenHeight = window.innerHeight;
+	document.ontouchmove = function(e) {e.preventDefault()};
+	$("#welcome").html("welcome "+ getCookie("username")+"!");
+    $("#account").html(getCookie("username"));
+
+    var sessionid=getCookie("sessionid");
+    if(sessionid!="" && sessionid!=null){
+        $('#logout').hide();
+        $('#account').hide();
+        $('#changeMode').hide();
+        $('#startlog').hide();
+    }
+    
+
+    timeOut = setInterval(function () {checkTimeOut();}, 1000);
+
+    var areaText =1-ratioMainStage;
+    //understand if baseline mode
+    if(visMode=="baseline"){
+        areaText = 0.955;
+        noOfDisplayed = Math.floor((_screenHeight*(areaText))/30);
+    }
+
+    /// INITIALIZE ALL 4 STAGES AND LAYERS
+    mainStage = new Kinetic.Stage({
+		container: 'visual_space',
+		width: _screenWidth,
+		height: _screenHeight*ratioMainStage,
+		});
+    contentStage= new Kinetic.Stage({
+		container: 'visual_space2',
+		width: _screenWidth,
+		height: _screenHeight*(areaText),
+		});
+
+    	//determine the font sizes and other parameters
+	keywordPersonFontSize = Math.floor(mainStage.getHeight()*1/30);
+	 if(keywordPersonFontSize<16){
+    	keywordPersonFontSize=16;
+    }
+
+	keywordPersonMeasure=keywordPersonFontSize+tagMargin*2;
+
+
+    //contentFontSize = Math.floor(mainStage.getHeight()/65);
+    contentFontSize = Math.floor(_screenHeight/80);
+        if(contentFontSize<12){
+    	contentFontSize=12;
+    }
+    
+    monthFontSize= mainStage.getHeight()/40;
+
+    if(monthFontSize<14){
+    	monthFontSize=14;
+    }
+
+    monthHeight=monthFontSize+ monthTopPadding*3;
+
+	//upperLimit = mainStage.getHeight()*1/15+mainStage.getHeight()*1/60;
+	filterBar = mainStage.getHeight()-_screenHeight*ratioUpperBar;
+	upperLimit = monthHeight+4;
+	sideMargin=mainStage.getWidth()*1/50;
+
+	//mainBG_Y = mainStage.getHeight()*13/15;	
+	lowerLimit = filterBar-keywordPersonMeasure*3.2;
+	deathLimit = filterBar-keywordPersonMeasure/2;
+	mainBG_Y = filterBar-keywordPersonMeasure*2.8;	
+	personY = filterBar-keywordPersonMeasure*2.8;
+	keywordY = filterBar-keywordPersonMeasure*1.5,
+	betweenLimits = lowerLimit-upperLimit;
+    measureUnit= Math.floor(betweenLimits/140);
+    console.log(measureUnit);
+
+
+	beforeAfterHeight = (filterBar)/3;
+    beforeAfterY = filterBar/2-beforeAfterHeight/2;
+    if(visMode=="baseline") beforeAfterY = _screenHeight*(areaText/2)-beforeAfterHeight/2;
+	
+
+	//mainBG_Y = mainStage.getHeight()*12/15;	
+	//personY = mainStage.getHeight()*12.22/15;
+	//keywordY = mainStage.getHeight()*13.2/15;	
+
+    if(contentFontSize<10){
+    	contentFontSize=10;
+    }
+   
+    drawBackground();
+
+	user = {name: getCookie("username")};
+	sendLogs(user.name, (new Date).toString()+" " +user.name+" Login : ", "login");
+	
+	initialSearch('','initial');
+	initializeContentLayer();
+	balanceENodes();
+	drawExpandableTimeLineSelection();
+	drawENodes();	
+	////// LOG current state of interface//////
+	logState();
+	///////////END LOGGING///////////////////////////////////////
+	initialSelectedENodes();
+	normalSelectEvent();
+
+	//enable scroling from both textual and graphical area
+	$("#visual_space2").mousewheel(function(event, delta, deltaX, deltaY){
+        scrollFunction(event, delta, deltaX, deltaY)
+	});
+
+    $("#visual_space").mousewheel(function(event, delta, deltaX, deltaY){
+        scrollFunction(event, delta, deltaX, deltaY);  
+    });
+
+    function scrollFunction(event, delta, deltaX, deltaY){
+        //scroll only if there are more nodes than what is possible to show
+        if(nodePositionsReverse.length>noOfDisplayed){
+            //determine the number of scroll based on visualization mode
+            var amount = 1;
+            if(visMode == "baseline") {amount = 10};
+
+            //scroll
+            for(var i=0; i<amount; i++){
+                var newest= DisplayedENodesText[0].getName();
+                var oldest= DisplayedENodesText[DisplayedENodes.length-1].getName();
+
+                //console.log(newest + " " + 0);
+                //if(visMode == ""){newest=0;}
+
+                //$("#keyword").val(DisplayedENodes[0].NodePos.column+"-"+DisplayedENodes[0].NodePos.row);
+                //// SCROLL UP///////////////
+                if( delta==1 && (DisplayedENodes[newest].NodePos.column!=noOfTimeFrame-1 || DisplayedENodes[newest].NodePos.row!=0) )
+                {
+                    scrollUp(oldest, newest);       
+                }
+                ////////SCROLL DOWN////////////
+                if( delta==-1 && (DisplayedENodes[oldest].NodePos.column!=0 || DisplayedENodes[oldest].NodePos.row!=ENodes[0].length-1) )
+                {
+                    scrollDown(oldest, newest);
+                }
+
+                if(amount>1){showSelectedENodesMini();}
+            }
+            showSelectedENodes();
+            if(visMode == "baseline"){contentLayer.batchDraw();}
+            if(visMode == "") {mainLayer.batchDraw();}
+        }
+    }
+
+    function scrollUp(oldest, newest){
+        /// scroll up 1 row/////
+        if(visMode == ""){newest=0;}
+        var columnToScrollUp = DisplayedENodes[newest].NodePos.column;
+        var rowToScrollUp = DisplayedENodes[newest].NodePos.row - 1;
+        /// if row == 0 scroll to right next column last row  /////
+        while(!notYetDisplayed(ENodesObj[columnToScrollUp][rowToScrollUp])) rowToScrollUp--;
+        if(rowToScrollUp == -1)
+        {
+            columnToScrollUp = DisplayedENodes[newest].NodePos.column+1;
+            /// if column empty move to next column AND if all next columns are empty then do nothing////////////
+            while(ENodesObj[columnToScrollUp].length==0||!columnToScrollUp>=noOfTimeFrame-1) columnToScrollUp++;
+            if(columnToScrollUp>=noOfTimeFrame) return;
+            rowToScrollUp = ENodes[columnToScrollUp].length-1;
+        }
+
+        var deselectedEnodes;
+        
+        if(visMode=="baseline"){
+            deselectedEnodes = selectedENodes[oldest];
+            selectedENodes.splice(oldest,1);
+            DisplayedENodes.splice(oldest,1);
+        }
+        else{
+            deselectedEnodes  = selectedENodes.pop();
+            DisplayedENodes.pop();
+        }
+        
+        deselectedEnodes.setRadius(measureUnit);
+        deselectedEnodes.setFill('#BDBDBD');
+        
+        DisplayedENodes.unshift(ENodes[columnToScrollUp][rowToScrollUp]);
+        selectedENodes.unshift(ENodesObj[columnToScrollUp][rowToScrollUp]);
+
+        for(var i=0; i<DisplayedENodes.length; i++){
+            if(HorizontalLines[DisplayedENodes[i].NodePos.column][DisplayedENodes[i].NodePos.row].isVisible());
+            HorizontalLines[DisplayedENodes[i].NodePos.column][DisplayedENodes[i].NodePos.row].setVisible(false);
+        }
+        
+        /////////LOG Email Events SCROLL /////////////////////////
+        var isSeen = "0";
+        if(ENodesObj[columnToScrollUp][rowToScrollUp].getFill() == '#BDBDBD')
+        isSeen = "1";
+        logEmailEvents("6", isSeen, rowToScrollUp+"", columnToScrollUp+"");
+        ///////////////////////////////////////////////////////
+    }
+
+    function scrollDown(oldest, newest){
+        if(visMode == ""){oldest=0;}
+        /// scroll down 1 row/////
+        var columnToScrollDown = DisplayedENodes[oldest].NodePos.column;
+        var rowToScrollDown = DisplayedENodes[oldest].NodePos.row + 1;
+        /// if row == maxrow scroll to left next column first row  /////
+        while(!notYetDisplayed(ENodesObj[columnToScrollDown][rowToScrollDown])) rowToScrollDown++;
+        if(rowToScrollDown == ENodes[columnToScrollDown].length)
+        {
+            columnToScrollDown = DisplayedENodes[oldest].NodePos.column-1;
+            /// if column empty move to next column AND if all next columns are empty then do nothing////////////
+            while(ENodesObj[columnToScrollDown].length==0||!columnToScrollDown<0) columnToScrollDown--;
+            if(columnToScrollDown<0) return;
+            rowToScrollDown = 0;
+        }
+
+        var deselectedEnodes;
+        
+        if(visMode=="baseline"){
+            deselectedEnodes = selectedENodes[oldest];
+            selectedENodes.splice(newest,1);
+            DisplayedENodes.splice(newest,1);
+        }
+        else{
+            deselectedEnodes  = selectedENodes.pop();
+            DisplayedENodes.pop();
+        }
+
+        deselectedEnodes.setRadius(measureUnit);
+        deselectedEnodes.setFill('#BDBDBD');
+
+        DisplayedENodes.unshift(ENodes[columnToScrollDown][rowToScrollDown]);
+        selectedENodes.unshift(ENodesObj[columnToScrollDown][rowToScrollDown]);
+
+        for(var i=0; i<DisplayedENodes.length; i++){
+            if(HorizontalLines[DisplayedENodes[i].NodePos.column][DisplayedENodes[i].NodePos.row].isVisible());
+                HorizontalLines[DisplayedENodes[i].NodePos.column][DisplayedENodes[i].NodePos.row].setVisible(false);
+        }
+            
+        /////////LOG Email Events SCROLL /////////////////////////
+        var isSeen = "0";
+        if(ENodesObj[columnToScrollDown][rowToScrollDown].getFill() == '#BDBDBD')
+            isSeen = "1";
+        logEmailEvents("6", isSeen, rowToScrollDown+"", columnToScrollDown+"");
+        ///////////////////////////////////////////////////////
+    }
+	
+	
+	$('#search').click(function() {
+	 	if($("#keyword").val()!="Search" && $("#keyword").val()!="")
+	 	{
+
+            //query = [];
+            //querytype = [];
+
+	 		if(isDateSuggestion($("#keyword").val())){
+                //console.log(giveTimeRange($("#keyword").val()));
+                newSearchToExpandHiddenPeriod(giveTimeRange($("#keyword").val()));
+            }
+            else{
+                enterQuery(event);
+            }
+	 	}
+	});
+
+	$('#keyword').keyup(function(event){
+        if(isDateSuggestion($("#keyword").val()))
+        {
+             $("#keyword").css('color', 'blue');
+             $("#keyword").css('font-weight', 'bold');
+             
+        }
+        else{
+            $("#keyword").css('color', '#222222');
+            $("#keyword").css('font-weight', 'normal');
+        }
+
+	 	if($("#keyword").val()!="Search" && $("#keyword").val()!="" && event.which == 13)
+	 	{
+            $("#keyword").css('color', '#222222');
+            $("#keyword").css('font-weight', 'normal');
+
+            if(isDateSuggestion($("#keyword").val())){
+                //console.log(giveTimeRange($("#keyword").val()));
+                newSearchToExpandHiddenPeriod(giveTimeRange($("#keyword").val()));
+            }
+            else{
+                enterQuery(event);
+            }
+	 		
+	 	}
+	});
+
+    function enterQuery(event){
+        event.preventDefault();
+        var temp = $("#keyword").val();
+        var newquery = $("#keyword").val().split(" ");
+
+        for(var i=0; i<newquery.length; i++)
+        {
+            query.push(newquery[i]);
+            querytype.push(0);
+        }
+
+        newSearch();
+    }
+
+});
+
+function drawBackground(){
+
+    mainLayer = new Kinetic.Layer();
+    contentLayer = new Kinetic.Layer();
+
+    var mainBG1 = new Kinetic.Rect({
+        x: 0,
+        y: 0,
+        width: mainStage.getWidth(),
+        height : mainStage.getHeight(),
+        fill: 'black',
+    });
+    
+    var mainBG2 = new Kinetic.Rect({
+        x: 0,
+        y: 0,
+        width: mainStage.getWidth(),
+        height : mainStage.getHeight(),
+        fill: backgroundColor,
+    });
+    
+    var mainBlueLine = new Kinetic.Rect({
+        x: 0,
+        y: filterBar,
+        width: mainStage.getWidth(),
+        height : 4,
+        fill: '#2E9AFE',
+    });
+
+    var mainBlackLine = new Kinetic.Rect({
+        x: 0,
+        y: 0,
+        width: mainStage.getWidth(),
+        height : 4,
+        fill: '#151515',
+    });
+
+     var blueBackground = new Kinetic.Rect({
+        x: 0,
+        y: filterBar,
+        width: mainStage.getWidth(),
+        height : _screenHeight*ratioUpperBar,
+        fill: '#1b4057',
+        //fill: timeColor,
+    });
+    
+    var contentBG = new Kinetic.Rect({
+        x: 0,
+        y: 0,
+        width: contentStage.getWidth(),
+        height : contentStage.getHeight(),
+        fill: 'white',
+    });
+    
+    var personRect = new Kinetic.Rect({
+        x: 0,
+        y: mainBG_Y,
+        width: mainStage.getWidth(),
+        height : keywordY-personY,
+        fill: '#151515',
+    });
+    
+    circlecursor = new Kinetic.Rect({
+        x: 0,
+        y: filterBar - keywordPersonFontSize-5,
+        width:20,
+        //radius: 20,
+        height :keywordPersonFontSize + 5,
+        fill: blueColor,
+        opacity: 0.5,
+    });
+
+    linecursor = new Kinetic.Line({
+        points: [0,filterBar,0,mainStage.getHeight()],
+        stroke: '#2E9AFE',
+        strokeWidth: 4,
+        opacity: 0.5,
+    });
+
+    
+    mainLayer.add(mainBG1);
+    mainLayer.add(mainBG2);
+    //mainLayer.add(personRect);
+    mainLayer.add(blueBackground);
+    mainLayer.add(mainBlueLine);
+    mainLayer.add(mainBlackLine);
+    contentLayer.add(contentBG);
+    
+    var X = mainStage.getWidth()*1/50;
+    var W = (mainStage.getWidth()-(mainStage.getWidth()*2/50))/noOfTimeFrame;
+    for(var i=0; i<noOfTimeFrame; i++)
+    {
+        var title = new Kinetic.Rect({
+            x: X,
+            y: upperLimit,
+            width: W,
+            height : monthHeight,
+            fill: '#D8D8D8',
+            stroke: '#2E2E2E',
+            strokeWidth: 0.5,
+        });
+
+        var date = new Kinetic.Text({
+            x: X,
+            width: W,
+            y: upperLimit+monthHeight-12,
+            fill: '#444444',
+            align: 'right',
+        });
+
+        var rect = new Kinetic.Rect({
+            x: X,
+            y: upperLimit+monthHeight,
+            width: W,
+            height : mainBG_Y - upperLimit- monthHeight,
+            fill: 'white',
+            name: "timeframe"+i,
+            opacity: 0,
+        });
+        var rect_bg = new Kinetic.Rect({
+            x: X+monthMargin,
+            y: upperLimit+monthHeight,
+            width: W-monthMargin*2,
+            height : 5,
+            fill: timeColor,
+            name: "timeframe"+i,
+            stroke: '#2E2E2E',
+            strokeWidth: 0.1,
+        });
+        
+        
+        
+        X+=(W);
+        mainLayer.add(title);
+        mainLayer.add(rect);
+        mainLayer.add(date);
+        mainLayer.add(rect_bg);
+        TimeFrameObj.push(rect);
+        TimeFrameTitleText.push(date);
+        TimeFrameBackGround.push(rect_bg);
+        TimeFrameTitle.push(title);
+        HorizontalLines.push(new Array());
+        ENodes.push(new Array());
+        ENodesObj.push(new Array());
+        temp_ENodes.push(new Array());
+        temp_ENodesObj.push(new Array());
+        senderLines.push(new Array());
+        recipientLines.push(new Array());
+        multiKey_ENodes.push(new Array());
+        multiKey_ENodesObj.push(new Array());
+        EKeywordList.push(new Array());
+        EKeywordTextList.push(new Array());
+    }
+    
+    textIndicator = new Kinetic.Text({
+        x: 0,
+        y: mainStage.getHeight()/15+mainStage.getHeight()/10,
+        fill: 'white',
+        padding: 3,
+    });
+    rectIndicator = new Kinetic.Rect({
+        x: textIndicator.getX(),
+        y: textIndicator.getY(),
+        width: textIndicator.getWidth(),
+        height: textIndicator.getHeight(),
+        fill: '#2E9AFE',
+    });
+    textIndicator.setVisible(false);
+    rectIndicator.setVisible(false);
+    mainLayer.add(rectIndicator);
+    mainLayer.add(textIndicator);
+    
+    mainStage.add(mainLayer);
+    contentStage.add(contentLayer);
+}
+
+
+function initialSearch(string, type)
+{
+	if(type == 'initial')
+	{
+		sendLogs(user.name, " - INITIAL SEARCH - ", " ");
+		msgidrequest = $.ajax({
+		    type: 'GET',
+		    url: 'initialmsgid.jsp',
+		    data: {"name":user.name},
+		    cache: false,
+			async: false,
+		    success: function(msg) {
+		    	// IF empty result, exit
+		    	//if(msg.replace(/\s/g, '')=="") {$('#imgloader').hide(); alert("NO RESULTS");return;}
+		    	if(msg.replace(/\s/g, '')=="") {$('#imgloader').hide(); return;}
+
+		    	var json = JSON.parse(msg)[0];
+		    	json = sort_object(json);
+		    	var firstdate;
+		    	var lastdate;
+		    	for(var key in json)
+				{
+					firstdate = json[key]["date"].split(" ");
+					biggestmsgid = json[key]["biggestmsgid"];
+					smallestmsgid = json[key]["smallestmsgid"];
+					biggestdate = json[key]["biggestdate"];
+					smallestdate = json[key]["smallestdate"];
+					break;
+				}
+		    	firstdate = new Date(firstdate[2], convertMonth(firstdate[0]), firstdate[1]);
+		    	
+		    	for(var key in json)
+				lastdate = json[key]["date"].split(" ");
+				lastdate = new Date(lastdate[2], convertMonth(lastdate[0]), lastdate[1]);
+				var days_difference = days_between(firstdate,lastdate);
+				
+				var division = Math.ceil(days_difference/(noOfTimeFrame+1));
+				TimeFrame[0]=new Date(firstdate);
+				for(var i=1; i<TimeFrameObj.length; i++)
+				{
+					TimeFrame[i]=new Date(TimeFrame[i-1]);
+					TimeFrame[i].setDate(TimeFrame[i].getDate()+division);
+				}
+				TimeFrame[noOfTimeFrame]=new Date(lastdate);
+				TimeFrame[noOfTimeFrame].setDate(TimeFrame[noOfTimeFrame].getDate());
+				
+				for(var key in json)
+				{
+					// PUT ALL MESSAGES RECEIVED FROM SERVER INTO AN ARRAY OF OBJECTS
+					var msgid = key;
+					var d = json[key]["date"].split(" ");
+					var date = new Date(d[2],convertMonth(d[0]),d[1]);
+					var object = {month: convertMonth(d[0]), day: d[1], year:d[2], name: key, text: date, subject: json[key]["subject"],
+									relevance: json[key]["relevance"], content: json[key]["content"], from: json[key]["from"] ,
+									to: json[key]["to"], attachment: json[key]["attachment"], color: '#60EEEE',
+									NodePos:{row:"0",column:"0"} };
+					for(var i=0; i<TimeFrameObj.length; i++)
+					{
+						if(date>=TimeFrame[i]&&date<=TimeFrame[i+1])
+						{	
+							ENodes[i].push(object);
+							break;
+						}
+					}
+				}
+				
+				//// reverse array to most recent first
+				for(var i=0; i<TimeFrameObj.length; i++)
+				{
+					ENodes[i].reverse();
+				}
+			}
+		});
+		
+		personrequest = $.ajax({
+		    type: 'GET',
+		    url: 'initialperson.jsp',
+		    data: {"name":user.name},
+		    cache: false,
+			async: true,
+		    success: function(msg) {
+		    	var json = JSON.parse(msg)[0];
+		    	for(var key in json)
+		    	{
+		    		var data = {text: key, relevance: json[key]};
+		    		preparePersons(data);
+		    	}
+		    	drawPersons(EPersonsObj, EPersonsText, thetag_forstatechange);
+                addSuggestions(EPersonsText);
+                logTagShown(thetag_forstatechange);
+			}
+		});
+		
+		keywordrequest = $.ajax({
+		    type: 'GET',
+		    url: 'initialkeyword.jsp',
+		    data: {"name":user.name},
+		    cache: false,
+			async: true,
+		    success: function(msg) {
+		    	var json = JSON.parse(msg)[0];
+		    	for(var key in json)
+		    	{
+		    		var data = {text: key, relevance: json[key]};
+		    		prepareKeywords(data);
+		    	}
+		    	drawKeywords(EKeywordsObj, EKeywordsText, thetag_forstatechange);
+                addSuggestions(EKeywordsText);
+		    	mainLayer.batchDraw();
+		    	
+		    	//$("#logout").attr("href","logout.html");
+		    	$('#imgloader').hide();
+		    	
+		    	
+		    	/// prepare keyword list for each timeframe
+				for(var i=0; i<noOfTimeFrame; i++)
+				{
+			    	var content ="";
+					for (var u=0; u<ENodes[i].length; u++)
+					{
+						content = content+" "+ENodes[i][u].content;
+					}
+                    var counter=0;
+					for(var k=uniqueness; k<EKeywordsText.length; k++)
+					{
+						if(content.toLowerCase().indexOf(EKeywordsText[k].getText()) != -1)
+						{
+							EKeywordList[i].push(EKeywordsObj[k]);
+							EKeywordTextList[i].push(EKeywordsText[k]);
+                            counter++;
+                            if(counter>5){
+                                break;
+                            }
+						}
+					}
+				}
+                isKeywordReady = true;
+				//////////// LOG TAGS SHOWN WHEN STATE CHANGED //////////////////
+				logTagShown(thetag_forstatechange);
+				////////////////END LOG/////////////////////////////////////////
+				
+			}
+		});
+	}
+	else if (type == 'normal')
+	{
+		//sendLogs(user.name, " - NORMAL SEARCH - ", " ");
+		msgidrequest = $.ajax({
+		    type: 'GET',
+		    url: 'msgid.jsp',
+		    data: {"query": string, "name":user.name},
+		    cache: false,
+			async: false,
+		    success: function(msg) {
+		    	// IF empty result, exit
+		    	//if(msg.replace(/\s/g, '')=="") {$('#imgloader').hide(); alert("NO RESULTS"); return;}
+                if(msg.replace(/\s/g, '')=="") {$('#imgloader').hide(); return;}
+		    	
+		    	var json = JSON.parse(msg)[0];
+		    	json = sort_object(json);
+		    	var firstdate;
+		    	var lastdate;
+		    	for(var key in json)
+				{
+					firstdate = json[key]["date"].split(" ");
+					biggestmsgid = json[key]["biggestmsgid"];
+					smallestmsgid = json[key]["smallestmsgid"];
+					biggestdate = json[key]["biggestdate"];
+					smallestdate = json[key]["smallestdate"];
+					break;
+				}
+		    	firstdate = new Date(firstdate[2], convertMonth(firstdate[0]), firstdate[1]);
+		    	
+		    	for(var key in json)
+				lastdate = json[key]["date"].split(" ");
+				lastdate = new Date(lastdate[2], convertMonth(lastdate[0]), lastdate[1]);
+				var days_difference = days_between(firstdate,lastdate);
+				
+				var division = Math.ceil(days_difference/(noOfTimeFrame+1));
+				TimeFrame[0]=new Date(firstdate);
+				for(var i=1; i<TimeFrameObj.length; i++)
+				{
+					TimeFrame[i]=new Date(TimeFrame[i-1]);
+					TimeFrame[i].setDate(TimeFrame[i].getDate()+division);
+				}
+				TimeFrame[noOfTimeFrame]=new Date(lastdate);
+				TimeFrame[noOfTimeFrame].setDate(TimeFrame[noOfTimeFrame].getDate());
+				
+				for(var key in json)
+				{
+					// PUT ALL MESSAGES RECEIVED FROM SERVER INTO AN ARRAY OF OBJECTS
+					var msgid = key;
+					var d = json[key]["date"].split(" ");
+					var date = new Date(d[2],convertMonth(d[0]),d[1]);
+					var object = {month: convertMonth(d[0]), day: d[1], year:d[2], name: key, text: date, subject: json[key]["subject"],
+									relevance: json[key]["relevance"], content: json[key]["content"], from: json[key]["from"] ,
+									to: json[key]["to"], attachment: json[key]["attachment"], color: '#60EEEE',
+									NodePos:{row:"0",column:"0"} };
+					for(var i=0; i<TimeFrameObj.length; i++)
+					{
+						if(date>=TimeFrame[i]&&date<=TimeFrame[i+1])
+						{	
+							ENodes[i].push(object);
+							break;
+						}
+					}
+				}
+				//// reverse array to most recent first
+				for(var i=0; i<TimeFrameObj.length; i++)
+				{
+					ENodes[i].reverse();
+				}
+			}
+		});
+		
+		personrequest = $.ajax({
+		    type: 'GET',
+		    url: 'person.jsp',
+		    data: {"query": string, "name":user.name},
+		    cache: false,
+			async: true,
+		    success: function(msg) {
+		    	// IF empty result, exit
+		    	if(msg.replace(/\s/g, '')=="") {$('#imgloader').hide(); return;}
+		    	
+		    	var json = JSON.parse(msg)[0];
+		    	for(var key in json)
+		    	{
+		    		var data = {text: key, relevance: json[key]};
+		    		preparePersons(data);
+		    	}
+		    	drawPersons(EPersonsObj, EPersonsText, thetag_forstatechange);
+                addSuggestions(EPersonsText);
+                logTagShown(thetag_forstatechange);
+			}
+		});
+		
+		keywordrequest = $.ajax({
+		    type: 'GET',
+		    url: 'keyword.jsp',
+		    data: {"query": string, "name":user.name},
+		    cache: false,
+			async: true,
+		    success: function(msg) {
+		    	var json = JSON.parse(msg)[0];
+		    	for(var key in json)
+		    	{
+		    		var data = {text: key, relevance: json[key]};
+		    		prepareKeywords(data);
+		    	}
+		    	drawKeywords(EKeywordsObj, EKeywordsText, thetag_forstatechange);
+                addSuggestions(EKeywordsText);
+		    	mainLayer.batchDraw();
+
+		    	
+		    	//$("#logout").attr("href","logout.html");
+		    	$('#imgloader').hide();
+
+			/// prepare keyword list for each timeframe
+				for(var i=0; i<noOfTimeFrame; i++)
+				{
+			    	var content ="";
+					for (var u=0; u<ENodes[i].length; u++)
+					{
+						content = content+" "+ENodes[i][u].content;
+					}
+
+                    var counter=0;
+					for(var k=uniqueness; k<EKeywordsText.length; k++)
+					{
+						if(content.toLowerCase().indexOf(EKeywordsText[k].getText()) != -1)
+						{
+							EKeywordList[i].push(EKeywordsObj[k]);
+							EKeywordTextList[i].push(EKeywordsText[k]);
+                            counter++;
+                            if(counter>5){
+                                break;
+                            }
+						}
+					}
+				}
+                isKeywordReady = true;
+				//////////// LOG TAGS SHOWN WHEN STATE CHANGED //////////////////
+				logTagShown(thetag_forstatechange)
+				////////////////END LOG/////////////////////////////////////////
+
+			}
+		});
+	}
+	else if (type == 'range')
+	{
+		sendLogs(user.name, " - TIMELINE SEARCH - ", " ");
+		var newquery = "";
+		for(var i=0; i<query.length;i++)
+		{
+			newquery+=(query[i]+" ");
+		}
+		//alert(newquery);
+		msgidrequest = $.ajax({
+		    type: 'GET',
+		    url: 'rangemsgid.jsp',
+		    data: {"name":user.name, "low":string.low, "high":string.high, "query" : newquery, "rangetype" : string.rangetype, "begin":string.begin},
+		    cache: false,
+			async: false,
+		    success: function(msg) {
+		    	// IF empty result, exit
+		    	//if(msg.replace(/\s/g, '')=="") {$('#imgloader').hide(); alert("NO RESULTS"); return;}
+                if(msg.replace(/\s/g, '')=="") {$('#imgloader').hide(); return;}
+		    	
+		    	var json = JSON.parse(msg)[0];
+		    	json = sort_object(json);
+		    	var firstdate;
+		    	var lastdate;
+		    	for(var key in json)
+				{
+					firstdate = json[key]["date"].split(" ");
+					biggestmsgid = json[key]["biggestmsgid"];
+					smallestmsgid = json[key]["smallestmsgid"];
+					biggestdate = json[key]["biggestdate"];
+					smallestdate = json[key]["smallestdate"];
+					break;
+				}
+		    	firstdate = new Date(firstdate[2], convertMonth(firstdate[0]), firstdate[1]);
+		    	
+		    	for(var key in json)
+				lastdate = json[key]["date"].split(" ");
+				lastdate = new Date(lastdate[2], convertMonth(lastdate[0]), lastdate[1]);
+				var days_difference = days_between(firstdate,lastdate);
+				
+				var division = Math.ceil(days_difference/(noOfTimeFrame+1));
+				TimeFrame[0]=new Date(firstdate);
+				for(var i=1; i<TimeFrameObj.length; i++)
+				{
+					TimeFrame[i]=new Date(TimeFrame[i-1]);
+					TimeFrame[i].setDate(TimeFrame[i].getDate()+division);
+				}
+				TimeFrame[noOfTimeFrame]=new Date(lastdate);
+				TimeFrame[noOfTimeFrame].setDate(TimeFrame[noOfTimeFrame].getDate());
+				
+				for(var key in json)
+				{
+					// PUT ALL MESSAGES RECEIVED FROM SERVER INTO AN ARRAY OF OBJECTS
+					var msgid = key;
+					var d = json[key]["date"].split(" ");
+					var date = new Date(d[2],convertMonth(d[0]),d[1]);
+					var object = {month: convertMonth(d[0]), day: d[1], year:d[2], name: key, text: date, subject: json[key]["subject"],
+									relevance: json[key]["relevance"], content: json[key]["content"], from: json[key]["from"] ,
+									to: json[key]["to"], attachment: json[key]["attachment"], color: '#60EEEE',
+									NodePos:{row:"0",column:"0"} };
+					for(var i=0; i<TimeFrameObj.length; i++)
+					{
+						if(date>=TimeFrame[i]&&date<=TimeFrame[i+1])
+						{	
+							ENodes[i].push(object);
+							break;
+						}
+					}
+				}
+				//// reverse array to most recent first
+				for(var i=0; i<TimeFrameObj.length; i++)
+				{
+					ENodes[i].reverse();
+				}
+			}
+		});
+		
+		personrequest = $.ajax({
+		    type: 'GET',
+		    url: 'rangeperson.jsp',
+		    data: {"name":user.name, "low":string.low, "high":string.high, "query":newquery, "rangetype":string.rangetype, "begin":string.begin},
+		    cache: false,
+			async: true,
+		    success: function(msg) {
+		    	var json = JSON.parse(msg)[0];
+		    	for(var key in json)
+		    	{
+		    		var data = {text: key, relevance: json[key]};
+		    		preparePersons(data);
+		    	}
+		    	drawPersons(EPersonsObj, EPersonsText, thetag_forstatechange);
+                addSuggestions(EPersonsText);
+			}
+		});
+		
+		keywordrequest = $.ajax({
+		    type: 'GET',
+		    url: 'rangekeyword.jsp',
+		    data: {"name":user.name, "low":string.low, "high":string.high, "query":newquery, "rangetype":string.rangetype, "begin":string.begin},
+		    cache: false,
+			async: true,
+		    success: function(msg) {
+		    	var json = JSON.parse(msg)[0];
+		    	for(var key in json)
+		    	{
+		    		var data = {text: key, relevance: json[key]};
+		    		prepareKeywords(data);
+		    	}
+		    	drawKeywords(EKeywordsObj, EKeywordsText, thetag_forstatechange);
+                addSuggestions(EKeywordsText);
+		    	mainLayer.batchDraw();
+
+		    	
+		    	//$("#logout").attr("href","logout.html");
+		    	$('#imgloader').hide();
+			/// prepare keyword list for each timeframe
+				for(var i=0; i<noOfTimeFrame; i++)
+				{
+			    	var content ="";
+					for (var u=0; u<ENodes[i].length; u++)
+					{
+						content = content+" "+ENodes[i][u].content;
+					}
+                    var counter=0;
+					for(var k=uniqueness; k<EKeywordsText.length; k++)
+					{
+						if(content.toLowerCase().indexOf(EKeywordsText[k].getText()) != -1)
+						{
+							EKeywordList[i].push(EKeywordsObj[k]);
+							EKeywordTextList[i].push(EKeywordsText[k]);
+                            counter++;
+                            if(counter>5){
+                                break;
+                            }
+						}
+					}
+				}
+                isKeywordReady = true;
+				//////////// LOG TAGS SHOWN WHEN STATE CHANGED //////////////////
+				logTagShown(thetag_forstatechange);
+				////////////////END LOG/////////////////////////////////////////
+
+			}
+		});
+	}
+}
+
+function addSuggestions(theSuggestionsText){
+    for(var i=0; i<theSuggestionsText.length; i++)
+    {
+        var option = $('<option value="'+theSuggestionsText[i].getText()+'"></option>');
+        $('#suggestions').append(option);
+    }
+}
+
+function normalSelectEvent()
+{
+
+	mainStage.getContent().addEventListener('mousedown', function(evt) {
+		isMouseClick = true;
+		if(!personIsPressed && !keywordIsPressed ) //&& timeSelected==null
+		{
+			sendLogs(user.name, " - NORMAL SELECTION  - ", "newline");
+		}
+
+        //add the function for mouseclick selection
+        if(timeSelected!=null&&!keywordIsPressed&&!personIsPressed)
+        {
+            var H = betweenLimits;
+            var R = measureUnit;
+            var Y = TimeFrameBackGround[0].getY() + R;
+            var mousePos = mainStage.getPointerPosition();
+            //var index = Math.floor((mousePos.y-Y)/((4/ratioMainStage)*R));
+            var index = Math.floor((mousePos.y-Y)/((4)*R));
+
+            if(index>=0 && index<ENodesObj[timeSelected].length && (typeof ENodesObj[timeSelected][index] !== 'undefined'))
+            {
+
+                if(notYetDisplayed(ENodesObj[timeSelected][index]))
+                {
+
+                    /////////LOG Email Events DIRECT SELECTION /////////////////////////
+                    var isSeen = "0";
+                    if(ENodesObj[timeSelected][index].getFill() == seenNode)
+                        isSeen = "1";
+                    logEmailEvents("2", isSeen, index+"", timeSelected+"");
+                    ///////////////////////////////////////////////////
+                    
+                    var deselectedEnodes = selectedENodes.pop();
+                    deselectedEnodes.setRadius(R);
+                    deselectedEnodes.setFill(seenNode);
+                    DisplayedENodes.pop();
+                    DisplayedENodes.unshift(ENodes[timeSelected][index]);
+                    selectedENodes.unshift(ENodesObj[timeSelected][index]);
+                    showSelectedENodes();
+                    mainLayer.batchDraw();
+                }
+                //mainLayer.batchDraw();
+            }
+            else
+            {
+                //// reset color of content background
+                for (var i=0; i<noOfDisplayed; i++)
+                {
+                    normalizeContentBackground(i);
+                }
+                contentLayer.batchDraw();
+            }
+
+        }
+
+	}, false);
+
+    mainStage.getContent().addEventListener('dblclick', function(evt) {
+
+
+        //add the function for mouseclick selection
+        if(timeSelected!=null&&!keywordIsPressed&&!personIsPressed)
+        {
+            var H = betweenLimits;
+            var R = measureUnit;
+            var Y = TimeFrameBackGround[0].getY() + R;
+            var mousePos = mainStage.getPointerPosition();
+            //var index = Math.floor((mousePos.y-Y)/((4/ratioMainStage)*R));
+            var index = Math.floor((mousePos.y-Y)/((4)*R));
+
+            if(index>=0 && index<ENodesObj[timeSelected].length && (typeof ENodesObj[timeSelected][index] !== 'undefined'))
+            {
+
+                if(notYetDisplayed(ENodesObj[timeSelected][index]))
+                {
+
+                    /////////LOG Email Events DIRECT SELECTION /////////////////////////
+                    var isSeen = "0";
+                    if(ENodesObj[timeSelected][index].getFill() == seenNode)
+                        isSeen = "1";
+                    logEmailEvents("2", isSeen, index+"", timeSelected+"");
+                    ///////////////////////////////////////////////////
+                    
+                    var deselectedEnodes = selectedENodes.pop();
+                    deselectedEnodes.setRadius(R);
+                    deselectedEnodes.setFill(seenNode);
+                    DisplayedENodes.pop();
+                    DisplayedENodes.unshift(ENodes[timeSelected][index]);
+                    selectedENodes.unshift(ENodesObj[timeSelected][index]);
+                    showSelectedENodes();
+                    mainLayer.batchDraw();
+                }
+                else
+                {
+                    //add the function for hebele
+                    for(var u=0; u<DisplayedENodes.length; u++)
+                    {
+
+                        if((ENodes[timeSelected][index].content) == DisplayedENodesText[u].getText()) 
+                        {
+                            //console.log("aman " + u);
+                            //console.log("name " + DisplayedENodesText[u].getName());
+                            //// reset color of content background
+                            doubleClickEvent(DisplayedENodesText[u].getName());
+
+                            //contentLayer.batchDraw();
+                        }
+                    }
+                }
+                //mainLayer.batchDraw();
+            }
+            else
+            {
+                //// reset color of content background
+                for (var i=0; i<noOfDisplayed; i++)
+                {
+                    normalizeContentBackground(i);
+                }
+                contentLayer.batchDraw();
+            }
+
+        }
+    }, false);
+	
+
+	mainStage.getContent().addEventListener('mousemove', function(evt) {
+
+		var H = betweenLimits;
+		var R = measureUnit;
+		var Y = TimeFrameBackGround[0].getY() + R;
+		var mousePos = mainStage.getPointerPosition();
+		//var index = Math.floor((mousePos.y-Y)/((4/ratioMainStage)*R));
+		var index = Math.floor((mousePos.y-Y)/((4)*R));
+
+
+		//deselect a time frame if tehmouse comes to the bottom of the page
+		if(timeSelected!=null && mousePos.y>deathLimit){
+			timeChange(timeSelected, false);
+		}
+
+		//// Show horizontal line /////////////////////////////
+
+		
+		if(timeSelected!=null)
+		{
+			if(typeof HorizontalLines[timeSelected][index] !== 'undefined')
+			{
+				if(activeHorizontalLine != HorizontalLines[timeSelected][index])
+				{
+					if(activeHorizontalLine!=null) activeHorizontalLine.setVisible(false);
+					HorizontalLines[timeSelected][index].setVisible(true);
+					activeHorizontalLine = HorizontalLines[timeSelected][index];
+					////////////////// show mouseover email node on contentlayer///////////////
+					if(!isMouseClick)
+					{
+						for(var i=0; i<DisplayedENodes.length;i++)
+						{
+							normalizeContentBackground(i);
+						}
+						if(DisplayedENodes.indexOf(ENodes[timeSelected][index]) !== -1)
+						{
+							for(var i=0; i<DisplayedENodes.length;i++)
+							{
+								if(ENodes[timeSelected][index].content==DisplayedENodesText[i].getText())
+								{
+									DisplayedENodesBackGround[i].setFill(colorLightBlue);
+									contentLayer.batchDraw();
+								}
+							}
+						}
+					}
+					///////////////////////////////////////////////////////////////////////////
+				}
+			}
+			else
+			{
+				if(activeHorizontalLine!=null) activeHorizontalLine.setVisible(false);
+				activeHorizontalLine = null;
+				
+			}
+		}
+		
+		
+		//////////////////////////////////////////
+		
+		//// set circle and line follows cursor ////
+		if(isMouseClick&&(personIsPressed||keywordIsPressed))
+		{
+			
+			//var newpos = [mousePos.x, linecursor.getPoints()[0].y, mousePos.x, mousePos.y];
+            var newpos = [mousePos.x, linecursor.getPoints()[0].y, mousePos.x, linecursor.getPoints()[1].y];
+			linecursor.setPoints(newpos);
+			
+
+            circlecursor.setX(mousePos.x);
+            circlecursor.setY(mousePos.y);
+            circlecursor.moveToTop();
+            circlecursor.setWidth(selectedObj[0].getWidth());
+            selectedObj[0].setX(mousePos.x);
+            selectedObj[0].setY(mousePos.y);
+            selectedObj[0].moveToTop();
+		}
+		//////////////////////////////////////////////
+		
+		/// keeping reseting all lines to original points//////////////////////////////
+		
+			for (var i=0 ; i<TimeFrameObj.length; i++)
+			{
+				TimeFrameObj[i].moveToTop();
+				for(var u=0; u<ENodes[i].length;u++)
+				{
+					if(typeof senderLines[i][u] !== 'undefined')
+					{
+						var originalpoints = [senderLines[i][u].getPoints()[0].x,senderLines[i][u].getPoints()[0].y,senderLines[i][u].getPoints()[0].x-20,senderLines[i][u].getPoints()[0].y];
+						senderLines[i][u].setPoints(originalpoints);
+					}
+					if(typeof recipientLines[i][u] !== 'undefined')
+					{
+						var originalpoints = [recipientLines[i][u].getPoints()[0].x,recipientLines[i][u].getPoints()[0].y,recipientLines[i][u].getPoints()[0].x+20,recipientLines[i][u].getPoints()[0].y];
+						recipientLines[i][u].setPoints(originalpoints);
+					}
+				}
+			}
+		
+		///////////////////////////////////////////////////
+		
+		if(isMouseClick&&timeSelected!=null&&personIsPressed)
+		{
+			//sendLogs(user.name, " - " + selectedperson + " mouseover TimeFrame " +timeSelected + " - ", " ");
+			
+			/// data for determining left or right position of pointer on timeframe
+			var pos = (Math.floor(mousePos.x-(TimeFrameObj[timeSelected].getX()+TimeFrameObj[timeSelected].getWidth()/2)));
+			if(pos>0) {selectedto = true; selectedfrom = false}
+			if(pos<0) {selectedfrom = true; selectedto = false}
+			///////////////////////////////////////////////////////////////////////
+			
+			
+			/// control lines connected
+			var upward = index - 3;
+			var downward = index +4;
+			
+			var temp_index = index;
+
+			if(selectedfrom)
+			{
+				//selectedObj[0].setText("From : "+selectedperson);
+				//selectedObj[0].setX(mainStage.getWidth()-selectedObj[0].getWidth()-mainStage.getWidth()*1/50);
+                //selectedObj[0].setX(mousePos.x-selectedObj[0].getWidth());
+                //circlecursor.setX(mousePos.x-selectedObj[0].getWidth());
+                
+				for(var i=upward; i<=downward; i++)
+				{
+					if(typeof senderLines[timeSelected][i] !== 'undefined')
+					{
+						var temp_line = senderLines[timeSelected][i].getPoints();
+						var newpoints = [temp_line[0].x, temp_line[0].y, mousePos.x+5, mousePos.y];
+						senderLines[timeSelected][i].setPoints(newpoints);
+						
+						///// pushing selected nodes based on selected from lines
+						if(notYetDisplayed(temp_ENodesObj[timeSelected][i]))
+							{
+
+								/////////LOG Email Events FROM /////////////////////////
+								var isSeen = "0";
+								if(temp_ENodesObj[timeSelected][i].getFill() == seenNode)
+									isSeen = "1";
+								logEmailEvents("3", isSeen, i+"", timeSelected+"");
+								///////////////////////////////////////////////////////
+								
+								var deselectedEnodes = selectedENodes.pop();
+								deselectedEnodes.setRadius(R);
+								deselectedEnodes.setFill(seenNode);
+								DisplayedENodes.pop();
+								DisplayedENodes.unshift(temp_ENodes[timeSelected][i]);
+								selectedENodes.unshift(temp_ENodesObj[timeSelected][i]);
+								//showSelectedENodes();
+								
+							}
+					}
+				}
+				
+			}
+			else if(selectedto)
+			{
+				//selectedObj[0].setText("To : "+selectedperson);
+				//selectedObj[0].setX(mainStage.getWidth()-selectedObj[0].getWidth()-mainStage.getWidth()*1/50);
+                //selectedObj[0].setX(mousePos.x);
+                //circlecursor.setX(mousePos.x);
+				for(var i=upward; i<=downward; i++)
+				{
+					if(typeof recipientLines[timeSelected][i] !== 'undefined')
+					{
+						var temp_line = recipientLines[timeSelected][i].getPoints();
+						var newpoints = [temp_line[0].x, temp_line[0].y, mousePos.x-5, mousePos.y];
+						recipientLines[timeSelected][i].setPoints(newpoints);
+						
+						///// pushing selected nodes based on selected to lines
+						if(notYetDisplayed(temp_ENodesObj[timeSelected][i]))
+							{
+	
+								/////////LOG Email Events TO /////////////////////////
+								var isSeen = "0";
+								if(temp_ENodesObj[timeSelected][i].getFill() == seenNode)
+									isSeen = "1";
+								logEmailEvents("4", isSeen, i+"", timeSelected+"");
+								///////////////////////////////////////////////////
+								
+								var deselectedEnodes = selectedENodes.pop();
+								deselectedEnodes.setRadius(R);
+								deselectedEnodes.setFill(seenNode);
+								DisplayedENodes.pop();
+								DisplayedENodes.unshift(temp_ENodes[timeSelected][i]);
+								selectedENodes.unshift(temp_ENodesObj[timeSelected][i]);
+								//showSelectedENodes();
+								
+								
+							}
+					}
+					
+				}
+			}
+			showSelectedENodes();
+			
+			/////////////// showing current selecting node //////////////
+			if(typeof senderLines[timeSelected][index] !== 'undefined'||typeof recipientLines[timeSelected][index] !== 'undefined')
+			{
+				for (var i=0; i<noOfDisplayed; i++)
+				{
+					normalizeContentBackground(i);
+				}
+				for(var u=0; u<DisplayedENodes.length; u++)
+				{
+					if((temp_ENodes[timeSelected][index].content) == DisplayedENodesText[u].getText()) 
+					{
+						
+						DisplayedENodesBackGround[u].setFill(colorLightBlue);
+						contentLayer.batchDraw();
+					}
+				}
+			}
+			else 
+			{
+				//// reset color of content background
+				for (var i=0; i<noOfDisplayed; i++)
+				{
+					normalizeContentBackground(i);
+				}
+				contentLayer.batchDraw();
+			}
+			//mainLayer.batchDraw();
+		}
+		////////////////////////////////////////////////////////////////////////
+		
+		if(isMouseClick&&timeSelected!=null&&!keywordIsPressed&&!personIsPressed)
+		{
+			if(index>=0 && index<ENodesObj[timeSelected].length && (typeof ENodesObj[timeSelected][index] !== 'undefined'))
+			{
+				if(notYetDisplayed(ENodesObj[timeSelected][index]))
+				{
+
+					/////////LOG Email Events DIRECT SELECTION /////////////////////////
+					var isSeen = "0";
+					if(ENodesObj[timeSelected][index].getFill() == seenNode)
+						isSeen = "1";
+					logEmailEvents("2", isSeen, index+"", timeSelected+"");
+					///////////////////////////////////////////////////
+					
+					var deselectedEnodes = selectedENodes.pop();
+					deselectedEnodes.setRadius(R);
+					deselectedEnodes.setFill(seenNode);
+					DisplayedENodes.pop();
+					DisplayedENodes.unshift(ENodes[timeSelected][index]);
+					selectedENodes.unshift(ENodesObj[timeSelected][index]);
+					showSelectedENodes();
+				}
+                
+				else
+				{
+					for(var u=0; u<DisplayedENodesText.length; u++)
+					{
+                        //hebele
+						//if((ENodes[timeSelected][index].content) == DisplayedENodesText[u].getText()) 
+                        if(DisplayedENodes[DisplayedENodesText[u].getName()].NodePos.column == timeSelected && DisplayedENodes[DisplayedENodesText[u].getName()].NodePos.row == index)
+						{
+							//// reset color of content background
+							for (var i=0; i<noOfDisplayed; i++)
+							{
+								normalizeContentBackground(i);
+							}
+							DisplayedENodesBackGround[u].setFill(colorLightBlue);
+							contentLayer.batchDraw();
+						}
+					}
+				}
+                
+				//mainLayer.batchDraw();
+			}
+			else
+			{
+				//// reset color of content background
+				for (var i=0; i<noOfDisplayed; i++)
+				{
+					normalizeContentBackground(i);
+				}
+				contentLayer.batchDraw();
+			}
+
+		}
+
+		else if (isMouseClick&&timeSelected!=null&&keywordIsPressed&&!personIsPressed)
+		{
+			//sendLogs(user.name, " - " + selectedkeyword + " mouseover TimeFrame " +timeSelected + " - ", " ");
+			
+			if(index>=0 && index<ENodesObj[timeSelected].length &&(typeof temp_ENodesObj[timeSelected][index] !== 'undefined'))
+			{
+				if(notYetDisplayed(temp_ENodesObj[timeSelected][index]))
+				{
+
+					/////////LOG Email Events KEYWORD FILTERS /////////////////////////
+					var isSeen = "0";
+					if(temp_ENodesObj[timeSelected][index].getFill() == seenNode)
+						isSeen = "1";
+					logEmailEvents("5", isSeen, index+"", timeSelected+"");
+					///////////////////////////////////////////////////
+					
+					var deselectedEnodes = selectedENodes.pop();
+					deselectedEnodes.setRadius(R);
+					deselectedEnodes.setFill(seenNode);
+					if(temp_ENodesObj[timeSelected][index].getStrokeWidth()==5)
+					{
+						temp_ENodesObj[timeSelected][index].setStrokeWidth(2);
+					}
+					DisplayedENodes.pop();
+					DisplayedENodes.unshift(temp_ENodes[timeSelected][index]);
+					selectedENodes.unshift(temp_ENodesObj[timeSelected][index]);
+					showSelectedENodes();
+				}
+				else
+				{
+					for(var u=0; u<DisplayedENodes.length; u++)
+					{
+						if((temp_ENodes[timeSelected][index].content) == DisplayedENodesText[u].getText()) 
+						{
+							//// reset color of content background
+							for (var i=0; i<noOfDisplayed; i++)
+							{
+								normalizeContentBackground(i);
+							}
+							DisplayedENodesBackGround[u].setFill(colorLightBlue);
+							contentLayer.batchDraw();
+						}
+					}
+				}
+			}
+			else
+			{
+				//// reset color of content background
+				for (var i=0; i<noOfDisplayed; i++)
+				{
+					normalizeContentBackground(i);
+				}
+				contentLayer.batchDraw();
+			}
+		}
+
+		
+		mainLayer.batchDraw();
+	}, false);
+
+	mainStage.getContent().addEventListener('mouseup', function(evt) {
+		//////  LOG Event of person&keword release tag /////////////////
+		if(selectedperson!=null)
+			logTagEvents("0", selectedperson, "1");
+		if(selectedkeyword!=null)
+			logTagEvents("0", selectedkeyword, "0");
+		/////////////END LOG///////////////////////////////////////////
+		
+		///// new search activated////////////////////////
+		var mousePos = mainStage.getPointerPosition();
+		if(mousePos.y>(filterBar)  && isMouseClick && (personIsPressed||keywordIsPressed))
+		{
+			var temp = selectedperson + " " + selectedkeyword;
+			if(personIsPressed&& query.indexOf(selectedperson) == -1) {query.push(selectedperson); querytype.push(1);}
+			if(keywordIsPressed&& query.indexOf(selectedkeyword) == -1) {query.push(selectedkeyword); querytype.push(0);}
+			newSearch();
+			sendLogs(user.name, " - PREDEFINED KEYWORD '" + temp + "' SELECTED FOR  NORMAL SEARCH - ", " ");		
+		}
+		///////////////////////////////////////////
+		else if( (personIsPressed||keywordIsPressed) && timeSelected == null){
+			var theExpansion = understandExpandableMonth();
+			if(theExpansion!=null){
+				selectedhiddenpiece = theExpansion;
+
+				if(personIsPressed&& query.indexOf(selectedperson) == -1) {query.push(selectedperson); querytype.push(1);}
+				if(keywordIsPressed&& query.indexOf(selectedkeyword) == -1) {query.push(selectedkeyword); querytype.push(0);}
+
+				if(selectedhiddenpiece!="")
+				{
+					if(selectedhiddenpiece.split("_").length==2)
+					{
+						var y = selectedhiddenpiece.split("_")[0];
+						var m = selectedhiddenpiece.split("_")[1];
+						if(m.length==1) m="0"+m;
+						var low = y+""+m+"00";
+						var high = y+""+m+"31";
+						//var range = {low:low, high:high};
+                        var range = {low:low, high:high, rangetype:"", begin:""};
+						newSearchToExpandHiddenPeriod(range);
+					}
+				}
+			}
+		}
+
+		keywordIsPressed = false;
+		personIsPressed = false;
+		selectedkeyword = null;
+		selectedperson = null;
+		selectedto = false;
+		selectedfrom = false;
+		isHiddenPieceSelected = false;
+		typeHiddenPieceSelected = '';
+		if(afterIndicator!=null) afterIndicator.setVisible(true);
+		if(beforeIndicator!=null) beforeIndicator.setVisible(true);
+		
+		for(var i=0; i<highlightedENodesObj.length; i++)
+		{
+			
+			highlightedENodesObj[i].setStroke(null);
+			highlightedENodesObj[i].setStrokeWidth(0);
+		}
+		highlightedENodesObj = new Array();
+		
+		for(var i=0; i<temp_ENodes.length; i++)
+		{
+			temp_ENodes[i] = new Array();
+			temp_ENodesObj[i] = new Array();
+			senderLines[i] = new Array();
+			recipientLines[i] = new Array();
+		}
+		
+		for(var i=0; i<allLines.length; i++)
+		{
+			allLines[i].remove();
+		}
+		allLines = new Array();
+		
+		for(var i=0; i<selectedObj.length; i++)
+		{
+			selectedObj[i].remove();
+		}
+		selectedObj = new Array();
+
+        //remove the content layer clues
+		removeKeywordCluesDisplay();
+        removePersonCluesDisplay();
+		
+		if(isCallTemporaryDisplay)
+		{
+			deleteTemporaryKeywordsPersons();
+			isCallTemporaryDisplay=false;
+
+			if(timeSelected!=null){
+				rearrangeTags();
+				isCallTemporaryDisplay=true;
+			}
+		}
+
+
+		//// reset color of content background
+		//alert('up');
+		for (var i=0; i<noOfDisplayed; i++)
+		{
+			normalizeContentBackground(i);
+		}
+		mainLayer.batchDraw();
+		contentLayer.batchDraw();
+		//if(isMouseClick)
+			deleteCircleCursor();
+		//contentLayer.batchDraw();
+		isMouseClick = false;
+		
+	}, false);
+
+	for(var i=0; i<TimeFrameObj.length; i++)
+	{
+
+		TimeFrameObj[i].on('mouseover', function(evt) {
+			var shape = evt.targetNode;
+			var index = TimeFrameObj.indexOf(shape);
+			timeChange(index, true);
+		});
+		
+		TimeFrameObj[i].on('mousedown', function(evt) {
+			var shape = evt.targetNode;
+			var index = TimeFrameObj.indexOf(shape);
+            /*
+			if(timeLocked){
+				unlockTime(index);
+			}
+			else{
+				tryLockTime(index);
+			}
+			*/
+		});
+
+		TimeFrameObj[i].on('mouseout', function(evt) {
+			var shape = evt.targetNode;
+			var index = TimeFrameObj.indexOf(shape);
+			timeChange(index, false);
+		});
+
+	}
+}
+
+function createTemporaryKeywordsPersons(content, type, indexOftimeSelected)
+{
+	if(type == 'keyword')
+	{
+		if(isKeywordReady)
+		{
+			temp_DisplayedKeywords = new Array();
+			temp_DisplayedKeywordsText = new Array();
+		}
+		temp_DisplayedPersons = new Array();
+		temp_DisplayedPersonsText = new Array();
+		if(indexOftimeSelected!=null)
+		{
+
+			for(var i=uniqueness; i<EKeywordTextList[indexOftimeSelected].length; i++)
+			{
+				if(content.toLowerCase().indexOf(EKeywordTextList[indexOftimeSelected][i].getText()) != -1 && EKeywordTextList[indexOftimeSelected][i].getText()!=selectedkeyword)
+				{
+					temp_DisplayedKeywords.push(EKeywordList[indexOftimeSelected][i]);
+					temp_DisplayedKeywordsText.push(EKeywordTextList[indexOftimeSelected][i]);
+				}
+			}
+		}
+		else
+		{
+			for(var i=uniqueness; i<EKeywordsText.length; i++)
+			{
+				if(content.toLowerCase().indexOf(EKeywordsText[i].getText()) != -1 && EKeywordsText[i].getText()!=selectedkeyword)
+				{
+					temp_DisplayedKeywords.push(EKeywordsObj[i]);
+					temp_DisplayedKeywordsText.push(EKeywordsText[i]);
+				}
+			}
+
+		}
+	}
+	
+	if(type == 'person')
+	{
+		if(!isKeywordReady)
+		{
+			temp_DisplayedPersons = new Array();
+			temp_DisplayedPersonsText = new Array();
+		}
+		
+		for(var i=uniqueness; i<EPersonsText.length; i++)
+		{
+			if(content.toLowerCase().indexOf(EPersonsText[i].getText()) != -1 && EPersonsText[i].getText()!=selectedperson)
+			{
+				temp_DisplayedPersons.push(EPersonsObj[i]);
+				temp_DisplayedPersonsText.push(EPersonsText[i]);
+			}
+		}
+	}
+	//isCallTemporaryDisplay = true;
+}
+
+function displayTemporaryKeywordsPersons()
+{
+	// first remove the old
+	if(isKeywordReady)
+	{
+		for(var i=0; i<EKeywordsObj.length; i++)
+		{
+			EKeywordsObj[i].remove();
+			EKeywordsText[i].remove();
+		}
+	}
+	
+	for(var i=0; i<EPersonsObj.length; i++)
+	{
+		EPersonsObj[i].remove();
+		EPersonsText[i].remove();
+	}
+
+	var thetag = "";
+	isCallTemporaryDisplay = true;
+
+	var xStart;
+	var xLength;
+	var xMargin = 1;
+	var xLimit;
+	var alignDirection = 1;
+
+	if(timeSelected !=null){
+
+		if(timeSelected<noOfTimeFrame/2){
+			alignDirection = 1;
+			displacement=(mainStage.getWidth()/4)*(timeSelected/(noOfTimeFrame/2));
+			xStart=TimeFrameObj[timeSelected].getX()-displacement;
+			xLimit = xStart + mainStage.getWidth()*1/2;
+		}
+		else{
+			alignDirection = -1;
+			displacement=(mainStage.getWidth()/4)*((noOfTimeFrame-timeSelected-1)/(noOfTimeFrame/2));
+			xStart=TimeFrameObj[timeSelected].getX() + TimeFrameObj[timeSelected].getWidth()+displacement;
+			xLimit = xStart - mainStage.getWidth()*1/2;
+		}
+		
+	}
+	else{
+		xStart=mainStage.getWidth()/6;
+		xLimit=mainStage.getWidth()*5/6;
+	}
+
+	var X = xStart;
+	Y = keywordY;
+	
+	//// temp keywords
+	if(isKeywordReady)
+	{
+		for(var i=0; i<temp_DisplayedKeywords.length; i++)
+		{
+			if(alignDirection==1){
+				if(X+temp_DisplayedKeywords[i].getWidth()>xLimit) break;
+			}
+			else{
+				X=X-temp_DisplayedKeywords[i].getWidth()-xMargin;
+				if(X-temp_DisplayedKeywords[i].getWidth()<xLimit) break;
+			}
+			////////// prepare thetag data for TAG SHOWN LOG//////////////
+			if(thetag != "") thetag+="-";
+			thetag+=("0"+","+anonymize(temp_DisplayedKeywordsText[i].getText()));
+			/////////////////////////////////////////////////////////////
+			temp_DisplayedKeywords[i].setX(X);
+			temp_DisplayedKeywords[i].setY(Y);
+			temp_DisplayedKeywords[i].setHeight(temp_DisplayedKeywordsText[i].getHeight());
+			temp_DisplayedKeywordsText[i].setX(X);
+			temp_DisplayedKeywordsText[i].setY(Y);
+			mainLayer.add(temp_DisplayedKeywords[i]);
+			mainLayer.add(temp_DisplayedKeywordsText[i]);
+			if(alignDirection==1){
+				X=(temp_DisplayedKeywords[i].getX()+temp_DisplayedKeywords[i].getWidth()+xMargin);
+			}
+		}
+	}
+	
+	//// temp persons
+	X = xStart;
+	Y = personY;
+	
+	for(var i=0; i<temp_DisplayedPersons.length; i++)
+	{
+		if(alignDirection==1){
+			if(X+temp_DisplayedPersons[i].getWidth()>xLimit) break;
+		}
+		else{
+			X=X-temp_DisplayedPersons[i].getWidth()-xMargin;
+			if(X-temp_DisplayedPersons[i].getWidth()<xLimit) break;
+		}
+		////////// prepare thetag data for TAG SHOWN LOG//////////////
+		if(thetag != "") thetag+="-";
+		thetag+=("1"+","+anonymize(temp_DisplayedPersonsText[i].getText()));
+		/////////////////////////////////////////////////////////////
+		temp_DisplayedPersons[i].setX(X);
+		temp_DisplayedPersons[i].setY(Y);
+		//temp_DisplayedPersons[i].setHeight(EPersonsText[i].getHeight());
+		temp_DisplayedPersonsText[i].setX(X);
+		temp_DisplayedPersonsText[i].setY(Y);
+		mainLayer.add(temp_DisplayedPersons[i]);
+		mainLayer.add(temp_DisplayedPersonsText[i]);
+		if(alignDirection==1){
+			X=(temp_DisplayedPersons[i].getX()+temp_DisplayedPersons[i].getWidth()+xMargin);
+		}
+	}
+	
+	
+	//mainLayer.batchDraw();
+	//////////// LOG TAGS SHOWN ///////// //////////////////
+	logTagShown(thetag)
+	////////////////END LOG/////////////////////////////////
+}
+
+function deleteTemporaryKeywordsPersons()
+{
+	var thetag = "";
+	isCallTemporaryDisplay = false;
+	if(isKeywordReady)
+	{
+		for(var i=0; i<temp_DisplayedKeywords.length; i++)
+		{
+			temp_DisplayedKeywords[i].remove();
+			temp_DisplayedKeywordsText[i].remove();
+		}
+		temp_DisplayedKeywords = new Array();
+		temp_DisplayedKeywordsText = new Array();
+	}
+	
+	for(var i=0; i<temp_DisplayedPersons.length; i++)
+	{
+		temp_DisplayedPersons[i].remove();
+		temp_DisplayedPersonsText[i].remove();
+	}
+
+	temp_DisplayedPersons = new Array();
+	temp_DisplayedPersonsText = new Array();
+	
+
+	xStart=mainStage.getWidth()/6;
+	xLimit=mainStage.getWidth()*5/6;
+
+
+	var X = xStart;
+	var xMargin = 1;
+
+	Y = keywordY;
+	
+	//// keywords
+	if(isKeywordReady)
+	{
+		for(var i=0; i<EKeywordsObj.length; i++)
+		{
+			if(X+EKeywordsObj[i].getWidth()>xLimit) break;
+			////////// prepare thetag data for TAG SHOWN LOG//////////////
+			if(thetag != "") thetag+="-";
+			thetag+=("0"+","+anonymize(EKeywordsText[i].getText()));
+			////////////////////////////////////////////////////////////
+			EKeywordsObj[i].remove();
+			EKeywordsText[i].remove();
+			EKeywordsObj[i].setX(X);
+			EKeywordsObj[i].setY(Y);
+			EKeywordsObj[i].setHeight(EKeywordsText[i].getHeight());
+			EKeywordsText[i].setX(X);
+			EKeywordsText[i].setY(Y);
+			mainLayer.add(EKeywordsObj[i]);
+			mainLayer.add(EKeywordsText[i]);
+			X=(EKeywordsObj[i].getX()+EKeywordsObj[i].getWidth()+xMargin);
+		}
+	}
+	
+	//// persons
+	X = xStart;
+	Y = personY;
+	
+	for(var i=0; i<EPersonsObj.length; i++)
+	{
+		if(X+EPersonsObj[i].getWidth()>xLimit) break;
+		////////// prepare thetag data for TAG SHOWN LOG//////////////
+		if(thetag != "") thetag+="-";
+		thetag+=("1"+","+anonymize(EPersonsText[i].getText()));
+		/////////////////////////////////////////////////////////////
+		EPersonsObj[i].setX(X);
+		EPersonsObj[i].setY(Y);
+		//EPersonsObj[i].setHeight(EKeywordsText[i].getHeight());
+		EPersonsText[i].setX(X);
+		EPersonsText[i].setY(Y);
+		mainLayer.add(EPersonsObj[i]);
+		mainLayer.add(EPersonsText[i]);
+		X=(EPersonsObj[i].getX()+EPersonsObj[i].getWidth()+xMargin);
+	}
+	//mainLayer.batchDraw();
+	//////////// LOG TAGS SHOWN ///////// //////////////////
+	logTagShown(thetag)
+	////////////////END LOG/////////////////////////////////
+}
+
+function initialSelectedENodes()
+{
+	var limit = 0;
+	for (var i=TimeFrameObj.length-1; i>=0; i--)
+	{
+		for(var u = 0; u<ENodesObj[i].length;u++)
+		{
+			if(limit == noOfDisplayed) break;
+
+			/////////LOG Email Events STATE CHANGE/FIRST STATE /////////////////////////
+			var isSeen = "0";
+			logEmailEvents("0", isSeen, u+"", i+"");
+			/////////////////////////////////////////////////////////////////////////
+			
+			selectedENodes[limit] = ENodesObj[i][u];
+			DisplayedENodes[limit] = ENodes[i][u];
+			limit++;
+		}
+	}
+	showSelectedENodes();
+}
+
+function showSelectedENodesMini()
+{
+    //// rearrange by date to display
+    var temp_array = new Array();
+    for (var i=0; i<selectedENodes.length; i++)
+    {
+        temp_array[i] = parseInt(DisplayedENodes[i].name);
+        //console.log(temp_array[i]);
+    }
+    temp_array.sort(sortNumber);
+    temp_array.reverse();
+
+    var index = 0;
+    for (var i=0; i<selectedENodes.length; i++)
+    {
+        index = temp_array.indexOf(parseInt(DisplayedENodes[i].name));
+        if(visMode==""){
+            selectedENodes[i].setRadius(R*2);
+            selectedENodes[i].setFill(colorcode[i]);
+            DisplayedENodesColor[index].setFill(selectedENodes[i].getFill());
+        }
+        DisplayedENodesText[index].setName(i);      
+        DisplayedENodesTextDate[index].setName(i);
+        DisplayedENodesTextFrom[index].setName(i);
+        DisplayedENodesTextSubject[index].setName(i);
+        DisplayedENodesGhost[index].setName(i);
+    }
+}
+
+function showSelectedENodes()
+{
+	var H = betweenLimits;
+	var R = measureUnit;
+	
+    var X = contentStage.getWidth();
+    var xPositions = [0,0.08,0.17,0.35,0.88,1];
+    var maxSubjectWidth =   X*xPositions[3] - X*xPositions[2];
+        
+        
+
+	//// rearrange by date to display
+	var temp_array = new Array();
+	for (var i=0; i<selectedENodes.length; i++)
+	{
+		temp_array[i] = parseInt(DisplayedENodes[i].name);
+        //console.log(temp_array[i]);
+	}
+	temp_array.sort(sortNumber);
+	temp_array.reverse();
+	///
+	//var colorcode = new Array('#000000','#FF0000','#00FF00','#0000FF','#FFFF00','#00FFFF','#FF00FF','#C0C0C0', '#989898');
+	var index = 0;
+	for (var i=0; i<selectedENodes.length; i++)
+	{
+		index = temp_array.indexOf(parseInt(DisplayedENodes[i].name));
+        if(visMode==""){
+    		selectedENodes[i].setRadius(R*2);
+    		selectedENodes[i].setFill(colorcode[i]);
+    		DisplayedENodesColor[index].setFill(selectedENodes[i].getFill());
+            DisplayedENodesColor[index].setStroke(null);
+            DisplayedENodesColor[index].setStrokeWidth(0);
+
+            DisplayedENodesTextFrom[index].setFill('black');
+
+            DisplayedENodesLineTo[index].setName(DisplayedENodes[i].to);
+            DisplayedENodesLineTo[index].setOpacity(0);
+            //DisplayedENodesLineFrom[index].setOpacity(0);
+        }
+
+		//colorcode+=101010;
+		DisplayedENodesTextDate[index].setText(DisplayedENodes[i].day+" "+reverseMonth(DisplayedENodes[i].month)+" "+DisplayedENodes[i].year);
+		DisplayedENodesTextFrom[index].setText(DisplayedENodes[i].from);
+		DisplayedENodesTextSubject[index].setText(DisplayedENodes[i].subject);
+		DisplayedENodesTextSubject[index].setHeight(DisplayedENodesTextDate[i].getHeight()*2);
+		DisplayedENodesText[index].setText(DisplayedENodes[i].content);
+		DisplayedENodesText[index].setName(i);		
+		DisplayedENodesTextDate[index].setName(i);
+		DisplayedENodesTextFrom[index].setName(i);
+		DisplayedENodesTextSubject[index].setName(i);
+		DisplayedENodesGhost[index].setName(i);
+
+        //arrange the body x position
+        /*
+        var subjectWidth = DisplayedENodesTextSubject[index].getWidth();
+        if(subjectWidth>maxSubjectWidth){
+            DisplayedENodesTextSubject[index].setWidth(maxSubjectWidth);
+            DisplayedENodesText[index].setX(X*xPositions[3]);
+        }
+        else{
+            DisplayedENodesTextSubject[index].setWidth(subjectWidth);
+            var bodyXPos = X*xPositions[2] + subjectWidth;
+            DisplayedENodesText[index].setX(bodyXPos);
+        }
+    */
+		
+        //show teh keyword clue
+        if(visMode=="" && selectedkeyword!=null){
+            if(DisplayedENodesText[index].getText().toLowerCase().replace(/\r?\n|\r/g," ").indexOf(selectedkeyword) != -1){
+                DisplayedENodesColor[index].setStroke('#2E9AFE');
+                DisplayedENodesColor[index].setStrokeWidth(3);
+            }
+        }
+
+        //show the sender and to clues
+        if(visMode=="" && selectedperson!=null){
+            if(DisplayedENodesTextFrom[index].getText().toLowerCase().indexOf(selectedperson) != -1){
+                DisplayedENodesTextFrom[index].setFill('#2E9AFE');
+                //DisplayedENodesLineFrom[index].setOpacity(1);
+            }
+
+            if(DisplayedENodesLineTo[index].getName().toLowerCase().indexOf(selectedperson) != -1 ){
+                DisplayedENodesLineTo[index].setOpacity(1);
+            }
+        }
+
+        ////////////Show Attachment Image////////////////////////
+		if(DisplayedENodes[i].attachment=="yes") 
+		{
+			DisplayedENodesTextAttachment[index].show();
+			//selectedENodesAttachedImg[i].setX(selectedENodes[i].getX()+R*2);
+			//selectedENodesAttachedImg[i].setY(selectedENodes[i].getY()-R*2);
+			//selectedENodesAttachedImg[i].show();
+		}
+		else	
+		{
+			DisplayedENodesTextAttachment[index].hide();
+			//selectedENodesAttachedImg[i].hide();
+		}
+	}
+	if(isMouseClick)
+		DisplayedENodesBackGround[temp_array.indexOf(parseInt(DisplayedENodes[0].name))].setFill(colorLightBlue);
+
+    //modify the scroll bar
+    if(visMode =="baseline"){
+        var newest = DisplayedENodesText[0].getName();
+        var newestIndex= nodePositionsReverse.length - nodePositions[DisplayedENodes[newest].NodePos.column][DisplayedENodes[newest].NodePos.row]; 
+
+        var oldest= DisplayedENodesText[DisplayedENodes.length-1].getName();
+        var oldestIndex= nodePositionsReverse.length - nodePositions[DisplayedENodes[oldest].NodePos.column][DisplayedENodes[oldest].NodePos.row]; 
+
+        //console.log(oldestIndex + " " + newestIndex);
+        //console.log(nodePositionsReverse.length + " " + contentStage.getHeight());
+
+        var yPos = contentStage.getHeight()*(newestIndex/nodePositionsReverse.length);
+        var hBar = contentStage.getHeight()*((oldestIndex-newestIndex)/nodePositionsReverse.length);
+
+        scrollBar.setY(yPos);
+        scrollBar.setHeight(hBar);
+
+        //console.log(yPos, hBar);
+    }
+
+	if(visMode == ""){contentLayer.batchDraw();}
+	//mainLayer.batchDraw();
+}
+
+function drawKeywords(theKeywords, theKeywordsText, tagLog)
+{
+
+
+	var X = mainStage.getWidth()*1/6;
+	var xLimit=mainStage.getWidth()*5/6;
+	var xMargin = 1;
+	var Y = keywordY;
+	var limitReached=false;
+
+	for(var i=0; i<theKeywords.length; i++)
+	{
+		//only log the ones that fit in the screen
+		if(X+theKeywords[i].getWidth()>xLimit) limitReached=true;
+		if(!limitReached){
+		if(tagLog != "") tagLog+="-";
+		tagLog+=("0"+","+anonymize(theKeywordsText[i].getText()));
+		}
+
+		theKeywords[i].setX(X);
+		theKeywords[i].setY(Y);
+		theKeywordsText[i].setX(X);
+		theKeywordsText[i].setY(Y);
+
+		theKeywordsText[i].on("mouseover",function(evt){
+			var shape = evt.targetNode;
+			shape.setFill(blueColor);
+			if(highlightedENodesObj.length==0&&!isMouseClick)
+			{
+				addKeywordClues(shape);
+                addKeywordCluesDisplay(shape);
+			}
+
+			//////  LOG Event of keyword tag ////////////////
+			logTagEvents("2", evt.targetNode.getText(), "0");
+			/////////////END LOG/////////////////////////////
+		});
+
+
+		theKeywordsText[i].on("mouseout",function(evt){
+			var shape = evt.targetNode;
+			shape.setFill(colorKeywordText);
+			if(!isMouseClick)
+			{
+				for(var i=0; i<highlightedENodesObj.length; i++)
+				{
+					highlightedENodesObj[i].setStroke(null);
+					highlightedENodesObj[i].setStrokeWidth(0);
+				}
+				highlightedENodesObj = new Array();
+                removeKeywordCluesDisplay();
+				for(var i=0; i<temp_ENodes.length; i++)
+				{
+					temp_ENodes[i] = new Array();
+					temp_ENodesObj[i] = new Array();
+				}
+			}
+
+			//////  LOG Event of keyword tag ////////////////
+			logTagEvents("0", evt.targetNode.getText(), "0");
+			/////////////END LOG/////////////////////////////
+		});
+
+		theKeywordsText[i].on("mousedown",function(evt){
+				keywordIsPressed = true;
+				unlockTime(-1);
+				var shape = evt.targetNode;
+				selectedkeyword = shape.getText();
+				addCircleCursor();
+
+	//////////// prevent some bug after release mouseclick ///////////////
+			
+			if(highlightedENodesObj.length==0)
+			{
+				addKeywordClues(shape);
+                addKeywordCluesDisplay(shape);
+			}
+				
+				/// show selected keyword on upper left of screen ///
+				displayCurrentSelection(selectedkeyword, false);
+				/////////////////////////////////////////////////////
+				
+				
+				//// create temporary keyword list
+				rearrangeTags();
+				
+				
+				///////// Display highlighted node on contentLayer
+				var temp_count=1;
+				var H = betweenLimits;
+				var R = measureUnit;
+				//DisplayedENodes = new Array();
+				for(var i=TimeFrameObj.length-1; i>=0; i--)
+				{
+                    if(i==TimeFrameObj.length-1 && timeSelected!=null){i=timeSelected;}
+					if(temp_count>noOfDisplayed) break;
+										for(var u=0; u< ENodes[i].length; u++)
+					{
+						
+						if(typeof temp_ENodes[i][u] !== 'undefined')
+						{
+                            if(notYetDisplayed(temp_ENodesObj[i][u]) ){
+								/////////LOG Email Events KEYWORD SELECTION /////////////////////////
+								var isSeen = "0";
+								if(temp_ENodesObj[i][u].getFill() == seenNode)
+									isSeen = "1";
+								logEmailEvents("1", isSeen, u+"", i+"");
+								////////////////////////////////////////////////////////////////
+								
+								var deselectedEnodes = selectedENodes.shift();
+								deselectedEnodes.setRadius(R);
+								deselectedEnodes.setFill(seenNode);
+								if(temp_ENodesObj[i][u].getStrokeWidth()==5)
+								{
+									temp_ENodesObj[i][u].setStrokeWidth(2);
+								}
+								DisplayedENodes.shift();
+								DisplayedENodes.push(temp_ENodes[i][u]);
+								selectedENodes.push(temp_ENodesObj[i][u]);
+								
+                            }
+                            temp_count++;
+                                if(temp_count>=noOfDisplayed) break;
+						}
+					}
+				}
+				
+				for(var i=temp_count; i<noOfDisplayed; i++)
+				{
+					var deselectedEnodes = selectedENodes.shift();
+					deselectedEnodes.setRadius(R);
+					deselectedEnodes.setFill(seenNode);
+					var deselecteddata = DisplayedENodes.shift();
+					DisplayedENodes.push(deselecteddata);
+					selectedENodes.push(deselectedEnodes);
+				}
+				
+				showSelectedENodes();
+							
+				////////////////////////////////////////////
+				
+				circlecursor.moveToTop();
+				//mainLayer.batchDraw();
+
+			//////  LOG Event of keyword tag ////////////////
+			logTagEvents("1", evt.targetNode.getText(), "0");
+			/////////////END LOG/////////////////////////////
+		});
+		
+		theKeywordsText[i].on("mouseup",function(evt){
+			keywordIsPressed = false;
+            removeKeywordCluesDisplay();
+			deleteCircleCursor();
+			mainLayer.batchDraw();
+		});
+		if(!limitReached){
+			mainLayer.add(theKeywords[i]);
+			mainLayer.add(theKeywordsText[i]);
+		}
+		X=(theKeywords[i].getX()+theKeywords[i].getWidth()+xMargin);
+	}
+}
+
+function prepareKeywords(data)
+{
+	var relevance = data.relevance;
+	var content = data.text;
+	var rect = new Kinetic.Rect({
+		x:0,
+		y:0,
+		width: mainStage.getWidth()*1/16+mainStage.getWidth()*1/64,
+		height: mainStage.getHeight()*1/25,
+		//fill: '#BDBDBD',
+		fill: colorKeywordBackground,
+		name: content,
+	});
+	
+	var text = new Kinetic.Text({
+		x:0,
+		y:0,
+		fontSize: keywordPersonFontSize,
+		fontFamily: fancyFont,
+		fontStyle: fancyFontStyle,
+		text: content,
+		fill: colorKeywordText,
+		align: 'center',
+		padding: tagMargin,
+		name: "keyword-"+content,
+	});
+
+	rect.setWidth(text.getWidth() + 5);
+	rect.setHeight(text.getHeight());
+	EKeywordsObj.push(rect);
+	EKeywordsText.push(text);
+}
+
+function drawPersons(thePersons, thePersonsText, tagLog)
+{
+	var X = mainStage.getWidth()*1/6;
+	var xLimit=mainStage.getWidth()*5/6;
+	var xMargin = 1;
+	var Y = personY;
+	var limitReached=false;
+
+	for(var i=0; i<thePersons.length; i++)
+	{
+		if(X+thePersons[i].getWidth()>xLimit) limitReached=true;
+
+		//only log the tags that fit into screen
+		if(!limitReached){
+		if(tagLog!= "") tagLog+="-";
+		tagLog+=("1"+","+anonymize(thePersonsText[i].getText()));
+		}
+
+		thePersons[i].setX(X);
+		thePersons[i].setY(Y);
+		thePersonsText[i].setX(X);
+		thePersonsText[i].setY(Y);
+		
+		thePersonsText[i].on("mouseover",function(evt){
+			var shape = evt.targetNode;
+			shape.setFill(blueColor);
+
+
+			if(senderLines[0].length==0 && !isMouseClick)
+			{
+			var shape = evt.targetNode;
+
+				if(senderLines[0].length==0)
+				{
+					addPersonClues(shape);
+                    addPersonCluesDisplay(shape);
+						
+				}
+			
+			//////  LOG Event of person tag //////////
+			logTagEvents("2", evt.targetNode.getText(), "1");
+			/////////////END LOG//////////////////////
+			}
+		});
+		
+		thePersonsText[i].on("mouseout",function(evt){
+			var shape = evt.targetNode;
+			shape.setFill(colorPersonText);
+			if(!isMouseClick)
+			{
+				for(var i=0; i<temp_ENodes.length; i++)
+				{
+					temp_ENodes[i] = new Array();
+					temp_ENodesObj[i] = new Array();
+					senderLines[i] = new Array();
+					recipientLines[i] = new Array();
+				}
+				
+				for(var i=0; i<allLines.length; i++)
+				{
+					allLines[i].remove();
+				}
+				allLines = new Array();
+                removePersonCluesDisplay();
+			//////  LOG Event of keyword tag ////////////////
+			logTagEvents("0", evt.targetNode.getText(), "1");
+			/////////////END LOG/////////////////////////////
+
+			}
+		});
+		
+		thePersonsText[i].on("mousedown",function(evt){
+				personIsPressed = true;
+				var shape = evt.targetNode;
+				selectedperson = shape.getText();
+				unlockTime(-1);
+
+				addCircleCursor();
+
+				//////////// prevent some bug after release mouseclick ///////////////
+				
+				if(allLines.length==0)
+				{
+					addPersonClues(shape);
+                    addPersonCluesDisplay(shape);
+				}
+				
+
+				/// show selected person on upper right of screen ///
+				displayCurrentSelection(selectedperson,true);
+
+				//// create temporary keyword list
+				rearrangeTags();
+				
+				///////// Display highlighted node on contentLayer
+				var temp_count=1;
+				var H = betweenLimits;
+				var R = measureUnit;
+				//DisplayedENodes = new Array();
+				for(var i=TimeFrameObj.length-1; i>=0; i--)
+				{
+                    if(i==TimeFrameObj.length-1 && timeSelected!=null){i=timeSelected;}
+					if(temp_count>noOfDisplayed) break;
+					for(var u=0; u< ENodes[i].length; u++)
+					{
+						if(typeof temp_ENodes[i][u] !== 'undefined')
+						{
+                            if(notYetDisplayed(temp_ENodesObj[i][u]) ){
+								/////////LOG Email Events CONTACT SELECTION /////////////////////////
+								var isSeen = "0";
+								if(temp_ENodesObj[i][u].getFill() == seenNode)
+									isSeen = "1";
+								logEmailEvents("1", isSeen, u+"", i+"");
+								//////////////////////////////////////////////////////////////////
+
+								var deselectedEnodes = selectedENodes.shift();
+								deselectedEnodes.setRadius(R);
+								deselectedEnodes.setFill(seenNode);
+								if(temp_ENodesObj[i][u].getStrokeWidth()==5)
+								{
+									temp_ENodesObj[i][u].setStrokeWidth(2);
+								}
+								DisplayedENodes.shift();
+								DisplayedENodes.push(temp_ENodes[i][u]);
+								selectedENodes.push(temp_ENodesObj[i][u]);
+								
+                            }		
+                            temp_count++;   
+                            if(temp_count>=noOfDisplayed) break;    		
+						}
+					}
+				}
+				
+				for(var i=temp_count; i<noOfDisplayed; i++)
+				{
+					var deselectedEnodes = selectedENodes.shift();
+					deselectedEnodes.setRadius(R);
+					deselectedEnodes.setFill(seenNode);
+					var deselecteddata = DisplayedENodes.shift();
+					DisplayedENodes.push(deselecteddata);
+					selectedENodes.push(deselectedEnodes);
+				}
+				
+				showSelectedENodes();
+							
+				////////////////////////////////////////////
+			circlecursor.moveToTop();
+
+			mainLayer.batchDraw();
+
+			//////  LOG Event of person tag //////////
+			logTagEvents("1", evt.targetNode.getText(), "1");
+			/////////////END LOG//////////////////////
+		});
+	
+		thePersonsText[i].on("mouseup",function(evt){
+			personIsPressed = false;
+			selectedfrom = false;
+			selectedto = false;
+			deleteCircleCursor();
+            removePersonCluesDisplay();
+			mainLayer.batchDraw();
+		});
+	
+		if(!limitReached){
+			mainLayer.add(thePersons[i]);
+			mainLayer.add(thePersonsText[i]);
+		}
+		X=(thePersons[i].getX()+thePersons[i].getWidth()+xMargin);
+	}
+}
+
+function preparePersons(data)
+{
+	var relevance = data.relevance;
+	var content = data.text;
+	var rect = new Kinetic.Rect({
+		x:0,
+		y:0,
+		width: mainStage.getWidth()*1/16+mainStage.getWidth()*1/64,
+		height: mainStage.getHeight()*1/25,
+		fill: colorPersonBackground,
+	});
+	
+	var text = new Kinetic.Text({
+		x:0,
+		y:0,
+		fontSize: keywordPersonFontSize,
+		fontFamily: fancyFont,
+		fontStyle: fancyFontStyle,
+		text: content,
+		fill: colorPersonText,
+		align: 'center',
+		padding: tagMargin,
+		name: "person-"+content,
+	});
+
+	rect.setWidth(text.getWidth()+6);
+	rect.setHeight(text.getHeight());
+	EPersonsObj.push(rect);
+	EPersonsText.push(text);
+}
+
+function isKeywordUnselect(text)
+{
+	for (var i =0; i<dblClickSelection.length; i++)
+	{
+		if(dblClickSelection[i] == text)
+			return true;
+	}
+	return false;
+}
+
+function drawENodes()
+{
+	var H = lowerLimit-upperLimit;
+	var R = measureUnit;
+	var marginY = 4*R;	
+	for(var i=0; i<TimeFrameObj.length; i++)
+	{
+		var Y = 4*R+TimeFrameBackGround[i].getY();
+		/*var monthperiod;
+		if(TimeFrame[i].getMonth() == TimeFrame[i+1].getMonth()) monthperiod = reverseMonth(TimeFrame[i].getMonth());
+		else monthperiod = reverseMonth(TimeFrame[i].getMonth())+"~"+reverseMonth(TimeFrame[i+1].getMonth());
+		var text = new Kinetic.Text({
+			x : TimeFrameTitle[i].getX(),
+			y : TimeFrameTitle[i].getY(),
+			width: TimeFrameTitle[i].getWidth(),
+			fill: 'black',
+			align: 'center',
+			text: monthperiod,
+		});
+		mainLayer.add(text);
+		TimeFrameTitleText.push(text);*/
+		//TimeFrameBackGround[i].setHeight(H*ENodes[i].length/50);
+		TimeFrameBackGround[i].setHeight(ENodes[i].length*(R*4) + marginY);
+		
+		for(var u=0; u<ENodes[i].length; u++)
+		{
+			var node = new Kinetic.Circle({
+				x: TimeFrameBackGround[i].getX()+TimeFrameBackGround[i].getWidth()/2,
+				y: Y,
+				radius: R,
+				fill: unSeenNode,
+				name: ENodes[i][u].name,
+			});
+			var line = new Kinetic.Rect({
+				x: TimeFrameBackGround[i].getX(),
+				y: Y-(2*R),
+				width: TimeFrameBackGround[i].getWidth(),
+				height: R*4,
+				fill: '#A9F5F2',
+				visible: false,
+				opacity: 0.5,
+			});
+			Y+=(R*4);
+			mainLayer.add(line);
+			mainLayer.add(node);
+			var imageObj = new Image();
+		    imageObj.src = 'Picture/attachment.png';
+		    var img;
+			if(ENodes[i][u].attachment=="yes")
+			{
+				img = new Kinetic.Image({
+			          x: node.getX()+R*2,
+			          y: node.getY()-R*2,
+			          image: imageObj,
+			          width: R*4,
+			          height: R*4,
+			        });
+				mainLayer.add(img);
+			}
+			ENodesObj[i].push(node);
+			HorizontalLines[i].push(line);
+		}
+	}
+	mainLayer.batchDraw();
+}
+
+function balanceENodes()
+{
+	while(isENodesLengthBig())
+	{
+		for(var i=0; i<TimeFrameObj.length; i++)
+		{
+			if(ENodes[i].length>maxNodes)
+			{
+				balance_nodes(i, ENodes[i].length - maxNodes);
+				
+			}
+			else if(ENodes[i].length<=1)
+			{
+				balance_nodes(i,0);
+			}
+		}
+	}
+	update_timeframe();
+	
+	////////// ADD position attribute Email Nodes //////////
+	for(var i=0; i<TimeFrameObj.length; i++)
+	{
+		for(var u=0; u<ENodes[i].length; u++)
+		{
+			ENodes[i][u].NodePos.column = i;
+			ENodes[i][u].NodePos.row = u;
+		}
+	}
+
+	//this function is a directory that puts all the nodes in timeframes in a linear order from end to beginning
+	indexNodes();
+}
+
+function isENodesLengthBig()
+{
+	for(var i=0; i<TimeFrameObj.length; i++)
+	{
+		if(ENodes[i].length>maxNodes)
+			return true;
+	}
+	return false;
+}
+
+function update_timeframe()
+{
+	for(var i=0; i<TimeFrameObj.length; i++)
+	{
+		if(ENodes[i].length>0)
+			TimeFrame[i] = new Date(ENodes[i][ENodes[i].length-1].year,ENodes[i][ENodes[i].length-1].month,ENodes[i][ENodes[i].length-1].day);
+	}
+}
+
+function balance_nodes(index, amount)
+{
+	var array_ENodes_size = new Array();
+	for (var i=0; i<TimeFrameObj.length; i++)
+	{
+		array_ENodes_size[i] = ENodes[i].length;
+	}
+	var indexof_smallest = smallest_element(array_ENodes_size);
+	var indexof_biggest = biggest_element(array_ENodes_size);
+	if(amount==0)
+	{
+		if(index<indexof_biggest)
+		{
+			for(var i=indexof_biggest; i>index; i--)
+			{
+				var temp_amount = Math.floor(ENodes[indexof_biggest].length/2);
+				while(temp_amount>0)
+				{
+					var temp = ENodes[i].pop();
+					ENodes[i-1].unshift(temp);
+					temp_amount--;
+				}
+			}
+		}
+		else if(index>indexof_biggest)
+		{
+			for(var i=indexof_biggest; i<index; i++)
+			{
+				var temp_amount = Math.floor(ENodes[indexof_biggest].length/2);
+				while(temp_amount>0)
+				{
+					var temp = ENodes[i].shift();
+					ENodes[i+1].push(temp);
+					temp_amount--;
+				}
+			}
+		}
+	}
+	else
+	{
+		if(index<indexof_smallest)
+		{
+			for(var i=index; i<indexof_smallest; i++)
+			{
+				var temp_amount = amount;
+				while(temp_amount>0)
+				{
+					var temp = ENodes[i].shift();
+					ENodes[i+1].push(temp);
+					temp_amount--;
+				}
+			}
+		}
+		else if(index>indexof_smallest)
+		{
+			for(var i=index; i>indexof_smallest; i--)
+			{
+				var temp_amount = amount;
+				while(temp_amount>0)
+				{
+					var temp = ENodes[i].pop();
+					ENodes[i-1].unshift(temp);
+					temp_amount--;
+				}
+			}
+		}
+	}
+}
+
+function isStringContainMultipleKeywords(string)
+{
+	var count=0;
+	for(var i=0; i<dblClickSelection.length;i++)
+	{
+		if(string.toLowerCase().replace(/\r?\n|\r/g," ").indexOf(dblClickSelection[i]) !== -1)
+		{
+			count++;
+		}
+	}
+	if(count == dblClickSelection.length) return true;
+	else return false;
+}
+
+function addCircleCursor()
+{
+	var mousePos = mainStage.getPointerPosition();
+	circlecursor.setX(mousePos.x);
+	circlecursor.setY(mousePos.y);
+	//var newpos = [mousePos.x, linecursor.getPoints()[0].y, mousePos.x, mousePos.y];
+    var newpos = [mousePos.x, linecursor.getPoints()[0].y, mousePos.x, linecursor.getPoints()[1].y];
+	linecursor.setPoints(newpos);
+
+	mainLayer.add(linecursor)
+	mainLayer.add(circlecursor);
+	mainLayer.batchDraw();
+}
+
+function deleteCircleCursor()
+{
+	linecursor.remove();
+	circlecursor.remove();
+	mainLayer.batchDraw();
+}
+
+function initializeContentLayer()
+{
+
+    var defBeckgroundColor = timeColor;
+    if(visMode=="baseline") {defBeckgroundColor = "#F7F7F7";}
+	var backgroundRect = new Kinetic.Rect({
+		x: 0,
+		y: 0,
+		width: contentStage.getWidth(),
+		height: contentStage.getHeight(),
+        fill: defBeckgroundColor,
+	});
+	contentLayer.add(backgroundRect);
+
+	var X = contentStage.getWidth();
+	contentTopMargin= contentStage.getHeight()/90;
+	var Y = contentTopMargin;
+	var H = (contentStage.getHeight()-contentTopMargin*2)/noOfDisplayed;
+    H2 = H;
+    if(visMode=="baseline"){H2=0;}
+	var Y_margin= H/10;
+	var W = contentStage.getWidth()*0.95;
+	var W_rect = contentStage.getWidth();
+	var R = measureUnit;
+	contentFontSize = Math.floor(H/2);
+
+	var xPositions = [0,0.08,0.17,0.35,0.88,1];
+    //var xPositions = [0,0.10,0.28,0.35,0.88,1];
+	for (var i=0; i<noOfDisplayed; i++)
+	{
+		var Y_bottom = Y+H/2; 
+		var rect = new Kinetic.Rect({
+			x: 0,
+			y: Y,
+			width: W_rect,
+			height: H2,
+            fill: defBeckgroundColor,
+		});
+		
+		var rectGhost = new Kinetic.Rect({
+			x: X*xPositions[1],
+			y: Y,
+			width: X*(xPositions[4]-xPositions[1]),
+			height: H,
+            fill:colorLightBlue,
+			opacity:0,
+		});
+
+		var line = new Kinetic.Line({
+			points: [0, Y, W_rect, Y],
+			stroke: '#F2F2F2',
+			strokeWidth: 2,
+			lineCap: 'sqare',
+		});
+		
+		var text = new Kinetic.Text({
+			x: X*xPositions[3],
+			y: Y+Y_margin,
+			width: X*xPositions[4] - X*xPositions[3]-H,
+			height: H-Y_margin*2,
+			align: 'left',
+			padding: 3,
+			fill: 'black',
+            fontSize: contentFontSize,
+            lineHeight: 1.2,
+		});
+		
+        rectGhost.on("mouseover",function(evt){
+            var shape = evt.targetNode;
+            var index = shape.getName();
+            if(DisplayedENodes[index]!=null){
+                var theColumn = DisplayedENodes[index].NodePos.column;
+                var theRow = DisplayedENodes[index].NodePos.row;
+                HorizontalLines[theColumn][theRow].setVisible(true);
+                contentLayer.batchDraw();
+                mainLayer.batchDraw();
+            }
+            
+        });
+        rectGhost.on("mouseout",function(evt){
+            var shape = evt.targetNode;
+            var index = shape.getName();
+            
+            if(DisplayedENodes[index]!=null){
+                var theColumn = DisplayedENodes[index].NodePos.column;
+                var theRow = DisplayedENodes[index].NodePos.row;
+                HorizontalLines[theColumn][theRow].setVisible(false);
+                contentLayer.batchDraw();
+                mainLayer.batchDraw();
+            }
+        });
+
+		rectGhost.on("dblclick",function(evt){
+			var shape = evt.targetNode;
+            var index = shape.getName();
+            if(DisplayedENodes[index]!=null){
+    			doubleClickEvent(index);
+            }
+		});
+
+		var textdate = new Kinetic.Text({
+			x: X*xPositions[4],
+			y: Y+Y_margin,
+			width: X*xPositions[5] - X*xPositions[4],
+			align: 'left',
+			padding: 3,
+            fill: 'black',
+            fontSize: contentFontSize,
+            fontFamily: "Helvetica",
+            wrap:'none',
+		});
+		
+		
+		var textfrom = new Kinetic.Text({
+			x: X*xPositions[1],
+			y: Y+Y_margin,
+			width: X*(xPositions[2] - xPositions[1]-0.02),
+			align: 'right',
+			fill: 'black',
+			wrap:'none',
+			padding: 3,
+			fontStyle: "bold",
+			fontSize: contentFontSize,
+			fontFamily: "Helvetica",
+		});
+
+		var textsubject = new Kinetic.Text({
+			x: X*xPositions[2],
+			y: Y+Y_margin,
+			width:  X*xPositions[3] - X*xPositions[2],
+			height: H/3,
+			wrap:'none',
+			align: 'left',
+			fill: 'black',
+			padding: 3,
+            fontStyle: "bold",
+			fontSize: contentFontSize,
+			fontFamily: "Helvetica",
+		});
+		
+		var imageObj = new Image();
+	    imageObj.src = 'Picture/attachment.png';
+		var img = new Kinetic.Image({
+	          x: X*xPositions[4]-H,
+	          y: Y+H/4,
+	          image: imageObj,
+	          width: H/2,
+	          height: H/2,
+	        });
+		img.hide();
+
+		var circlePos = X*xPositions[2]-H;
+
+		var circle = new Kinetic.Circle({
+			x: circlePos,
+			y: Y+H/2,
+			radius: H/6,
+			fill: null,
+		});
+
+        var fromLine = new Kinetic.Line({
+            points: [circlePos,  Y+H/2, circlePos-H/2, Y+H/2],
+            stroke: blueColor,
+            strokeWidth: 4,
+            lineCap: 'sqare',
+            opacity:0,
+        });
+
+        var toLine = new Kinetic.Line({
+            points: [circlePos,  Y+H/2, circlePos+H/2, Y+H/2],
+            stroke: blueColor,
+            strokeWidth: 4,
+            lineCap: 'sqare',
+            opacity:0,
+        });
+		
+		contentLayer.add(rect);
+		//contentLayer.add(line);
+		contentLayer.add(text);
+		contentLayer.add(textsubject);
+		contentLayer.add(textfrom);
+		contentLayer.add(textdate);
+	    contentLayer.add(img);
+        if(visMode==""){ contentLayer.add(fromLine);contentLayer.add(toLine);contentLayer.add(circle);}
+	    contentLayer.add(rectGhost);
+		DisplayedENodesBackGround.push(rect);
+		DisplayedENodesText.push(text);
+		DisplayedENodesTextDate.push(textdate);
+		DisplayedENodesTextFrom.push(textfrom);
+		DisplayedENodesTextSubject.push(textsubject);
+		DisplayedENodesTextAttachment.push(img);
+		if(visMode==""){DisplayedENodesLineFrom.push(fromLine); DisplayedENodesLineTo.push(toLine); DisplayedENodesColor.push(circle);}
+		DisplayedENodesGhost.push(rectGhost);
+		Y+=H;
+	}
+
+    //add scroll bar
+    var scrollBarWidth = 20;
+    scrollBar = new Kinetic.Rect({
+            x: contentStage.getWidth()-scrollBarWidth-sideMargin,
+            y: 0,
+            width: scrollBarWidth,
+            height: contentStage.getHeight(),
+            fill:colorYear,
+        });
+
+    if(visMode=="baseline") {contentLayer.add(scrollBar);}
+	
+	contentLayer.batchDraw();
+}
+
+function doubleClickEvent(index){
+    ////////////SEND LOG DOUBLE CLICK EVENT ////////////////
+    //console.log("double " + index);
+    var order = DisplayedENodes[index].NodePos.row+"";
+    var timeperiod = DisplayedENodes[index].NodePos.column+"";
+    var date = ("0" + DisplayedENodes[index].day).slice(-2)+""+("0" + (DisplayedENodes[index].month+1)).slice(-2)+""+DisplayedENodes[index].year.slice(2,4);
+    var attachment ="0";
+    if(DisplayedENodes[index].attachment == "yes") attachment = "1";
+    var timestamp = getCookie("timestamp");
+    var mytag = "";
+    for(var i=0; i<EKeywordTextList[timeperiod].length;i++)
+    {
+        if(DisplayedENodes[index].content.indexOf(EKeywordTextList[timeperiod][i].getText()) !== -1)
+        {
+            if(mytag!="") mytag+="-";
+            mytag+=("0"+","+anonymize(EKeywordTextList[timeperiod][i].getText()));
+        }
+    }
+    
+    for(var i=0; i<EPersonsText.length;i++)
+    {
+        if(DisplayedENodes[index].content.indexOf(EPersonsText[i].getText()) !== -1)
+        {
+            if(mytag!="") mytag+="-";
+            mytag+=("1"+","+anonymize(EPersonsText[i].getText()));
+        }
+    }
+    logDoubleClickEvents(order,timeperiod,date,attachment,timestamp,mytag);
+    
+    /////////////////END LOG////////////////////////////////
+    
+    popup_data = DisplayedENodes[index];
+    openWindow();
+}
+
+function newSearch()
+{
+
+	var newquery = "";
+	if(query.length!=0 || TimeFrame.length<=0) 
+		renewAllStages();
+
+	newquery = queryBar(newquery);
+	if(query.length==0 )
+	{
+		if(TimeFrame.length>0)
+		{
+		
+			var low_month = TimeFrame[0].getMonth()+1;
+			if(low_month<10) low_month = "0"+low_month;
+			var low_date = TimeFrame[0].getDate();
+			if(low_date<10) low_date = "0"+low_date;
+			
+			var high_month = TimeFrame[noOfTimeFrame-1].getMonth()+1;
+			if(high_month<10) high_month = "0"+high_month;
+			var high_date = TimeFrame[noOfTimeFrame-1].getDate();
+			if(high_date<10) high_date = "0"+high_date;
+			
+			var low = TimeFrame[0].getFullYear()+""+low_month+""+low_date;
+			var high = TimeFrame[noOfTimeFrame].getFullYear()+""+high_month+""+high_date;
+			var range = {low:low, high:high, rangetype:"", begin:""};
+	        //var range = {low:low, high:high};
+			renewAllStages();
+			initialSearch(range,'range');
+	        //newSearchToExpandHiddenPeriod(range);
+		}
+		else
+		{
+			renewAllStages();
+			initialSearch('','initial');
+		}
+	}
+	else{
+		initialSearch(newquery,'normal');
+    }
+	initializeContentLayer();
+	balanceENodes();
+	drawExpandableTimeLineSelection();
+	drawENodes();	
+	////// LOG current state of interface//////
+	logState();
+	///////////END LOGGING///////////////////////////////////////
+	initialSelectedENodes();
+	normalSelectEvent();
+}
+
+function renewAllStages()
+{
+	//$("#logout").removeAttr("href");
+	$('#imgloader').show();
+	$("#keyword").val("");
+    $('#suggestions').empty();
+	keywordrequest.abort();
+	msgidrequest.abort();
+	personrequest.abort();
+	sendLogs(user.name, " - NEW SEARCH : ", "newsearch");
+	mainLayer.removeChildren();
+	contentLayer.removeChildren();
+	mainLayer.batchDraw();
+	contentLayer.batchDraw();
+	//mainStage.destroy();
+	//contentStage.destroy();
+	
+	/// Data for TimeFrames, Nodes
+	TimeFrame = new Array();
+	TimeFrameObj = new Array();
+	TimeFrameBackGround = new Array();
+	TimeFrameTitle = new Array();
+	TimeFrameTitleText = new Array();
+	HorizontalLines = new Array();
+	activeHorizontalLine = null;
+	ENodes = new Array();
+	ENodesObj = new Array();
+	temp_ENodes = new Array();
+	temp_ENodesObj = new Array();
+	highlightedENodesObj = new Array();
+
+	/// Data for Keywords, Persons
+	EKeywordsText = new Array();
+	EPersonsText = new Array();
+	EKeywordsObj = new Array();
+	EPersonsObj = new Array();
+	temp_DisplayedKeywords = new Array();
+	temp_DisplayedPersons = new Array();
+	temp_DisplayedKeywordsText = new Array();
+	temp_DisplayedPersonsText = new Array();
+	temp_temp_DisplayedKeywords = new Array();
+	temp_temp_DisplayedPersons = new Array();
+	temp_temp_DisplayedKeywordsText = new Array();
+	temp_temp_DisplayedPersonsText = new Array();
+	isCallTemporaryDisplay = false;
+	EKeywordList = new Array();
+	EKeywordTextList = new Array();
+	thetag_forstatechange = "";
+
+	/// Data for Content Layer
+	DisplayedENodes = new Array();
+	DisplayedENodesBackGround = new Array();
+	DisplayedENodesText = new Array();
+	DisplayedENodesTextDate = new Array();
+	DisplayedENodesTextFrom = new Array();
+	DisplayedENodesTextSubject = new Array();
+	DisplayedENodesTextAttachment = new Array();
+    DisplayedENodesLineFrom = new Array();
+    DisplayedENodesLineTo = new Array();
+	DisplayedENodesColor = new Array();
+	DisplayedENodesGhost = new Array();
+	/// data for hidden period
+	expandableMonth = new Array();
+	beforeIndicator = null;
+	afterIndicator = null;
+	isHiddenPieceSelected = false;
+	typeHiddenPieceSelected = '';
+	selectedhiddenpiece = "";
+    dateSuggestions =  new Array();
+	
+	/// Data upper left text appearance;
+	selectedObj = new Array();
+
+	/// extra params
+	isKeywordReady = false;
+	isMouseClick = false;
+	timeSelected = null;
+	keywordIsPressed = false;
+	personIsPressed = false;
+	selectedENodes = new Array();
+	selectedENodesAttachedImg = new Array();
+	selectedkeyword = null;
+	selectedperson = null;
+	selectedto = false;
+	selectedfrom = false;
+	senderLines = new Array();
+	recipientLines = new Array();
+	allLines = new Array();
+    allSuggestions = new Array();
+	
+    drawBackground();
+}
+
+function drawYearPeriod(before, after)
+{
+	var yearperiod = new Array();
+	var yearlength = new Array();
+	for (var i=0; i<TimeFrameObj.length; i++)
+	{
+		var start;
+		var end;
+		if(ENodes[i].length>=2)
+		{
+			end = ENodes[i][0].year;
+			start = ENodes[i][ENodes[i].length-1].year;
+		}
+		else
+		{
+			end = TimeFrame[i].getFullYear()+"";
+			start = TimeFrame[i+1].getFullYear()+"";
+		}
+		if(yearperiod.indexOf(start) == -1)
+		{
+			yearperiod.push(start);
+			yearlength.push(0);
+		}
+		if(yearperiod.indexOf(end) == -1)
+		{
+			yearperiod.push(end);
+			yearlength.push(0);
+		}
+	}
+	
+	//// increase year length accordingly
+	for (var i=0; i<TimeFrameObj.length; i++)
+	{
+		var start;
+		var end;
+		if(ENodes[i].length>=2)
+		{
+			end = ENodes[i][0].year;
+			start = ENodes[i][ENodes[i].length-1].year;
+		}
+		else
+		{
+			end = TimeFrame[i].getFullYear()+"";
+			start = TimeFrame[i+1].getFullYear()+"";
+		}
+		var startindex = yearperiod.indexOf(start);
+		var endindex = yearperiod.indexOf(end);
+		yearlength[startindex]+=0.5;
+		yearlength[endindex]+=0.5;
+	}
+	
+	//// resize TimeFrameObj to match year
+	//var X = mainStage.getWidth()*1/50+(before*(smallmonthsize*12+2))+((TimeFrame[0].getMonth())*smallmonthsize);
+
+	var smallestMonth = parseInt(smallestdate.substring(4,6))-1;
+	var biggestMonth = parseInt(biggestdate.substring(4,6))-1;
+
+	var smallestyear = parseInt(smallestdate.substring(0,4));
+	var biggestyear = parseInt(biggestdate.substring(0,4));
+	//TimeFrame[0].getFullYear()-smallestyear, biggestyear-TimeFrame[noOfTimeFrame].getFullYear()
+
+	//first compute the array of months that come before
+	var beforeYearArray = new Array();
+	if(smallestyear==TimeFrame[0].getFullYear()){
+		var beforeMonths = new Array();
+		for(var j = smallestMonth; j<TimeFrame[0].getMonth(); j++){
+			beforeMonths.push(j);
+		}
+		
+		if(beforeMonths.length>0)
+			beforeYearArray.push(beforeMonths);
+	}
+	else{
+		for(var i=smallestyear; i<=TimeFrame[0].getFullYear(); i++){
+			if(i==smallestyear){
+				var beforeMonths = new Array();
+				for(var j = smallestMonth; j<=11; j++){
+					beforeMonths.push(j);
+				}
+				if(beforeMonths.length>0)
+					beforeYearArray.push(beforeMonths);
+			}
+
+			else if(i==TimeFrame[0].getFullYear()){
+				var beforeMonths = new Array();
+				for(var j = 0; j<TimeFrame[0].getMonth(); j++){
+					beforeMonths.push(j);
+				}
+				if(beforeMonths.length>0)
+					beforeYearArray.push(beforeMonths);
+			}
+
+			else {
+				var beforeMonths = new Array();
+				for(var j = 0; j<=11; j++){
+					beforeMonths.push(j);
+				}
+				if(beforeMonths.length>0)
+					beforeYearArray.push(beforeMonths);
+			}
+		}
+	}
+
+
+	//and then compute the array of months that come after
+	var afterYearArray = new Array();
+	if(biggestyear==TimeFrame[noOfTimeFrame].getFullYear()){
+		var afterMonths = new Array();
+		for(var i = TimeFrame[noOfTimeFrame].getMonth()+1; i<=biggestMonth; i++){
+			afterMonths.push(i);
+		}
+		if(afterMonths.length>0)
+			afterYearArray.push(afterMonths);
+	}
+
+	else{
+		for(var i=TimeFrame[noOfTimeFrame].getFullYear(); i<=biggestyear; i++){
+			if(i==TimeFrame[noOfTimeFrame].getFullYear()){
+				var afterMonths = new Array();
+				for(var j = TimeFrame[noOfTimeFrame].getMonth()+1; j<=11; j++){
+					afterMonths.push(j);
+				}
+				if(afterMonths.length>0)
+					afterYearArray.push(afterMonths);
+			}
+
+			else if(i==biggestyear){
+				var afterMonths = new Array();
+				for(var j = 0; j<=biggestMonth; j++){
+					afterMonths.push(j);
+				}
+				if(afterMonths.length>0)
+					afterYearArray.push(afterMonths);
+			}
+
+			else {
+				var afterMonths = new Array();
+				for(var j = 0; j<=11; j++){
+					afterMonths.push(j);
+				}
+				if(afterMonths.length>0)
+					afterYearArray.push(afterMonths);
+			}
+		}
+	}
+
+	var isBefore=0;
+	if(beforeYearArray.length>0){
+		if(TimeFrame[0].getMonth()==0 && beforeYearArray[beforeYearArray.length-1][beforeYearArray[beforeYearArray.length-1]-1]==11){
+			isBefore = 1;
+		}
+	}
+
+	var neededBefore = monthWidth*(beforeYearArray.length) + yearMargin*(beforeYearArray.length-1+isBefore); 
+
+
+	var isNext=0;
+	if(afterYearArray.length>0){
+		if(TimeFrame[noOfTimeFrame].getMonth()==11 && afterYearArray[0][0]==0){
+			isNext = 1;
+		}
+	}
+
+	var neededAfter = monthWidth*(afterYearArray.length)+ yearMargin*(afterYearArray.length-1+isNext);
+
+
+	var X = sideMargin+neededBefore;
+	var totalAvailableX = mainStage.getWidth()-sideMargin*2-neededBefore-neededAfter;
+	var W = totalAvailableX/noOfTimeFrame;
+	
+	for(var i=0; i<TimeFrameObj.length; i++)
+	{
+		var theTimeFrameDate= "";
+		if(ENodes[i].length>0){
+			//theTimeFrameDate= (parseInt(ENodes[i][0].day)).toString() + " " + reverseMonth(ENodes[i][0].month);
+			theTimeFrameDate= (parseInt(ENodes[i][0].day)).toString();
+		}
+
+		TimeFrameTitleText[i].setText(theTimeFrameDate);
+		TimeFrameTitleText[i].setWidth(W);
+		TimeFrameTitleText[i].setX(X);
+		TimeFrameTitleText[i].moveToTop();
+
+		TimeFrameObj[i].setX(X);
+		TimeFrameObj[i].setWidth(W);
+		TimeFrameBackGround[i].setX(X+monthMargin);
+		TimeFrameBackGround[i].setWidth(W-monthMargin*2);
+		
+		TimeFrameTitle[i].setX(X);
+		TimeFrameTitle[i].setWidth(W);
+
+		X+=W;
+	}
+
+	timeXStart= TimeFrameObj[0].getX();
+	timeXEnd= TimeFrameObj[noOfTimeFrame-1].getX() + TimeFrameObj[noOfTimeFrame-1].getWidth();
+
+	
+	//// draw expandable month period on layer
+	X = sideMargin;
+	W = smallmonthsize;
+
+
+
+	for(var i=0; i<beforeYearArray.length; i++)
+	{
+		var marginYears = i+isBefore;
+		for (var u=0; u<beforeYearArray[i].length; u++)
+		{
+
+			var text = new Kinetic.Text({
+		       	x: X + i*monthWidth + marginYears*yearMargin,
+		       	//y: upperLimit + u*(monthHeight+4),
+                y: upperLimit + (beforeYearArray[i].length-1-u)*(monthHeight+4),
+		       	height: monthHeight,
+		       	width: monthWidth,
+		       	fill: 'black',
+		       	fontStyle: 'bold',
+		       	fontFamily: fancyFont,
+		       	fontSize: monthFontSize,
+		       	align: 'center',
+		       	padding: monthTopPadding,
+		       	text: reverseMonth(beforeYearArray[i][u]),
+		       	name: (TimeFrame[0].getFullYear()-(beforeYearArray.length-1-i)-isBefore)+"_"+(beforeYearArray[i][u]+1),
+	    	});
+
+			var rect1 = new Kinetic.Rect({
+		       	x: X + i*monthWidth + marginYears*yearMargin,
+		       	y: upperLimit + (beforeYearArray[i].length-1-u)*(monthHeight+4),
+                //y: upperLimit + u*(monthHeight+4),
+		       	width: monthWidth,
+		       	height : monthHeight,
+		       	fillLinearGradientStartPoint: {x:0, y:0},
+	            fillLinearGradientEndPoint: {x:0, y:monthHeight},
+	            fillLinearGradientColorStops: gradientMonth,   
+		       	name: (TimeFrame[0].getFullYear()-(beforeYearArray.length-1-i)-isBefore)+"_"+(beforeYearArray[i][u]+1),
+		    });
+			mainLayer.add(rect1);
+			mainLayer.add(text);
+			expandableMonth.push(text);
+            dateSuggestions.push(reverseMonth(parseInt(text.getName().split('_')[1])-1) + " " + text.getName().split('_')[0]);
+            //console.log(reverseMonth(parseInt(text.getName().split('_')[1])-1) + " " + text.getName().split('_')[0]);
+		}
+	}
+
+
+	for(var i=0; i<afterYearArray.length; i++)
+	{
+		var marginYears = i+isNext;
+		for (var u=0; u<afterYearArray[i].length; u++)
+		{
+
+		    var text = new Kinetic.Text({
+		       	x: X + totalAvailableX + i*monthWidth + neededBefore + marginYears*yearMargin,
+		       	y: upperLimit + (afterYearArray[i].length-1-u)*(monthHeight+4),
+                //y: upperLimit + u*(monthHeight+4),
+		       	height: monthHeight,
+		       	width: monthWidth,
+		       	fill: 'black',
+		       	align: 'center',
+		       	fontStyle: 'bold',
+		       	fontFamily: fancyFont,
+		       	fontSize: monthFontSize,
+		       	padding: monthTopPadding,
+		       	text: reverseMonth(afterYearArray[i][u]),
+		       	name: (TimeFrame[noOfTimeFrame].getFullYear()+(i+isNext))+"_"+(afterYearArray[i][u]+1),
+	    	});
+
+			var rect1 = new Kinetic.Rect({
+		       	x: X + totalAvailableX + i*monthWidth + neededBefore + marginYears*yearMargin,
+		       	y: upperLimit + (afterYearArray[i].length-1-u)*(monthHeight+4),
+                //y: upperLimit + u*(monthHeight+4),
+		       	width: monthWidth,
+		       	height : monthHeight,
+		       	fillLinearGradientStartPoint: {x:0, y:0},
+	            fillLinearGradientEndPoint: {x:0, y:monthHeight},
+	            fillLinearGradientColorStops: gradientMonth,  
+		       	name: (TimeFrame[noOfTimeFrame].getFullYear()+(i+isNext))+"_"+(afterYearArray[i][u]+1),
+		    });
+			mainLayer.add(rect1);
+			mainLayer.add(text);
+			expandableMonth.push(text);
+            dateSuggestions.push(reverseMonth(parseInt(text.getName().split('_')[1])-1) + " " + text.getName().split('_')[0]);
+		}
+	}
+
+	//// draw year period on layer
+	X = sideMargin;
+	yearY = upperLimit -monthHeight;
+	for(var i=before-1; i>=0; i--)
+	{
+		var rect = new Kinetic.Rect({
+	       	x: X,
+	       	y: yearY,
+	       	width: smallmonthsize*12,
+	       	height : monthHeight,
+	       	fill: colorYear,
+	    });
+	    var text = new Kinetic.Text({
+	       	x: X,
+	       	y: yearY,
+	       	width: smallmonthsize*12,
+	       	height:monthHeight,
+	       	fontSize: monthFontSize,
+	       	fontFamily: fancyFont,
+	       	padding:monthTopPadding,
+	       	fill: 'white',
+	       	align: 'center',
+	       	text: "'"+((TimeFrame[0].getFullYear()-(i+1)).toString()).substring(2,4),
+	    });
+	    X += (smallmonthsize*12+yearMargin);
+	    mainLayer.add(rect);
+	    mainLayer.add(text);
+	}
+
+	X = mainStage.getWidth()-sideMargin - after*monthWidth - (after + isNext)*yearMargin; 
+	//((smallmonthsize*12+2)*after);
+	for(var i=0; i<after; i++)
+	{
+		var rect = new Kinetic.Rect({
+	       	x: X,
+	       	y: yearY,
+	       	width: smallmonthsize*12,
+	       	height : monthHeight,
+	       	fill: colorYear,
+	    });
+	    var text = new Kinetic.Text({
+	       	x: X,
+	       	y: yearY,
+	       	width: smallmonthsize*12,
+	       	height:monthHeight,
+	       	fontFamily: fancyFont,
+	       	fontSize: monthFontSize,
+	       	padding:monthTopPadding,
+	       	fill: 'white',
+	       	align: 'center',
+	       	text: "'"+((TimeFrame[noOfTimeFrame].getFullYear()+(i+1)).toString()).substring(2,4),
+	    });
+	    X += (smallmonthsize*12+yearMargin);
+	    mainLayer.add(rect);
+	    mainLayer.add(text);
+	}
+	
+	X = sideMargin + before*monthWidth + (before + isBefore)*yearMargin; 
+	for(var i=0; i<yearperiod.length; i++)
+	{
+		
+		W = ((mainStage.getWidth()*48/50-(before*(smallmonthsize*12+2))-(after*(smallmonthsize*12+2))
+				-((TimeFrame[0].getMonth()+1)*smallmonthsize)
+				-((11-TimeFrame[noOfTimeFrame].getMonth())*smallmonthsize))/noOfTimeFrame)*yearlength[i];
+		
+
+	    if(i==0) W+=((TimeFrame[0].getMonth()+1)*smallmonthsize);
+	    if(i==yearperiod.length-1) W+=((11-TimeFrame[noOfTimeFrame].getMonth())*smallmonthsize)
+		var rect = new Kinetic.Rect({
+	       	x: X,
+	       	y: yearY,
+	       	width: W-1,
+	       	height : monthHeight,
+	       	fill: colorYear,
+	    });
+	    var text = new Kinetic.Text({
+	       	x: X,
+	       	y: yearY,
+	       	width: smallmonthsize*12,
+	       	height:monthHeight,
+	       	fontFamily: fancyFont,
+	       	fontSize: monthFontSize,
+	       	padding:monthTopPadding,
+	       	fill: 'white',
+	       	align: 'center',
+	       	text: "'"+yearperiod[i].substring(2,4),
+	    });
+	    X += (W);
+	    mainLayer.add(rect);
+	    mainLayer.add(text);
+	}
+	
+	mainLayer.batchDraw();
+}
+
+// function that draws the months
+function drawExpandableTimeLineSelection()
+{
+	var X = mainStage.getWidth()*1/50;
+	var Y = upperLimit- monthHeight;
+	var smallestyear = smallestdate.substring(0,4);
+	var biggestyear = biggestdate.substring(0,4);
+
+	var smallestMonth = smallestdate.substring(4,6);
+	var biggestMonth = biggestdate.substring(4,6);
+
+	if(TimeFrame.length>0){
+		drawYearPeriod(TimeFrame[0].getFullYear()-smallestyear, biggestyear-TimeFrame[noOfTimeFrame].getFullYear());
+		drawHiddenPeriod();
+	}
+}
+
+//function to draw the small before after things
+function drawHiddenPeriod()
+{
+	var intimeframe_biggestmsgid;
+	var index_big;
+    var beforeAfterColor = 'backgroundColor';
+    if(visMode=="baseline"){beforeAfterColor = "#FFFFFF";}
+
+	for(var i=TimeFrameObj.length-1; i>=0; i--)
+	{
+		if(ENodes[i].length>0)
+		{
+			intimeframe_biggestmsgid = ENodes[i][0].name;
+			index_big = i;
+			break;
+		}
+	}
+	if(parseInt(intimeframe_biggestmsgid)<parseInt(biggestmsgid))
+	{
+		var temp_date = new Array();
+		temp_date[0] = new Date(TimeFrame.slice(noOfTimeFrame,noOfTimeFrame+1));
+		temp_date[0].setDate(temp_date[0].getDate()+1);
+
+		
+		//if(temp_date[0].getMonth()==TimeFrame[noOfTimeFrame].getMonth())
+
+		afterIndicator = addTooltipTimeFrame(TimeFrameObj[noOfTimeFrame-1],"right","newer");
+
+		
+		if(temp_date[0].getMonth()==TimeFrame[noOfTimeFrame].getMonth())
+		{
+			var textNext = new Kinetic.Text({
+				x: mainStage.getWidth()-sideMargin*4/6,
+		    	y: beforeAfterY+beforeAfterHeight/2- sideMargin/2,
+		    	fontSize: sideMargin*5/6,
+		    	text: '>',
+		    	align: 'right',
+		    	fill: beforeAfterColor,
+		    	fontStyle: 'bold',
+			});
+			var extraperiod = new Kinetic.Rect({
+		    	x: mainStage.getWidth()-sideMargin*5/6,
+		    	y: beforeAfterY,
+		    	width: sideMargin*5/6,
+		    	height : beforeAfterHeight,
+		    	fill: 'gray',
+		    	name: 'after_'+TimeFrame[noOfTimeFrame].getFullYear()+"_"+(TimeFrame[noOfTimeFrame].getMonth()+1)+"_"+TimeFrame[noOfTimeFrame].getDate(),
+			});
+			
+			extraperiod.on('mouseover', function(evt){
+				var shape = evt.targetNode;
+
+					shape.setFill('#2E9AFE');
+					selectedhiddenpiece = shape.getName();
+			});
+
+			extraperiod.on('mouseout', function(evt){
+				var shape = evt.targetNode;
+				shape.setFill('gray');
+				selectedhiddenpiece="";
+			});
+
+			extraperiod.on('click', function(evt){
+				var shape = evt.targetNode;
+				selectedhiddenpiece = shape.getName();
+				if(selectedhiddenpiece!="")
+				{
+					if(selectedhiddenpiece.split("_").length==2)
+					{
+						var y = selectedhiddenpiece.split("_")[0];
+						var m = selectedhiddenpiece.split("_")[1];
+						if(m.length==1) m="0"+m;
+						var low = y+""+m+"00";
+						var high = y+""+m+"31";
+						var rangetype = "";
+						var range = {low:low, high:high, rangetype:rangetype, begin:""};
+						newSearchToExpandHiddenPeriod(range);
+					}
+					if(selectedhiddenpiece.split("_").length==4)
+					{
+						var type = selectedhiddenpiece.split("_")[0];
+						var y = selectedhiddenpiece.split("_")[1];
+						var m = selectedhiddenpiece.split("_")[2];
+						var d = selectedhiddenpiece.split("_")[3];
+						if(m.length==1) m="0"+m;
+						if(d.length==1) d="0"+d;
+						////// low, high is range for searching in time range, begin is msgid of email to begin with when search.
+						var low; var high; var begin;
+						if(type=="before")
+						{
+							low = y+""+m+"00";
+							high = y+""+m+""+d;
+							for(var i=0; i<noOfTimeFrame; i++)
+							{
+								if(ENodes[i].length>0)
+									begin = ENodes[i][ENodes[i].length-1].name; break;
+							}
+						}
+						if(type=="after")
+						{
+							low = y+""+m+""+d;
+							high = y+""+m+"31";
+							for(var i=noOfTimeFrame-1; i>=0; i--)
+							{
+								if(ENodes[i].length>0)
+									begin = ENodes[i][0].name; break;
+							}
+						}
+						var rangetype = type;
+						var range = {low:low, high:high, rangetype:rangetype, begin:begin};
+						newSearchToExpandHiddenPeriod(range);
+					}
+					
+				}
+				////////////////////////////////////////////////////////
+			});
+            if(visMode==""){
+                mainLayer.add(extraperiod);
+                mainLayer.add(textNext);
+            }
+            else{
+                contentLayer.add(extraperiod);
+                contentLayer.add(textNext);
+                //extraperiod.moveToTop();
+                //textNext.moveToTop();
+            }
+			
+		}
+	}
+	
+	var intimeframe_smallestmsgid;
+	var index_small;
+	for(var i=0; i<TimeFrameObj.length; i++)
+	{
+		if(ENodes[i].length>0)
+		{
+			intimeframe_smallestmsgid = ENodes[i][ENodes[i].length-1].name;
+			index_small = i;
+			break;
+		}
+	}
+
+	//alert(intimeframe_smallestmsgid);
+	if(parseInt(intimeframe_smallestmsgid)>parseInt(smallestmsgid))
+	{
+		//if(TimeFrame[0].getDate()>1)
+
+		beforeIndicator = addTooltipTimeFrame(TimeFrameObj[0],"left","older");
+		/// draw background rect for expandable period
+		
+		if(TimeFrame[0].getDate()>1)
+		{
+			var textBefore = new Kinetic.Text({
+				x: sideMargin*1/6,
+		    	y: beforeAfterY+beforeAfterHeight/2-sideMargin/2,
+		    	text: '<',
+		    	fill: beforeAfterColor,
+		    	fontSize: sideMargin*5/6,
+		    	fontStyle: 'bold',
+			});
+
+			var extraperiod = new Kinetic.Rect({
+				x: 0,
+		    	y: beforeAfterY,
+		    	width: sideMargin*5/6,
+		    	height : beforeAfterHeight,
+		    	fill: 'gray',
+		    	name: 'before_'+TimeFrame[0].getFullYear()+"_"+(TimeFrame[0].getMonth()+1)+"_"+TimeFrame[0].getDate(),
+			});
+			extraperiod.on('mouseover', function(evt){
+				var shape = evt.targetNode;
+
+					shape.setFill('#2E9AFE');
+					selectedhiddenpiece = shape.getName();
+			});
+
+			extraperiod.on('mouseout', function(evt){
+				var shape = evt.targetNode;
+				shape.setFill('gray');
+				selectedhiddenpiece="";
+			});
+
+			extraperiod.on('click', function(evt){
+				var shape = evt.targetNode;
+				selectedhiddenpiece = shape.getName();
+				if(selectedhiddenpiece!="")
+				{
+					if(selectedhiddenpiece.split("_").length==2)
+					{
+						var y = selectedhiddenpiece.split("_")[0];
+						var m = selectedhiddenpiece.split("_")[1];
+						if(m.length==1) m="0"+m;
+						var low = y+""+m+"00";
+						var high = y+""+m+"31";
+						var rangetype = "";
+						var range = {low:low, high:high, rangetype:rangetype, begin:""};
+						newSearchToExpandHiddenPeriod(range);
+					}
+					if(selectedhiddenpiece.split("_").length==4)
+					{
+						var type = selectedhiddenpiece.split("_")[0];
+						var y = selectedhiddenpiece.split("_")[1];
+						var m = selectedhiddenpiece.split("_")[2];
+						var d = selectedhiddenpiece.split("_")[3];
+						if(m.length==1) m="0"+m;
+						if(d.length==1) d="0"+d;
+						var low; var high; var begin="";
+						if(type=="before")
+						{
+							low = y+""+m+"00";
+							high = y+""+m+""+d;
+							for(var i=0; i<noOfTimeFrame; i++)
+							{
+								if(ENodes[i].length>0)
+									begin = ENodes[i][ENodes[i].length-1].name; break;
+							}
+						}
+						if(type=="after")
+						{
+							low = y+""+m+""+d;
+							high = y+""+m+"31";
+							for(var i=noOfTimeFrame-1; i>=0; i--)
+							{
+								if(ENodes[i].length>0)
+									begin = ENodes[i][0].name; break;
+							}
+						}
+						var rangetype = type;
+						var range = {low:low, high:high, rangetype:rangetype, begin:begin};
+						newSearchToExpandHiddenPeriod(range);
+					}
+					
+				}
+			
+				////////////////////////////////////////////////////////
+
+
+			});
+			if(visMode==""){
+                mainLayer.add(extraperiod);
+                mainLayer.add(textBefore);
+            }
+            else{
+                contentLayer.add(extraperiod);
+                contentLayer.add(textBefore);
+                extraperiod.moveToTop();
+                textBefore.moveToTop();
+            }
+		}
+	}
+	
+	
+	
+	/// add events for expandable months
+	for(var i=0; i<expandableMonth.length; i++)
+	{
+		//expandableMonth[i].moveToTop();
+
+		expandableMonth[i].on('mouseover', function(evt){
+			var shape = evt.targetNode;
+			selectedExpTime=expandableMonth.indexOf(shape);
+			shape.setFill(blueColor);
+
+		});
+
+		expandableMonth[i].on('mouseout', function(evt){
+			var shape = evt.targetNode;
+			if(shape.getFill()!='black') 
+				shape.setFill('black');
+
+			selectedhiddenpiece = "";
+			selectedExpTime=null;
+		});
+
+		expandableMonth[i].on("click", function(evt){
+			var shape = evt.targetNode;
+			selectedhiddenpiece = shape.getName();
+			if(selectedhiddenpiece!="")
+			{
+				if(selectedhiddenpiece.split("_").length==2)
+				{
+					var y = selectedhiddenpiece.split("_")[0];
+					var m = selectedhiddenpiece.split("_")[1];
+					if(m.length==1) m="0"+m;
+					var low = y+""+m+"01";
+					var high = y+""+m+"31";
+					var range = {low:low, high:high, rangetype:"", begin:""};
+					newSearchToExpandHiddenPeriod(range);
+				}
+				if(selectedhiddenpiece.split("_").length==4)
+				{
+					var type = selectedhiddenpiece.split("_")[0];
+					var y = selectedhiddenpiece.split("_")[1];
+					var m = selectedhiddenpiece.split("_")[2];
+					var d = selectedhiddenpiece.split("_")[3];
+					if(m.length==1) m="0"+m;
+					if(d.length==1) d="0"+d;
+					var low; var high; var begin="";
+					if(type=="before")
+					{
+						low = y+""+m+"01";
+						high = y+""+m+""+d;
+						for(var i=0; i<noOfTimeFrame; i++)
+						{
+							if(ENodes[i].length>0)
+								begin = ENodes[i][ENodes[i].length-1].name; break;
+						}
+					}
+					if(type=="after")
+					{
+						low = y+""+m+""+d;
+						high = y+""+m+"31";
+						for(var i=noOfTimeFrame-1; i>=0; i--)
+						{
+							if(ENodes[i].length>0)
+								begin = ENodes[i][0].name; break;
+						}
+					}
+					var rangetype = type;
+					var range = {low:low, high:high, rangetype:rangetype, begin:begin};
+					newSearchToExpandHiddenPeriod(range);
+				}
+				
+			}
+		
+			////////////////////////////////////////////////////////
+
+		});
+
+	}
+	
+	//// add TimeFrame Title and Text
+	var monthperiod = new Array();
+	var monthlength = new Array();
+	//var smallmonthsize = 3;
+	for (var i=0; i<TimeFrameObj.length; i++)
+	{
+		var start;
+		var end;
+		if(ENodes[i].length>=1)
+		{
+			end = ENodes[i][0].year+""+ENodes[i][0].month;
+			start = ENodes[i][ENodes[i].length-1].year+""+ENodes[i][ENodes[i].length-1].month;
+		}
+		else
+		{
+			end = TimeFrame[i].getFullYear()+""+TimeFrame[i].getMonth();
+			start = TimeFrame[i].getFullYear()+""+TimeFrame[i+1].getMonth();
+		}
+		if(monthperiod.indexOf(start) == -1)
+		{
+			monthperiod.push(start);
+			monthlength.push(0);
+		}
+		if(monthperiod.indexOf(end) == -1)
+		{
+			monthperiod.push(end);
+			monthlength.push(0);
+		}
+	}
+	
+	//// increase month length accordingly
+	for (var i=0; i<TimeFrameObj.length; i++)
+	{
+		var start;
+		var end;
+		if(ENodes[i].length>=1)
+		{
+			end = ENodes[i][0].year+""+ENodes[i][0].month;
+			start = ENodes[i][ENodes[i].length-1].year+""+ENodes[i][ENodes[i].length-1].month;
+		}
+		else
+		{
+			end = TimeFrame[i].getFullYear()+""+TimeFrame[i].getMonth();
+			start = TimeFrame[i].getFullYear()+""+TimeFrame[i+1].getMonth();
+		}
+		var startindex = monthperiod.indexOf(start);
+		var endindex = monthperiod.indexOf(end);
+		monthlength[startindex]+=0.5;
+		monthlength[endindex]+=0.5;
+	}
+	
+	//// remove old TimeFrameTitle and Text
+	for (var i=0; i<TimeFrameTitle.length; i++)
+	{
+		TimeFrameTitle[i].remove();
+		//TimeFrameTitleText[i].remove();
+	}
+	
+	var index=0;
+	var X=TimeFrameTitle[0].getX();
+	var Y=0;
+	var H=0;
+	for(var i=0;i<monthlength.length;i++)
+	{
+		var temp_index = index;
+		index+=monthlength[i];
+		var W=0;
+		while(index>temp_index)
+		{
+			temp_index+=0.5;
+			W += TimeFrameTitle[Math.ceil(temp_index)-1].getWidth()/2;
+		}
+		Y = TimeFrameTitle[Math.ceil(index)-1].getY();
+		//H = TimeFrameTitle[Math.ceil(index)-1].getHeight();
+		H = monthHeight;
+        var theMonthColor = colorMonth;
+        if(i%2==0){theMonthColor = colorMonth2;}
+		var rect = new Kinetic.Rect({
+			x: X,
+			y: Y,
+			width: W,
+			height: H,
+			fill: theMonthColor,
+			stroke: 'gray',
+			strokeWidth:0.5,
+		});
+
+		var content = reverseMonth(parseInt(monthperiod[i].substring(4,6)));
+		var text = new Kinetic.Text({
+			x: X,
+			y: Y,
+			width: monthWidth,
+			height: H,
+			fontSize: monthFontSize,
+			fontFamily: fancyFont,
+	       	padding:monthTopPadding,
+			text: content,
+			fill: 'black',
+			align: 'center',
+		});
+		mainLayer.add(rect);
+		mainLayer.add(text);
+		X +=W;
+	}
+for(var i=0; i<TimeFrameObj.length; i++){
+	TimeFrameTitleText[i].moveToTop();
+	}
+	mainLayer.batchDraw();
+}
+
+function understandExpandableMonth(){
+	var mousePos = mainStage.getPointerPosition();
+
+	for(var i=0; i<expandableMonth.length; i++)
+	{
+		var shape = expandableMonth[i];
+		if(mousePos.x>expandableMonth[i].getX() && mousePos.x<expandableMonth[i].getX() + expandableMonth[i].getWidth() ){
+			if(mousePos.y>expandableMonth[i].getY() && mousePos.y<expandableMonth[i].getY() + expandableMonth[i].getHeight() ){
+				return expandableMonth[i].getName();
+			}
+		}	
+	}
+	return null;
+}
+
+function newSearchToExpandHiddenPeriod(range)
+{
+	//query = new Array();
+	/*
+	if(!checkEmails(range,'range'))
+	{
+		alert('no messages');
+		return;
+	}
+	*/
+	renewAllStages();
+	var doNothing="";
+	queryBar(doNothing);
+	
+	initialSearch(range,'range');
+	initializeContentLayer();
+	balanceENodes();
+	drawExpandableTimeLineSelection();
+	drawENodes();	
+	////// LOG current state of interface//////
+	logState();
+	///////////END LOGGING///////////////////////////////////////
+	initialSelectedENodes();
+	normalSelectEvent();	
+}
+
+function queryBar(theQuery){
+	var X = _screenWidth*0.14;
+	var Y = filterBar;
+
+	for(var i=0; i<query.length;i++)
+	{
+        /*
+		if(visMode==""){
+            var text = new Kinetic.Text({
+                x: X,
+                y: Y,
+                padding: tagMargin,
+                fill: 'white',
+                fontSize: keywordPersonFontSize-2,
+                fontFamily: fancyFont,
+                fontStyle: fancyFontStyle,
+                text: query[i],
+                draggable: true,
+            });
+            text.on('mousedown',function(evt){
+                originalPos = {x: evt.targetNode.getX(), y: evt.targetNode.getY()};
+                mainLayer.batchDraw();
+            });
+            text.on('dragmove', function(evt){
+                var shape = evt.targetNode;
+                var rect = mainStage.find('.query'+query.indexOf(shape.getText()))[0];
+                rect.setX(shape.getX());
+                rect.setY(shape.getY());
+                mainLayer.batchDraw();
+            });
+            text.on('dragend',function(evt){
+                var shape = evt.targetNode;
+                var rect = mainStage.find('.query'+query.indexOf(shape.getText()))[0];
+                if(shape.getY()>=filterBar)
+                {
+                    shape.setX(originalPos.x);
+                    shape.setY(originalPos.y);
+                    rect.setX(originalPos.x);
+                    rect.setY(originalPos.y);
+                }
+                originalPos = null;
+                if(shape.getY()<filterBar)
+                {
+                    querytype.splice(query.indexOf(shape.getText()), 1);
+                    query.splice(query.indexOf(shape.getText()), 1);
+                    newSearch();
+                    sendLogs(user.name, " - REMOVED KEYWORDS - ", " ");
+                }
+                mainLayer.batchDraw();
+            });
+
+            var rect = new Kinetic.Rect({
+                x: X,
+                y: Y,
+                fill: '#2E9AFE',
+                width: text.getWidth(),
+                height: text.getHeight(),
+                name: 'query'+i,
+            });
+
+            X+=(rect.getWidth()+3);
+            mainLayer.add(rect);
+            mainLayer.add(text);
+        }
+        else if(visMode=="baseline"){
+            */
+            var text = new Kinetic.Text({
+                x: X,
+                y: Y,
+                padding: tagMargin,
+                fill: 'white',
+                fontSize: keywordPersonFontSize-2,
+                fontFamily: fancyFont,
+                fontStyle: fancyFontStyle,
+                text: query[i],
+                draggable: false,
+            });
+            text.on('mouseover', function(evt){
+                var shape = evt.targetNode;
+                var rect = mainStage.find('.query'+query.indexOf(shape.getText()))[0];
+                rect.setFill('#FF5555');
+            });
+            text.on('mouseout', function(evt){
+                var shape = evt.targetNode;
+                var rect = mainStage.find('.query'+query.indexOf(shape.getText()))[0];
+                if(rect!=null){
+                    rect.setFill(blueColor);
+                }
+            });
+            text.on('mousedown',function(evt){
+                var shape = evt.targetNode;
+
+                querytype.splice(query.indexOf(shape.getText()), 1);
+                query.splice(query.indexOf(shape.getText()), 1);
+                newSearch();
+                sendLogs(user.name, " - REMOVED KEYWORDS - ", " ");
+                mainLayer.batchDraw();
+            });
+
+            var rect = new Kinetic.Rect({
+                x: X,
+                y: Y,
+                fill: '#2E9AFE',
+                width: text.getWidth(),
+                height: text.getHeight(),
+                name: 'query'+i,
+            });
+
+            X+=(rect.getWidth()+3);
+            mainLayer.add(rect);
+            mainLayer.add(text);
+       // }
+
+		theQuery=theQuery+query[i]+" ";
+	}
+	return theQuery;
+}
+
+function addTooltipTimeFrame(shape, direction, string)
+{
+	var X;
+	var Y = mainStage.getHeight()*1/15+mainStage.getHeight()*1/8+7.5;
+	var text = new Kinetic.Text({
+        text: string,
+        fontFamily: 'Calibri',
+        fontSize: 13,
+        align: 'center',
+        fill: 'white',
+        padding: 2,
+      });
+	var tag = new Kinetic.Tag({
+        fill: '#2E9AFE',
+        pointerDirection: direction,
+        pointerWidth: 8,
+        pointerHeight: text.getHeight(),
+        lineJoin: 'round',
+        name: direction+' tooltip',
+      });
+	if(direction=="left")
+		X = shape.getX() - text.getWidth() - tag.getPointerWidth();
+	if(direction=="right")
+		X = shape.getX()+shape.getWidth() + text.getWidth()+tag.getPointerWidth();
+	var label = new Kinetic.Label({
+        x: X,
+        y: Y,
+        name: direction+' tooltip',
+      });
+	
+      label.add(tag);
+      
+      label.add(text);
+      
+      label.on('mousedown', function(evt){
+    	  isHiddenPieceSelected = true;
+    	  typeHiddenPieceSelected = label.getName().split(" ")[0];
+    	  label.setVisible(false);
+    	  
+      });
+      //mainLayer.add(label);
+      //mainLayer.batchDraw();
+      return label;
+}
+
+function smallest_element(array)
+{
+	var index = 0;
+	var value = array[0];
+	for (var i = 1; i < array.length; i++) {
+	  if (array[i] < value) {
+	    value = array[i];
+	    index = i;
+	  }
+	}
+	return index;
+}
+
+function biggest_element(array)
+{
+	var index = 0;
+	var value = array[0];
+	for (var i = 1; i < array.length; i++) {
+	  if (array[i] > value) {
+	    value = array[i];
+	    index = i;
+	  }
+	}
+	return index;
+}
+
+function days_between(date1, date2) {
+
+    // The number of milliseconds in one day
+    var ONE_DAY = 1000 * 60 * 60 * 24
+
+    // Convert both dates to milliseconds
+    var date1_ms = date1.getTime()
+    var date2_ms = date2.getTime()
+
+    // Calculate the difference in milliseconds
+    var difference_ms = Math.abs(date1_ms - date2_ms)
+
+    // Convert back to days and return
+    return Math.round(difference_ms/ONE_DAY)
+
+}
+
+//the function to understand on which displayed email the mouse is on.
+function getDisplayedNode(deltaVal){
+	var mousePos = contentStage.getPointerPosition();
+	var theNode;
+	var individualLength = (contentStage.getHeight()*14/15)/noOfDisplayed;
+	//exception handling
+	if(deltaVal==1){
+		theNode=0;
+	}
+	else if(deltaVal==-1){
+		theNode = DisplayedENodes.length-1;
+	}
+
+	//now understand which email
+	theNode = Math.floor((mousePos.y + contentStage.getHeight()*1/30)/individualLength);
+
+	if(theNode> DisplayedENodes.length-1){
+		theNode = DisplayedENodes.length-1;
+	}
+	return theNode;
+}
+
+function sort_object(map) {
+    var keys = _.sortBy(_.keys(map), function(a) { return a; });
+    var newmap = {};
+    _.each(keys, function(k) {
+        newmap[k] = map[k];
+    });
+    return newmap;
+}
+
+function getDistance(p1, p2) {
+    return Math.sqrt(Math.pow((p2.x - p1.x), 2) + Math.pow((p2.y - p1.y), 2));
+  }
+function convertMonth(month)
+{
+	switch (month)
+	{
+	case "Jan":
+	  return 0;
+	  break;
+	case "Feb":
+	  return 1;
+	  break;
+	case "Mar":
+	  return 2;
+	  break;
+	case "Apr":
+	  return 3;
+	  break;
+	case "May":
+	  return 4;
+	  break;
+	case "Jun":
+	  return 5;
+	  break;
+	case "Jul":
+	  return 6;
+	  break;
+	case "Aug":
+	  return 7;
+	  break;
+	case "Sep":
+	  return 8;
+	  break;
+	case "Oct":
+	  return 9;
+	  break;
+	case "Nov":
+	  return 10;
+	  break;
+	case "Dec":
+	  return 11;
+      break;					
+	}
+}
+
+function reverseMonth(month)
+{
+	switch (month)
+	{
+	case 0:
+	  return "Jan";
+	  break;
+	case 1:
+	  return "Feb";
+	  break;
+	case 2:
+	  return "Mar";
+	  break;
+	case 3:
+	  return "Apr";
+	  break;
+	case 4:
+	  return "May";
+	  break;
+	case 5:
+	  return "Jun";
+	  break;
+	case 6:
+	  return "Jul";
+	  break;
+	case 7:
+	  return "Aug";
+	  break;
+	case 8:
+	  return "Sep";
+	  break;
+	case 9:
+	  return "Oct";
+	  break;
+	case 10:
+	  return "Nov";
+	  break;
+	case 11:
+	  return "Dec";
+      break;					
+	}
+}
+
+function isDateSuggestion(val){
+    if(visMode=="baseline"){
+        if(val.charAt(0) ){
+            val = val.charAt(0).toUpperCase() + val.slice(1);
+        } 
+        if($.inArray(val, dateSuggestions)>-1){
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+function giveTimeRange(string){
+    string = string.charAt(0).toUpperCase() + string.slice(1);
+    var m = (convertMonth(string.split(" ")[0])+1)+"";
+    var y = string.split(" ")[1]+"";
+
+    if(m.length==1) m="0"+m;
+    var low = y+""+m+"01";
+    var high = y+""+m+"31";
+    return {low:low, high:high, rangetype:"", begin:""};
+}
+
+function sendLogs(name, string, type)
+{
+     if(sessionid!="" && sessionid!=null){
+    	$.ajax({
+    	    type: 'GET',
+    	    url: 'savelog.jsp',
+    	    data: {"name": name, "content":string, "type": type},
+    	    cache: false,
+    	    async: true,
+    	    success: function(msg) {
+        	}
+        });
+    }
+}
+
+function checkIndex(name)
+{
+	var result;
+	$.ajax({
+		    type: 'GET',
+		    url: 'checkindex.jsp',
+		    data: {"name":name},
+		    cache: false,
+		    async: false,
+		    success: function(msg) {
+			result =  msg.trim();
+		}
+	});
+	return result;
+}
+
+function indexNodes(){
+	nodePositions= new Array();
+	nodePositionsReverse = new Array();
+	var theOrder=0;
+
+	for(var i=0; i<ENodes.length; i++){
+		var timeFrameArray = new Array();
+		theOrder = theOrder+ENodes[i].length;
+		for(var u=0; u<ENodes[i].length; u++){
+			theOrder--;
+			timeFrameArray.push(theOrder);
+			
+
+			var thePosition = [i,ENodes[i].length-1-u];
+			nodePositionsReverse.push(thePosition);
+		}
+		theOrder = theOrder+ENodes[i].length;
+		nodePositions.push(timeFrameArray);
+	}
+}
+
+
+function checkEmails(range, type)
+{
+	var result;
+	var newquery = "";
+	for(var i=0; i<query.length;i++)
+	{
+		newquery+=(query[i]+" ");
+	}
+	if(type=='range')
+	$.ajax({
+		    type: 'GET',
+		    url: 'rangemsgid.jsp',
+		    data: {"name":user.name, "low":range.low, "high":range.high, "query":newquery, "rangetype":range.rangetype, "begin":range.begin},
+		    cache: false,
+		    async: false,
+		    success: function(msg) {
+		    	var json = JSON.parse(msg)[0];
+		    	var count=0;
+		    	for (var key in json)
+		    	{
+		    		count++;
+		    	}
+		    	if (count==0) 
+		    		result=false;
+		    	else
+		    		result = true;
+		}
+	});
+	return result;
+}
+		
+//function for checking if the email is already slected
+function notYetDisplayed(theEmail){
+	for(var i=0; i<selectedENodes.length; i++){
+		if(theEmail==selectedENodes[i]){
+			return false;
+		}
+	}
+	return true;
+}
+
+//function for checking if the email is already slected
+function getDisplayIndex(theEmail){
+    for(var i=0; i<selectedENodes.length; i++){
+        if(theEmail==selectedENodes[i]){
+           for(var j=0; j<DisplayedENodesText.length; j++){
+                if(DisplayedENodesText[j].getName()==i){
+                    return j;
+                }
+           }
+        }
+    }
+    return -1;
+}
+
+//display selected keyword contact
+function displayCurrentSelection(theText, isSelectedPerson){
+
+	var text = new Kinetic.Text({
+		x: 0,
+		y: filterBar-keywordPersonFontSize-5,
+		//fill: '#2E9AFE',
+        fill: 'white',
+		fontSize: keywordPersonFontSize-2,
+		fontFamily: fancyFont,
+		fontStyle: fancyFontStyle,
+		text: theText,
+		padding: 5,
+	});
+
+	//text.setX(mainStage.getWidth()-text.getWidth()-mainStage.getWidth()*1/30);
+    var mousePos = mainStage.getPointerPosition();
+    text.setX(mousePos.x);
+    text.setY(mousePos.y);
+	//text.setY(filterBar + tagMargin);
+	mainLayer.add(text);
+	selectedObj.push(text);
+
+    circlecursor.setWidth(selectedObj[0].getWidth());
+    selectedObj[0].moveToTop();
+}
+
+//////////Functions related to time////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function timeChange(theIndex, isSelect){
+	var mousePos = mainStage.getPointerPosition();
+	var timeToBeSelected = null;
+	var timeToBeDeselected = null;
+	var timeMouseOver;
+	var isTimeChange=false;
+	if(isSelect){
+		timeMouseOver=theIndex;
+	}
+	else{
+		timeMouseOver=null;
+	}
+
+	var reallyOut=false;
+
+	if(timeLocked==null){
+		//first check if it is a pure mouseout event
+		if(!isSelect && timeSelected!=null && timeSelected==theIndex){
+			if(mousePos.x<timeXStart || mousePos.x>timeXEnd || mousePos.y<upperLimit+monthHeight || mousePos.y>deathLimit){
+				timeToBeDeselected=timeSelected;
+				timeSelected = null;
+				isTimeChange = true;
+			}
+		}
+		
+		//if it is a mouseover event, check if any timeframe needs to be deselected
+		if(isSelect && timeMouseOver!==timeSelected){
+			timeToBeSelected = timeMouseOver;
+			if(timeSelected!=null){
+				timeToBeDeselected = timeSelected;
+			}
+			timeSelected = timeToBeSelected;
+			isTimeChange = true;
+		}
+	}
+	
+
+	//if the time has changed:
+	if (isTimeChange){
+
+		//perform select and deselect actions
+        if(timeToBeDeselected != null){
+            deselectTime(timeToBeDeselected);
+        }
+
+		if(timeToBeSelected != null){
+			selectTime(timeToBeSelected);
+		}
+
+        //if there is a keyword or contact that is clicked on
+        if(selectedkeyword!=null ||selectedperson!=null){
+            var temp_count=0;
+            var H = betweenLimits;
+            var R = measureUnit;
+            //DisplayedENodes = new Array();
+            i=timeSelected;
+                
+            for(var u=0; u< ENodes[i].length; u++){
+                if(typeof temp_ENodes[i][u] !== 'undefined')
+                {
+                    //console.log(notYetDisplayed(temp_ENodesObj[i][u]));
+                    if(notYetDisplayed(temp_ENodesObj[i][u]) ){
+                        /////////LOG Email Events KEYWORD SELECTION /////////////////////////
+                        var isSeen = "0";
+                        if(temp_ENodesObj[i][u].getFill() == seenNode)
+                            isSeen = "1";
+                        logEmailEvents("1", isSeen, u+"", i+"");
+                        ////////////////////////////////////////////////////////////////
+                        
+                        var deselectedEnodes = selectedENodes.pop();
+                        deselectedEnodes.setRadius(R);
+                        deselectedEnodes.setFill(seenNode);
+                        if(temp_ENodesObj[i][u].getStrokeWidth()==5)
+                        {
+                            temp_ENodesObj[i][u].setStrokeWidth(2);
+                        }
+                        DisplayedENodes.pop();
+                        DisplayedENodes.unshift(temp_ENodes[i][u]);
+                        selectedENodes.unshift(temp_ENodesObj[i][u]);
+                        temp_count++;
+                        if(temp_count>noOfDisplayed) break;
+                    }
+                }
+            }
+
+            /*
+            for(var i=temp_count; i<noOfDisplayed +1; i++)
+            {
+                var deselectedEnodes = selectedENodes.shift();
+                deselectedEnodes.setRadius(R);
+                deselectedEnodes.setFill(seenNode);
+                var deselecteddata = DisplayedENodes.shift();
+                DisplayedENodes.push(deselecteddata);
+                selectedENodes.push(deselectedEnodes);
+            }
+            */
+            showSelectedENodes();
+        }
+
+
+		//change the keywords/ persons available and redraw 
+		rearrangeTags();
+		mainLayer.batchDraw();
+		contentLayer.batchDraw();
+		isTimeChange=false;
+	}
+}
+
+function selectTime(theIndex){
+	timeSelected=theIndex;
+	TimeFrameBackGround[theIndex].setFill(timeColorSelected);
+	TimeFrameObj[theIndex].setOpacity(0.15);
+	logTimeEvents("1", theIndex+"");
+
+	//set the background of all selected to white
+	for(var i=0; i<selectedENodes.length; i++){
+		normalizeContentBackground(i);
+	}
+}
+
+function deselectTime(theIndex){
+	TimeFrameBackGround[theIndex].setFill(timeColor);
+	TimeFrameObj[theIndex].setOpacity(0);
+	logTimeEvents("0", theIndex+"");
+
+	for(var i=0; i<selectedENodes.length; i++){
+		normalizeContentBackground(i);
+	}
+	
+}
+
+/*
+function highlightContentBackground(theIndex){
+
+	if(){
+
+	}
+	else{
+	DisplayedENodesBackGround[theIndex].setFillPriority('linear-gradient');
+	}
+}
+*/
+function normalizeContentBackground(theNodeIndex){
+
+	theActualIndex= DisplayedENodesText[theNodeIndex].getName();
+	if(theActualIndex>=0){
+		if(DisplayedENodes[theActualIndex].NodePos.column === timeSelected){
+			DisplayedENodesBackGround[theNodeIndex].setFill(timeColorSelected);
+		}
+		else{
+			DisplayedENodesBackGround[theNodeIndex].setFill(timeColor);
+		}
+	}
+}
+
+//lock a time period
+function tryLockTime(theTime){
+	if(timeLocked===null){
+
+		var mousePos = mainStage.getPointerPosition();
+	
+		if(mousePos.y > TimeFrameBackGround[theTime].getHeight() + TimeFrameBackGround[theTime].getY()){
+			timeLocked = theTime.toString();
+			TimeFrameObj[theTime].setStroke('black');
+			TimeFrameObj[theTime].setStrokeWidth(2);
+		}
+	}
+}
+
+function unlockTime(theTime){
+	if(timeLocked!==null){
+
+		if((keywordIsPressed || personIsPressed)){
+			TimeFrameObj[timeLocked].setStrokeWidth(0.1);
+			TimeFrameObj[timeLocked].setStroke(null);
+			deselectTime(timeLocked);
+			timeLocked=null;
+		}
+
+		else if(theTime==timeLocked){
+			TimeFrameObj[timeLocked].setStrokeWidth(0.1);
+			TimeFrameObj[timeLocked].setStroke(null);
+			timeLocked=null;
+		}
+		else{
+			TimeFrameObj[timeLocked].setStrokeWidth(0.1);
+			TimeFrameObj[timeLocked].setStroke(null);
+			deselectTime(timeLocked);
+			timeLocked=null;
+
+			selectTime(theTime);
+			rearrangeTags();
+			mainLayer.batchDraw();
+		}
+	}
+}
+
+//////////Functions related to keyword person selections ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function addKeywordClues(theKeyword){
+	for(var i=0; i<TimeFrameObj.length; i++)
+	{
+		for(var u=0; u<ENodesObj[i].length; u++)
+		{
+			if(ENodes[i][u].content.toLowerCase().replace(/\r?\n|\r/g," ").indexOf(theKeyword.getText()) != -1)
+			{
+				ENodesObj[i][u].setStroke('#2E9AFE');
+				ENodesObj[i][u].setStrokeWidth(3);
+				highlightedENodesObj.push(ENodesObj[i][u]);
+				temp_ENodesObj[i][u] = ENodesObj[i][u];
+				temp_ENodes[i][u] = ENodes[i][u];
+
+                
+                if(!notYetDisplayed(ENodesObj[i][u])){
+                    var index = getDisplayIndex(ENodesObj[i][u]);
+                    DisplayedENodesColor[index].setStroke('#2E9AFE');
+                    DisplayedENodesColor[index].setStrokeWidth(3);
+                    highlightedENodesObj.push(DisplayedENodesColor[index]);
+                }
+			}
+		}
+	}
+}
+
+function addKeywordCluesDisplay(theKeyword){
+    if(visMode==""){
+        for(var i=0; i<DisplayedENodesText.length; i++)
+        {
+            if(DisplayedENodesText[i].getText().toLowerCase().replace(/\r?\n|\r/g," ").indexOf(theKeyword.getText()) != -1){
+                DisplayedENodesColor[i].setStroke('#2E9AFE');
+                DisplayedENodesColor[i].setStrokeWidth(3);
+            }
+            
+            else{
+                DisplayedENodesColor[i].setStroke(null);
+                DisplayedENodesColor[i].setStrokeWidth(0);
+            }
+        }
+        contentLayer.batchDraw();
+    }
+    
+}
+
+function removeKeywordCluesDisplay(){
+    if(visMode==""){
+        for(var i=0; i<DisplayedENodesText.length; i++)
+        {
+            DisplayedENodesColor[i].setStroke(null);
+            DisplayedENodesColor[i].setStrokeWidth(0);
+
+        }
+        contentLayer.batchDraw();
+    }
+}
+
+function addPersonClues(thePerson){
+    if(visMode==""){
+    	for(var i=0; i<TimeFrameObj.length; i++)
+    	{
+    		for(var u=0; u<ENodesObj[i].length; u++)
+    		{
+    			//// sender
+    			if(ENodes[i][u].from.toLowerCase().indexOf(thePerson.getText()) != -1)
+    			{
+    				var line = new Kinetic.Line({
+    					points: [ENodesObj[i][u].getX()-5,ENodesObj[i][u].getY(),ENodesObj[i][u].getX()-25,ENodesObj[i][u].getY()],
+    					stroke: '#2E9AFE',
+    					strokeWidth: 2,
+    				});
+    				mainLayer.add(line);
+    				allLines.push(line);
+    				senderLines[i][u]=line;
+    				temp_ENodesObj[i][u] = ENodesObj[i][u];
+    				temp_ENodes[i][u] = ENodes[i][u];
+    			}
+    			//// recipient
+    			if(ENodes[i][u].to.toLowerCase().indexOf(thePerson.getText()) != -1)
+    			{
+    				var line = new Kinetic.Line({
+    					points: [ENodesObj[i][u].getX()+5,ENodesObj[i][u].getY(),ENodesObj[i][u].getX()+25,ENodesObj[i][u].getY()],
+    					stroke: '#2E9AFE',
+    					strokeWidth: 2,
+    				});
+    				mainLayer.add(line);
+    				allLines.push(line);
+    				recipientLines[i][u]=line;
+    				temp_ENodesObj[i][u] = ENodesObj[i][u];
+    				temp_ENodes[i][u] = ENodes[i][u];
+    			}
+    		}
+    	}
+    }
+}
+
+function addPersonCluesDisplay(thePerson){
+    if(visMode==""){
+        for(var i=0; i<DisplayedENodesTextFrom.length; i++)
+        {
+            //draw the from clue
+            if(DisplayedENodesTextFrom[i].getText().toLowerCase().indexOf(thePerson.getText()) != -1){
+                DisplayedENodesTextFrom[i].setFill('#2E9AFE');
+                //DisplayedENodesLineTo[i].setOpacity(1);
+            }
+            else{
+                //DisplayedENodesTextFrom[i].setFill('black');
+                DisplayedENodesLineTo[i].setOpacity(0);
+            }
+
+            //draw the cc clue
+            if(DisplayedENodesLineTo[i].getName().toLowerCase().indexOf(thePerson.getText()) != -1 ){
+                DisplayedENodesLineTo[i].setOpacity(1);
+            }
+            else{
+                DisplayedENodesLineTo[i].setOpacity(0);
+            }
+        }
+        contentLayer.batchDraw();
+    }
+}
+
+function removePersonCluesDisplay(){
+    if(visMode==""){
+        for(var i=0; i<DisplayedENodesTextFrom.length; i++)
+        {
+            DisplayedENodesTextFrom[i].setFill('black');
+            //DisplayedENodesLineFrom[i].setOpacity(0);
+            DisplayedENodesLineTo[i].setOpacity(0);
+        }
+        contentLayer.batchDraw();
+    }
+}
+
+//function for rearranging the tags
+function rearrangeTags(){
+	if(timeSelected!=null&& !(keywordIsPressed || personIsPressed))
+	{
+		//sendLogs(user.name, " - just select TimeFrame " +timeSelected + " - ", " ");
+		//// create temporary keyword list
+		var content ="";
+		if(isKeywordReady)
+		{
+			temp_DisplayedKeywords = new Array();
+			temp_DisplayedKeywordsText = new Array();
+			temp_DisplayedPersons = new Array();
+			temp_DisplayedPersonsText = new Array();
+			temp_DisplayedKeywords = EKeywordList[timeSelected].slice(0);
+			temp_DisplayedKeywordsText = EKeywordTextList[timeSelected].slice(0);
+		}
+		//// create temporary person list
+		content ="";
+		for(var i=0; i<ENodes[timeSelected].length; i++)
+		{
+			content = content+" "+ENodes[timeSelected][i].from+" "+ENodes[timeSelected][i].to;
+		}
+		createTemporaryKeywordsPersons(content, 'person', timeSelected);
+		//// display temporary keyword person
+		displayTemporaryKeywordsPersons();
+	}
+
+	//else if(isMouseClick&&timeSelected!=null)
+	else if((keywordIsPressed || personIsPressed)&&timeSelected!=null)
+	{
+		
+		//// create temporary keyword list
+		var content ="";
+		if(isKeywordReady)
+		{
+			for(var i=0; i<ENodes[timeSelected].length; i++)
+			{
+				if(typeof temp_ENodes[timeSelected][i] !== 'undefined')
+					content = content+" "+ENodes[timeSelected][i].content;
+			}
+			createTemporaryKeywordsPersons(content, 'keyword', timeSelected)
+		}
+
+		//// create temporary person list
+		content ="";
+		for(var i=0; i<ENodes[timeSelected].length; i++)
+		{
+			if(typeof temp_ENodes[timeSelected][i] !== 'undefined')
+				content = content+" "+ENodes[timeSelected][i].from+" "+ENodes[timeSelected][i].to;
+		}
+		createTemporaryKeywordsPersons(content, 'person', timeSelected);
+		//// display temporary keyword person
+		displayTemporaryKeywordsPersons();
+	}
+
+	else if(timeSelected ==null && (keywordIsPressed || personIsPressed) ){
+		isCallTemporaryDisplay=true;
+		var content ="";
+
+		//create temporary keyword list
+		if(isKeywordReady)
+		{
+			for(var i=0; i<TimeFrameObj.length;i++)
+			{
+				for(var u=0; u<ENodes[i].length; u++)
+				{
+					if(typeof temp_ENodes[i][u] !== 'undefined')
+						content = content+" "+ENodes[i][u].content;
+				}
+			}
+			createTemporaryKeywordsPersons(content, 'keyword', timeSelected);
+			temp_temp_DisplayedKeywordsText = temp_DisplayedKeywordsText.slice(0);
+			temp_temp_DisplayedKeywords = temp_DisplayedKeywords.slice(0);
+		}
+
+		//// create temporary person list
+		content ="";
+		for(var i=0; i<TimeFrameObj.length;i++)
+		{
+			for(var u=0; u<ENodes[i].length; u++)
+			{
+				if(typeof temp_ENodes[i][u] !== 'undefined')
+					content = content+" "+ENodes[i][u].from+" "+ENodes[i][u].to;
+			}
+		}
+		createTemporaryKeywordsPersons(content, 'person', timeSelected);
+		//// display temporary keyword person
+
+		displayTemporaryKeywordsPersons();
+		temp_temp_DisplayedPersons = temp_DisplayedPersons.slice(0);
+		temp_temp_DisplayedPersonsText = temp_DisplayedPersonsText.slice(0);
+		}
+
+	else if(timeSelected == null){
+		if (activeHorizontalLine !=null) activeHorizontalLine.setVisible(false); activeHorizontalLine=null;
+
+		if(isCallTemporaryDisplay)
+		{
+			if(isKeywordReady)
+			{
+				for(var i=0; i<temp_DisplayedKeywords.length; i++)
+				{
+					if(temp_DisplayedKeywords[i].getX()>mainStage.getWidth()) break;
+					temp_DisplayedKeywords[i].remove();
+					temp_DisplayedKeywordsText[i].remove();
+				}
+				
+				temp_DisplayedKeywordsText = temp_temp_DisplayedKeywordsText.slice(0);
+				temp_DisplayedKeywords = temp_temp_DisplayedKeywords.slice(0);
+			}
+			
+			for(var i=0; i<temp_DisplayedPersons.length; i++)
+			{
+				if(temp_DisplayedPersons[i].getX()>mainStage.getWidth()) break;
+				temp_DisplayedPersons[i].remove();
+				temp_DisplayedPersonsText[i].remove();
+			}
+
+			temp_DisplayedPersons = temp_temp_DisplayedPersons.slice(0);
+			temp_DisplayedPersonsText = temp_temp_DisplayedPersonsText.slice(0);
+			//// display temporary keyword person
+			displayTemporaryKeywordsPersons();
+		}
+		
+		if(isCallTemporaryDisplay&&timeSelected==null)
+		{
+			deleteTemporaryKeywordsPersons();
+			isCallTemporaryDisplay=false;
+		}
+	}
+}
+
+function anonymize(theString){
+    /*
+    var resultString = theString;
+    var theLength = theString.length;
+    if(theLength>=2){
+        var theFirst= theString.charCodeAt(0);
+         var theSecond= theString.charCodeAt(1);
+        if(theFirst!=NaN && theSecond!=NaN){
+            var replaceString = "";
+            var firstTwo = theFirst+ "_" + theSecond + "_";
+            var lengthString = theLength.toString() + "_";
+
+            var additional="";
+            var theLast=theString.charCodeAt(theString.length-1);
+            var oneBefore = theString.charCodeAt(theString.length-2)
+            if( theLast!=NaN && oneBefore!=NaN){
+                additional = (theLast + oneBefore).toString();
+            }
+            replaceString = firstTwo + lengthString + additional;
+            resultString = replaceString;
+        }
+    }
+    return resultString;
+    */ 
+    return theString;
+}
+
+function logState()
+{
+	var filename = rootPath+"logs/"+getCookie("username")+""+getCookie("timestamp")+".xml";
+	var timeperiod = "";
+	var filter = "";
+	
+	for(var i=0; i<noOfTimeFrame;i++)
+	{
+		if(i>0) timeperiod+="-";
+		if(ENodes[i].length>0)
+		{
+			firstmail = ("0"+ENodes[i][0].day).slice(-2)+""+("0"+(ENodes[i][0].month+1)).slice(-2)+""+ENodes[i][0].year.substring(2,4);
+			lastmail = ("0"+ENodes[i][ENodes[i].length-1].day).slice(-2)+""+("0"+(ENodes[i][ENodes[i].length-1].month+1)).slice(-2)+""+ENodes[i][ENodes[i].length-1].year.substring(2,4);
+			timeperiod=timeperiod+firstmail+","+lastmail+","+i+","+ENodes[i].length;
+		}
+		else if(TimeFrame.length>0)
+		{
+			firstmail = ("0"+TimeFrame[i].getDate()).slice(-2)+""+("0"+(TimeFrame[i].getMonth()+1)).slice(-2)+(""+TimeFrame[i].getFullYear()).substring(2,4);
+			lastmail = ("0"+TimeFrame[i+1].getDate()).slice(-2)+""+("0"+(TimeFrame[i+1].getMonth()+1)).slice(-2)+(""+TimeFrame[i+1].getFullYear()).substring(2,4);
+			timeperiod=timeperiod+firstmail+","+lastmail+","+i+","+ENodes[i].length;
+		}
+		else{
+			firstmail = "000000";
+			lastmail =  "000000";
+			timeperiod=timeperiod+firstmail+","+lastmail+","+i+","+ENodes[i].length;
+		}
+	}
+	
+	for(var i=0; i<query.length; i++)
+	{
+		if(i>0) filter+="-";
+		filter = filter+querytype[i]+","+query[i];
+	}
+	
+	var newtimestamp = (new Date()).getTime()-timestamp;
+	var content = {filename:filename, timestamp:newtimestamp+"", timeperiod:timeperiod, filter:filter};
+	//alert(JSON.stringify(content));
+	sendLogs(user.name, JSON.stringify(content), "thestate");
+}
+
+function logTagEvents(type, tagId, isPerson)
+{
+	var filename = rootPath+"logs/"+getCookie("username")+""+getCookie("timestamp")+".xml";
+	var newtimestamp = (new Date()).getTime()-timestamp;
+	var content = {filename:filename, type:type, timestamp:newtimestamp+"", tagId:anonymize(tagId), isPerson:isPerson};
+	sendLogs(user.name, JSON.stringify(content), "tagselected");
+}
+
+function logTimeEvents(type, timeId)
+{
+	var filename = rootPath+"logs/"+getCookie("username")+""+getCookie("timestamp")+".xml";
+	var newtimestamp = (new Date()).getTime()-timestamp;
+	var content = {filename:filename, type:type, timeId:timeId, timestamp:newtimestamp+""};
+	sendLogs(user.name, JSON.stringify(content), "timeselected");
+}
+
+function logTagShown(thetag)
+{
+	var filename = rootPath+"logs/"+getCookie("username")+""+getCookie("timestamp")+".xml";
+	var newtimestamp = (new Date()).getTime()-timestamp;
+	var content = {filename:filename, timestamp:newtimestamp+"", thetag:thetag};
+	sendLogs(user.name, JSON.stringify(content), "tagset");
+}
+
+function logEmailEvents(type, isSeen, order, timeperiod)
+{
+	var filename = rootPath+"logs/"+getCookie("username")+""+getCookie("timestamp")+".xml";
+	var newtimestamp = (new Date()).getTime()-timestamp;
+    var emailID =  ENodes[timeperiod][order].name+"";
+	var content = {filename:filename, type:type, isSeen:isSeen, order:order, timeperiod:timeperiod, emailID:emailID, timestamp:newtimestamp+""};
+	sendLogs(user.name, JSON.stringify(content), "emailselect");
+}
+
+function logDoubleClickEvents(order,timeperiod,date,attachment,timestamp,thetag)
+{
+	var filename = rootPath+"logs/"+getCookie("username")+""+getCookie("timestamp")+".xml";
+	var newtimestamp = (new Date()).getTime()-timestamp;
+	var content = {filename:filename, order:order, timeperiod:timeperiod, date:date+"", attachment:attachment, timestamp:newtimestamp+"", thetag:thetag};
+	sendLogs(user.name, JSON.stringify(content), "doubleclick");
+}
+
+function savelog () {
+	//alert("yes");
+    if(sessionid!="" && sessionid!=null){
+    	var name = getCookie("username");
+    	var timestamp = getCookie("timestamp");
+    	var string = {filename:rootPath+"logs/"+getCookie("username")+""+getCookie("timestamp")+".xml",
+    					value:"failure", timestamp:((new Date()).getTime()-timestamp)+"", sessionid:getCookie("sessionid") };
+    	var type = "combinelogs";
+    	$.ajax({
+    	    type: 'GET',
+    	    url: 'savelog.jsp',
+    	    data: {"name": name, "content":JSON.stringify(string), "type": type},
+    	    cache: false,
+    	    async: false,
+    	    success: function(msg) {
+    	    	//alert("yes");
+    	    	//setCookie("timestamp",msg.trim(),1);
+    	    	setCookie("sessionid","",1);
+    	        location.reload();
+    		}
+    	});
+    }
+    else{
+        alert("There is no active session to be saved");
+    }
+}
+
+function startlog () {
+    //alert("yes");
+    if(sessionid=="" || sessionid==null){
+        while(sessionid==""||sessionid==null)
+        {
+            sessionid = encodeURIComponent(prompt("Please enter the task code"));
+            setCookie("sessionid",sessionid,1);
+            setCookie("startTime",new Date().getTime(),1);
+        }
+
+        var name = getCookie("username");
+        var timestamp = getCookie("timestamp");
+        var string = {filename:rootPath+"logs/"+getCookie("username")+""+getCookie("timestamp")+".xml",
+                        value:"failure", timestamp:((new Date()).getTime()-timestamp)+"", sessionid:getCookie("sessionid") };
+        var type = "initial";
+        $.ajax({
+            type: 'GET',
+            url: 'savelog.jsp',
+            data: {"name": name, "content":JSON.stringify(string), "type": type},
+            cache: false,
+            async: false,
+            success: function(msg) {
+                //alert("yes");
+                setCookie("timestamp",msg.trim(),1);
+                location.reload();
+            }
+        });
+
+    }
+    else{
+        alert("First save the log to start a new session");
+    }
+}
+
+function changeMode(){
+    mode = getCookie("visMode");
+    if(mode==""){
+        setCookie("visMode", "baseline", 1);
+    }
+    else{
+        setCookie("visMode", "", 1);
+    }
+    location.reload();
+}
+
+
+function setCookie(cname,cvalue,exdays)
+{
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+function getCookie(cname)
+{
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) 
+	  {
+	  var c = ca[i].trim();
+	  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	  }
+	return "";
+}
+
+function onFocus(x)
+{
+	if(x.value == "Search")
+		x.value="";
+}
+
+var alphaOnly = /[A-Za-z]/g;
+
+function restrictCharacters(myfield, e) {
+
+    if (!e) var e = window.event;
+    if (e.keyCode) code = e.keyCode;
+    else if (e.which) code = e.which;
+    var character = String.fromCharCode(code);
+
+    // if they pressed esc... remove focus from field...
+    if (code==27) { this.blur(); return false; }
+    
+    // ignore if they are press other keys
+    // strange because code: 39 is the down key AND ' key...
+    // and DEL also equals .
+    /*
+    if (!e.ctrlKey && code!=9 && code!=8 && code!=36 && code!=37 && code!=38 && (code!=39 || (code==39 && character=="'")) && code!=40) {
+        if (character.match(alphaOnly)) {
+            return true;
+        } else {
+            return false;
+        }
+        
+    }
+    */
+    if(code<128){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
+
+
+function openWindow() {
+    if(popUpWin!=null){
+        popUpWin.close();
+    }
+        
+    popUpWin = window.open('popup.html', 'popUpWindow','height=800, width=650, left=300, top=100, resizable=yes, scrollbars=yes, toolbar=yes, menubar=no, location=no, directories=no, status=yes');
+
+}
+
+function getData()
+{
+	return popup_data;
+}
+
+function sortNumber(a,b) {
+    return a - b;
+}
+
+function abort(){
+    var r = confirm("Are you sure you want to abort the session?");
+    if (r == true) {
+        savelog();
+    }
+}
+
+function checkTimeOut(){
+    var theSessionid=getCookie("sessionid");
+    if(theSessionid!="" && theSessionid!=null){
+        var currentTime = new Date().getTime();
+        var timeDif = currentTime - parseInt(getCookie("startTime"));
+        if(timeDif>=300000){
+            alert("5 minutes are over, please go to the next task."); 
+            window.clearInterval(timeOut);
+            savelog();
+        }
+    }
+}
+
+
+</script>
+
+<style type="text/css">
+#maintable { width: 100%; height: 90%}
+#subtable { width: 95%}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('font/inconsolata-bold-webfont.eot');
+    src: url('font/inconsolata-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/inconsolata-bold-webfont.woff') format('woff'),
+         url('font/inconsolata-bold-webfont.ttf') format('truetype'),
+         url('font/inconsolata-bold-webfont.svg#inconsolatabold') format('svg');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('font/inconsolata-regular-webfont.eot');
+    src: url('font/inconsolata-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/inconsolata-regular-webfont.woff') format('woff'),
+         url('font/inconsolata-regular-webfont.ttf') format('truetype'),
+         url('font/inconsolata-regular-webfont.svg#inconsolataregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+div.scrollable {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+#image{
+    border: 0px;
+    position: relative;
+	left: 42%;
+	top: 40%;
+}
+.element {
+    width:80%;
+}
+
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+}
+
+#keyword {
+	font-size: 100%;
+    position: absolute;
+    color: #222222;
+    text-align: left;
+    border: none;
+	top: 95.8%;
+    left: 2%;
+    height: 3.3%;
+    width: 10%;
+    padding: 0.4%;
+    background-color : #FFFFFF;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+      }
+#search
+{
+    position: absolute;
+    color: #2E9AFE;
+    top: 95.8%;
+    height: 3.3%;
+    left: 12%;
+    background-color : #FFFFFF;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+}
+
+
+
+#welcome
+{
+	font-family: Tahoma, Helvetica, arial;
+	font-style: bold;
+    position: absolute;
+    left: 2%;
+    top: 0.5%;
+    color: 	#FFFFFF;
+}
+
+
+#imgloader
+{
+	position: absolute;
+	top: 92%;
+	height: 2%;
+	left: 50%;
+}
+
+#visual_space{
+	position: absolute;
+	bottom: 0px;
+	left:0px;
+}
+
+#visual_space2{
+	position: absolute;
+	top: 0%;
+	right:0px;
+}
+
+#miscellaneous{
+	position: absolute;
+	top: 30.5%;
+	left:0px;
+	height:3%;
+}
+
+#logButtons{
+	position: absolute;
+	top: 1.8%;
+	right:1.2%;
+	height: 2.8%;
+}
+
+#startlog{
+    position: absolute;
+    top:10.6%;
+    left:0%;
+    background-color: #EEEEEE;
+    height: 2.2%;
+    border: none;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+
+#savelog{
+	position: absolute;
+	top:13.8%;
+	left:0%;
+	background-color: #FFEFEF;
+	height: 2.2%;
+	border: none;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+	cursor:pointer;
+}
+
+#changeMode{
+    position: absolute;
+    top:7.4%;
+    left:0%;
+    background-color: #EEEEEE;
+    height: 2.2%;
+    border: none;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+    cursor:pointer;
+}
+
+#logout{
+	position: absolute;
+	top:4.2%;
+	left:0%;
+	background-color: #FFEFEF;
+	height: 2.2%;
+	border: none;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+	cursor:pointer;
+}
+
+#account{
+    position: absolute;
+    top:1%;
+    left:0%;
+    background-color: transparent;
+    height: 2.2%;
+    border: none;
+}
+
+button.savelog:hover,button.logout:hover{background-color: #FFFFFF}
+
+
+</style>
+</head>
+<body>
+<table id="maintable">
+<tr>
+<td valign="top" align="center">
+<div id="visual_space"></div>
+
+
+<div id="miscellaneous">
+
+</td>
+  
+
+
+
+<td align="left" valign="top">
+<table id="subtable">
+<tr>
+
+</tr>
+</table>
+</div>
+<img id="imgloader" name="imgloader" src="Picture/bigloader.gif">
+<div id="visual_space2"></div>
+<button id="account"></button>  
+<button id="startlog" onclick="startlog()" > Start log</button>  
+<button id="savelog" onclick="abort()" >Abort</button>
+<button id="logout" onclick="location.href='logout.html';" >Log out</button>
+<button id="changeMode" onclick="changeMode()" >Change Mode</button>
+<input type="search" align="bottom" list="suggestions" name="keyword" id="keyword" value="" onfocus="onFocus(this)" onkeypress="return restrictCharacters(this, event);">
+<datalist id="suggestions">
+</datalist>
+<input type="image" alt="submit" id="search" src="Picture/search.jpg">
+</td>
+</tr>
+</td>
+</table>
+</body>
+</html>

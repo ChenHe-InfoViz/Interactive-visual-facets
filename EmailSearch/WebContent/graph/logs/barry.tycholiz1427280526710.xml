@@ -1,0 +1,1154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emailLog>
+  <states>states
+    <theState start="1038">
+      <theTimePeriod firstMail="090801" lastMail="010801" id="0" numMails="21"/>
+      <theTimePeriod firstMail="170801" lastMail="100801" id="1" numMails="18"/>
+      <theTimePeriod firstMail="240801" lastMail="210801" id="2" numMails="22"/>
+      <theTimePeriod firstMail="310801" lastMail="270801" id="3" numMails="23"/>
+      <theTimePeriod firstMail="100901" lastMail="040901" id="4" numMails="24"/>
+      <theTimePeriod firstMail="180901" lastMail="110901" id="5" numMails="30"/>
+      <theTimePeriod firstMail="250901" lastMail="190901" id="6" numMails="35"/>
+      <theTimePeriod firstMail="031001" lastMail="260901" id="7" numMails="14"/>
+      <theTimePeriod firstMail="081001" lastMail="031001" id="8" numMails="11"/>
+      <theTimePeriod firstMail="191001" lastMail="091001" id="9" numMails="21"/>
+      <theTimePeriod firstMail="261001" lastMail="191001" id="10" numMails="27"/>
+      <theTimePeriod firstMail="021101" lastMail="271001" id="11" numMails="35"/>
+      <theTimePeriod firstMail="121101" lastMail="021101" id="12" numMails="22"/>
+      <theTimePeriod firstMail="191101" lastMail="131101" id="13" numMails="13"/>
+      <theTimePeriod firstMail="291101" lastMail="191101" id="14" numMails="35"/>
+      <theTimePeriod firstMail="031201" lastMail="291101" id="15" numMails="15"/>
+      <theTimePeriod firstMail="111201" lastMail="031201" id="16" numMails="10"/>
+      <theTimePeriod firstMail="211201" lastMail="111201" id="17" numMails="11"/>
+      <theTimePeriod firstMail="271201" lastMail="211201" id="18" numMails="7"/>
+      <theTimePeriod firstMail="311201" lastMail="271201" id="19" numMails="5"/>
+    </theState> 
+  </states>
+  <tagEvents>tagEvents
+    <tagSelected type="2" timeStamp="22710" tagId="gerald" isPerson="0" />
+    <tagSelected type="0" timeStamp="22773" tagId="gerald" isPerson="0" />
+    <tagSelected type="2" timeStamp="25557" tagId="presentation" isPerson="0" />
+    <tagSelected type="2" timeStamp="25627" tagId="jeff.dasovich" isPerson="1" />
+    <tagSelected type="0" timeStamp="25621" tagId="presentation" isPerson="0" />
+    <tagSelected type="1" timeStamp="26784" tagId="jeff.dasovich" isPerson="1" />
+    <tagSelected type="0" timeStamp="26933" tagId="jeff.dasovich" isPerson="1" />
+    <tagSelected type="0" timeStamp="26945" tagId="jeff.dasovich" isPerson="1" />
+    <tagSelected type="2" timeStamp="30145" tagId="jeff.dasovich" isPerson="1" />
+    <tagSelected type="0" timeStamp="30227" tagId="jeff.dasovich" isPerson="1" />
+    <tagSelected type="2" timeStamp="30478" tagId="mike.grigsby" isPerson="1" />
+    <tagSelected type="1" timeStamp="30843" tagId="mike.grigsby" isPerson="1" />
+    <tagSelected type="0" timeStamp="31696" tagId="mike.grigsby" isPerson="1" />
+    <tagSelected type="0" timeStamp="32132" tagId="mike.grigsby" isPerson="1" />
+    <tagSelected type="2" timeStamp="32140" tagId="tyrell.harrison" isPerson="1" />
+    <tagSelected type="0" timeStamp="32527" tagId="tyrell.harrison" isPerson="1" />
+    <tagSelected type="2" timeStamp="32533" tagId="mike.grigsby" isPerson="1" />
+    <tagSelected type="0" timeStamp="32793" tagId="mike.grigsby" isPerson="1" />
+    <tagSelected type="2" timeStamp="52831" tagId="presentation" isPerson="0" />
+    <tagSelected type="0" timeStamp="52883" tagId="presentation" isPerson="0" />
+    <tagSelected type="2" timeStamp="52949" tagId="jeff.dasovich" isPerson="1" />
+    <tagSelected type="1" timeStamp="53346" tagId="jeff.dasovich" isPerson="1" />
+    <tagSelected type="0" timeStamp="119388" tagId="jeff.dasovich" isPerson="1" />
+  </tagEvents>
+  <timeEvents>timeEvents
+    <timeSelected type="1" timeId="3" timeStamp="3094"/>
+    <timeSelected type="0" timeId="3" timeStamp="3196"/>
+    <timeSelected type="1" timeId="9" timeStamp="7197"/>
+    <timeSelected type="0" timeId="9" timeStamp="7317"/>
+    <timeSelected type="1" timeId="8" timeStamp="7320"/>
+    <timeSelected type="1" timeId="7" timeStamp="7455"/>
+    <timeSelected type="0" timeId="8" timeStamp="7453"/>
+    <timeSelected type="0" timeId="7" timeStamp="8029"/>
+    <timeSelected type="1" timeId="8" timeStamp="8030"/>
+    <timeSelected type="0" timeId="8" timeStamp="9722"/>
+    <timeSelected type="1" timeId="8" timeStamp="9883"/>
+    <timeSelected type="0" timeId="8" timeStamp="13006"/>
+    <timeSelected type="1" timeId="8" timeStamp="13244"/>
+    <timeSelected type="0" timeId="8" timeStamp="14896"/>
+    <timeSelected type="1" timeId="8" timeStamp="18691"/>
+    <timeSelected type="0" timeId="8" timeStamp="19205"/>
+    <timeSelected type="1" timeId="9" timeStamp="19207"/>
+    <timeSelected type="0" timeId="9" timeStamp="22477"/>
+    <timeSelected type="1" timeId="7" timeStamp="22478"/>
+    <timeSelected type="0" timeId="7" timeStamp="22546"/>
+    <timeSelected type="1" timeId="6" timeStamp="22547"/>
+    <timeSelected type="1" timeId="5" timeStamp="22627"/>
+    <timeSelected type="0" timeId="6" timeStamp="22625"/>
+    <timeSelected type="0" timeId="5" timeStamp="22775"/>
+    <timeSelected type="1" timeId="6" timeStamp="30229"/>
+    <timeSelected type="1" timeId="8" timeStamp="33014"/>
+    <timeSelected type="0" timeId="6" timeStamp="33012"/>
+    <timeSelected type="0" timeId="8" timeStamp="33068"/>
+    <timeSelected type="1" timeId="7" timeStamp="33071"/>
+    <timeSelected type="0" timeId="7" timeStamp="33609"/>
+    <timeSelected type="1" timeId="8" timeStamp="33610"/>
+    <timeSelected type="0" timeId="8" timeStamp="36479"/>
+    <timeSelected type="1" timeId="9" timeStamp="36480"/>
+    <timeSelected type="0" timeId="9" timeStamp="48034"/>
+    <timeSelected type="1" timeId="8" timeStamp="48036"/>
+    <timeSelected type="0" timeId="8" timeStamp="50916"/>
+    <timeSelected type="1" timeId="6" timeStamp="54340"/>
+    <timeSelected type="0" timeId="6" timeStamp="55112"/>
+    <timeSelected type="1" timeId="7" timeStamp="55114"/>
+    <timeSelected type="0" timeId="7" timeStamp="55423"/>
+    <timeSelected type="1" timeId="8" timeStamp="55425"/>
+    <timeSelected type="0" timeId="8" timeStamp="59308"/>
+    <timeSelected type="1" timeId="9" timeStamp="59313"/>
+    <timeSelected type="0" timeId="9" timeStamp="74534"/>
+    <timeSelected type="1" timeId="10" timeStamp="74536"/>
+    <timeSelected type="0" timeId="10" timeStamp="91218"/>
+    <timeSelected type="1" timeId="9" timeStamp="91222"/>
+    <timeSelected type="0" timeId="9" timeStamp="91395"/>
+    <timeSelected type="1" timeId="8" timeStamp="91397"/>
+    <timeSelected type="0" timeId="8" timeStamp="97035"/>
+    <timeSelected type="1" timeId="9" timeStamp="97036"/>
+    <timeSelected type="0" timeId="9" timeStamp="101931"/>
+    <timeSelected type="1" timeId="10" timeStamp="101933"/>
+    <timeSelected type="0" timeId="10" timeStamp="102319"/>
+    <timeSelected type="1" timeId="11" timeStamp="102320"/>
+    <timeSelected type="0" timeId="11" timeStamp="106626"/>
+    <timeSelected type="1" timeId="10" timeStamp="106628"/>
+    <timeSelected type="0" timeId="10" timeStamp="124648"/>
+    <timeSelected type="1" timeId="9" timeStamp="124649"/>
+  </timeEvents>
+  <tagsShown>tagsShown
+    <tagSet timeStamp="3102">
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+    </tagSet>
+    <tagSet timeStamp="3207">
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="7212">
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="expectation"/>
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="0" tagID="update"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="jessica.presas"/>
+      <theTag isPerson="1" tagID="no.address"/>
+    </tagSet>
+    <tagSet timeStamp="7329">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="7478">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="availability"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="consultant"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="jessica.presas"/>
+      <theTag isPerson="1" tagID="louise.kitchen"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="8038">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="8987">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="8994">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="9734">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="9891">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="12616">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="12624">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="13012">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="13251">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="14902">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="18698">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="19214">
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="expectation"/>
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="0" tagID="update"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="jessica.presas"/>
+      <theTag isPerson="1" tagID="no.address"/>
+    </tagSet>
+    <tagSet timeStamp="21534">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="21542">
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="expectation"/>
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="0" tagID="update"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="jessica.presas"/>
+      <theTag isPerson="1" tagID="no.address"/>
+    </tagSet>
+    <tagSet timeStamp="22486">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="availability"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="consultant"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="jessica.presas"/>
+      <theTag isPerson="1" tagID="louise.kitchen"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="22555">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="forwarding"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="judy.perdomo"/>
+      <theTag isPerson="1" tagID="ktycholiz"/>
+    </tagSet>
+    <tagSet timeStamp="22635">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="forwarding"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+    </tagSet>
+    <tagSet timeStamp="22782">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="26707">
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="forwarding"/>
+      <theTag isPerson="0" tagID="consultant"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="0" tagID="candidate"/>
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="0" tagID="movement"/>
+      <theTag isPerson="0" tagID="petition"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="ed.mcmichael"/>
+      <theTag isPerson="1" tagID="harry.kingerski"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+      <theTag isPerson="1" tagID="michael.etringer"/>
+      <theTag isPerson="1" tagID="susan.mara"/>
+      <theTag isPerson="1" tagID="alan.comnes"/>
+    </tagSet>
+    <tagSet timeStamp="26940">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="30243">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="forwarding"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="judy.perdomo"/>
+      <theTag isPerson="1" tagID="ktycholiz"/>
+    </tagSet>
+    <tagSet timeStamp="30793">
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="ed.mcmichael"/>
+      <theTag isPerson="1" tagID="harry.kingerski"/>
+      <theTag isPerson="1" tagID="brian.redmond"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+      <theTag isPerson="1" tagID="susan.mara"/>
+    </tagSet>
+    <tagSet timeStamp="31714">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="31722">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="forwarding"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="judy.perdomo"/>
+      <theTag isPerson="1" tagID="ktycholiz"/>
+    </tagSet>
+    <tagSet timeStamp="33020">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="33079">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="availability"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="consultant"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="jessica.presas"/>
+      <theTag isPerson="1" tagID="louise.kitchen"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="33616">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="36197">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="36204">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="36487">
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="expectation"/>
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="0" tagID="update"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="jessica.presas"/>
+      <theTag isPerson="1" tagID="no.address"/>
+    </tagSet>
+    <tagSet timeStamp="43977">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="43985">
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="expectation"/>
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="0" tagID="update"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="jessica.presas"/>
+      <theTag isPerson="1" tagID="no.address"/>
+    </tagSet>
+    <tagSet timeStamp="48042">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="mara.bronstein"/>
+    </tagSet>
+    <tagSet timeStamp="50923">
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="forwarding"/>
+      <theTag isPerson="0" tagID="consultant"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="0" tagID="candidate"/>
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="0" tagID="movement"/>
+      <theTag isPerson="0" tagID="petition"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="ed.mcmichael"/>
+      <theTag isPerson="1" tagID="harry.kingerski"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+      <theTag isPerson="1" tagID="michael.etringer"/>
+      <theTag isPerson="1" tagID="susan.mara"/>
+      <theTag isPerson="1" tagID="alan.comnes"/>
+    </tagSet>
+    <tagSet timeStamp="50928">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="53299">
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="forwarding"/>
+      <theTag isPerson="0" tagID="consultant"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="majority"/>
+      <theTag isPerson="0" tagID="utility"/>
+      <theTag isPerson="0" tagID="estimate"/>
+      <theTag isPerson="0" tagID="candidate"/>
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="0" tagID="movement"/>
+      <theTag isPerson="0" tagID="petition"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="ed.mcmichael"/>
+      <theTag isPerson="1" tagID="harry.kingerski"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+      <theTag isPerson="1" tagID="michael.etringer"/>
+      <theTag isPerson="1" tagID="susan.mara"/>
+      <theTag isPerson="1" tagID="alan.comnes"/>
+    </tagSet>
+    <tagSet timeStamp="54375">
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="ed.mcmichael"/>
+      <theTag isPerson="1" tagID="harry.kingerski"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+    </tagSet>
+    <tagSet timeStamp="59340">
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="1" tagID="m..tholt"/>
+    </tagSet>
+    <tagSet timeStamp="74570">
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+      <theTag isPerson="1" tagID="susan.mara"/>
+      <theTag isPerson="1" tagID="alan.comnes"/>
+    </tagSet>
+    <tagSet timeStamp="91240">
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="1" tagID="m..tholt"/>
+    </tagSet>
+    <tagSet timeStamp="97054">
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="1" tagID="m..tholt"/>
+    </tagSet>
+    <tagSet timeStamp="101952">
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+      <theTag isPerson="1" tagID="susan.mara"/>
+      <theTag isPerson="1" tagID="alan.comnes"/>
+    </tagSet>
+    <tagSet timeStamp="102354">
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+      <theTag isPerson="1" tagID="susan.mara"/>
+      <theTag isPerson="1" tagID="richard.shapiro"/>
+      <theTag isPerson="1" tagID="michael.mcdonald"/>
+      <theTag isPerson="1" tagID="tim.belden"/>
+    </tagSet>
+    <tagSet timeStamp="106647">
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+      <theTag isPerson="1" tagID="susan.mara"/>
+      <theTag isPerson="1" tagID="alan.comnes"/>
+    </tagSet>
+    <tagSet timeStamp="119409">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="119419">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="availability"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+    </tagSet>
+    <tagSet timeStamp="121369">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="121375">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="availability"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+    </tagSet>
+    <tagSet timeStamp="123332">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="123339">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="availability"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+    </tagSet>
+    <tagSet timeStamp="123521">
+      <theTag isPerson="0" tagID="origination"/>
+      <theTag isPerson="0" tagID="pipeline"/>
+      <theTag isPerson="0" tagID="trading"/>
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="gerald"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="input"/>
+      <theTag isPerson="0" tagID="reference"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="1" tagID="stephanie.miller"/>
+      <theTag isPerson="1" tagID="mark.whitt"/>
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="gerald.nemec"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="40enron"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+    </tagSet>
+    <tagSet timeStamp="123533">
+      <theTag isPerson="0" tagID="presentation"/>
+      <theTag isPerson="0" tagID="consideration"/>
+      <theTag isPerson="0" tagID="provision"/>
+      <theTag isPerson="0" tagID="northwest"/>
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="availability"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="phil.polsky"/>
+      <theTag isPerson="1" tagID="leslie.lawner"/>
+    </tagSet>
+    <tagSet timeStamp="124659">
+      <theTag isPerson="0" tagID="deadline"/>
+      <theTag isPerson="0" tagID="draft"/>
+      <theTag isPerson="0" tagID="resident"/>
+      <theTag isPerson="0" tagID="expectation"/>
+      <theTag isPerson="0" tagID="marketing"/>
+      <theTag isPerson="0" tagID="update"/>
+      <theTag isPerson="1" tagID="dave.fuller"/>
+      <theTag isPerson="1" tagID="tyrell.harrison"/>
+      <theTag isPerson="1" tagID="mike.grigsby"/>
+      <theTag isPerson="1" tagID="eric.le"/>
+      <theTag isPerson="1" tagID="jessica.presas"/>
+      <theTag isPerson="1" tagID="no.address"/>
+    </tagSet>
+  </tagsShown>
+  <emailEvents>emailEvents
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="19" emailID="527" timeStamp="1051"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="19" emailID="526" timeStamp="1054"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="18" emailID="523" timeStamp="1060"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="19" emailID="525" timeStamp="1056"/>
+    <emailSelect type="0" isSeen="0" order="1" timePeriod="18" emailID="522" timeStamp="1062"/>
+    <emailSelect type="0" isSeen="0" order="2" timePeriod="18" emailID="521" timeStamp="1068"/>
+    <emailSelect type="0" isSeen="0" order="3" timePeriod="18" emailID="520" timeStamp="1079"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="18" emailID="519" timeStamp="1085"/>
+    <emailSelect type="0" isSeen="0" order="5" timePeriod="18" emailID="518" timeStamp="1091"/>
+    <emailSelect type="0" isSeen="0" order="6" timePeriod="18" emailID="517" timeStamp="1096"/>
+    <emailSelect type="0" isSeen="0" order="4" timePeriod="19" emailID="524" timeStamp="1058"/>
+    <emailSelect type="0" isSeen="0" order="0" timePeriod="19" emailID="528" timeStamp="1049"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="18" emailID="523" timeStamp="4347"/>
+    <emailSelect type="6" isSeen="1" order="6" timePeriod="18" emailID="517" timeStamp="4446"/>
+    <emailSelect type="6" isSeen="0" order="0" timePeriod="17" emailID="516" timeStamp="4621"/>
+    <emailSelect type="6" isSeen="0" order="1" timePeriod="17" emailID="515" timeStamp="4721"/>
+    <emailSelect type="2" isSeen="0" order="0" timePeriod="8" emailID="327" timeStamp="8451"/>
+    <emailSelect type="2" isSeen="0" order="4" timePeriod="8" emailID="323" timeStamp="8522"/>
+    <emailSelect type="2" isSeen="0" order="8" timePeriod="8" emailID="319" timeStamp="8603"/>
+    <emailSelect type="2" isSeen="0" order="2" timePeriod="8" emailID="325" timeStamp="9657"/>
+    <emailSelect type="2" isSeen="0" order="5" timePeriod="8" emailID="322" timeStamp="9944"/>
+    <emailSelect type="2" isSeen="0" order="6" timePeriod="8" emailID="321" timeStamp="10050"/>
+    <emailSelect type="2" isSeen="0" order="7" timePeriod="8" emailID="320" timeStamp="10372"/>
+    <emailSelect type="2" isSeen="0" order="9" timePeriod="8" emailID="318" timeStamp="10516"/>
+    <emailSelect type="2" isSeen="0" order="10" timePeriod="8" emailID="317" timeStamp="10635"/>
+    <emailSelect type="2" isSeen="0" order="3" timePeriod="8" emailID="324" timeStamp="11009"/>
+    <emailSelect type="2" isSeen="0" order="1" timePeriod="8" emailID="326" timeStamp="11192"/>
+    <emailSelect type="2" isSeen="0" order="0" timePeriod="9" emailID="348" timeStamp="19469"/>
+    <emailSelect type="2" isSeen="0" order="1" timePeriod="9" emailID="347" timeStamp="19531"/>
+    <emailSelect type="2" isSeen="0" order="4" timePeriod="9" emailID="344" timeStamp="19607"/>
+    <emailSelect type="2" isSeen="0" order="7" timePeriod="9" emailID="341" timeStamp="19688"/>
+    <emailSelect type="2" isSeen="0" order="10" timePeriod="9" emailID="338" timeStamp="19768"/>
+    <emailSelect type="2" isSeen="0" order="12" timePeriod="9" emailID="336" timeStamp="19843"/>
+    <emailSelect type="2" isSeen="0" order="13" timePeriod="9" emailID="335" timeStamp="19921"/>
+    <emailSelect type="2" isSeen="0" order="15" timePeriod="9" emailID="333" timeStamp="20010"/>
+    <emailSelect type="2" isSeen="0" order="17" timePeriod="9" emailID="331" timeStamp="20086"/>
+    <emailSelect type="2" isSeen="0" order="18" timePeriod="9" emailID="330" timeStamp="20155"/>
+    <emailSelect type="2" isSeen="0" order="19" timePeriod="9" emailID="329" timeStamp="20234"/>
+    <emailSelect type="2" isSeen="0" order="20" timePeriod="9" emailID="328" timeStamp="20317"/>
+    <emailSelect type="2" isSeen="0" order="6" timePeriod="9" emailID="342" timeStamp="20793"/>
+    <emailSelect type="2" isSeen="0" order="3" timePeriod="9" emailID="345" timeStamp="20928"/>
+    <emailSelect type="2" isSeen="0" order="2" timePeriod="9" emailID="346" timeStamp="20996"/>
+    <emailSelect type="1" isSeen="0" order="29" timePeriod="14" emailID="451" timeStamp="26709"/>
+    <emailSelect type="1" isSeen="0" order="0" timePeriod="12" emailID="432" timeStamp="26710"/>
+    <emailSelect type="1" isSeen="0" order="6" timePeriod="12" emailID="426" timeStamp="26712"/>
+    <emailSelect type="1" isSeen="0" order="21" timePeriod="12" emailID="411" timeStamp="26718"/>
+    <emailSelect type="1" isSeen="0" order="12" timePeriod="11" emailID="398" timeStamp="26720"/>
+    <emailSelect type="1" isSeen="0" order="19" timePeriod="11" emailID="391" timeStamp="26722"/>
+    <emailSelect type="1" isSeen="0" order="25" timePeriod="11" emailID="385" timeStamp="26728"/>
+    <emailSelect type="1" isSeen="0" order="7" timePeriod="10" emailID="368" timeStamp="26733"/>
+    <emailSelect type="1" isSeen="0" order="28" timePeriod="11" emailID="382" timeStamp="26731"/>
+    <emailSelect type="1" isSeen="0" order="7" timePeriod="12" emailID="425" timeStamp="26714"/>
+    <emailSelect type="1" isSeen="0" order="24" timePeriod="11" emailID="386" timeStamp="26727"/>
+    <emailSelect type="1" isSeen="0" order="8" timePeriod="9" emailID="340" timeStamp="26736"/>
+    <emailSelect type="1" isSeen="0" order="1" timePeriod="6" emailID="301" timeStamp="30795"/>
+    <emailSelect type="1" isSeen="0" order="2" timePeriod="6" emailID="300" timeStamp="30798"/>
+    <emailSelect type="1" isSeen="0" order="3" timePeriod="5" emailID="264" timeStamp="30806"/>
+    <emailSelect type="1" isSeen="0" order="5" timePeriod="6" emailID="297" timeStamp="30801"/>
+    <emailSelect type="1" isSeen="0" order="10" timePeriod="5" emailID="257" timeStamp="30808"/>
+    <emailSelect type="1" isSeen="0" order="21" timePeriod="6" emailID="281" timeStamp="30805"/>
+    <emailSelect type="1" isSeen="0" order="21" timePeriod="5" emailID="246" timeStamp="30810"/>
+    <emailSelect type="1" isSeen="0" order="23" timePeriod="5" emailID="244" timeStamp="30813"/>
+    <emailSelect type="1" isSeen="0" order="2" timePeriod="3" emailID="211" timeStamp="30818"/>
+    <emailSelect type="1" isSeen="0" order="11" timePeriod="2" emailID="179" timeStamp="30820"/>
+    <emailSelect type="1" isSeen="0" order="23" timePeriod="4" emailID="214" timeStamp="30815"/>
+    <emailSelect type="1" isSeen="0" order="3" timePeriod="1" emailID="165" timeStamp="30822"/>
+    <emailSelect type="2" isSeen="1" order="0" timePeriod="8" emailID="327" timeStamp="33802"/>
+    <emailSelect type="2" isSeen="1" order="2" timePeriod="8" emailID="325" timeStamp="33885"/>
+    <emailSelect type="2" isSeen="1" order="6" timePeriod="8" emailID="321" timeStamp="33975"/>
+    <emailSelect type="2" isSeen="1" order="10" timePeriod="8" emailID="317" timeStamp="34067"/>
+    <emailSelect type="2" isSeen="1" order="8" timePeriod="8" emailID="319" timeStamp="34600"/>
+    <emailSelect type="2" isSeen="1" order="3" timePeriod="8" emailID="324" timeStamp="34727"/>
+    <emailSelect type="2" isSeen="1" order="1" timePeriod="8" emailID="326" timeStamp="34817"/>
+    <emailSelect type="2" isSeen="1" order="5" timePeriod="8" emailID="322" timeStamp="35121"/>
+    <emailSelect type="2" isSeen="1" order="7" timePeriod="8" emailID="320" timeStamp="35219"/>
+    <emailSelect type="2" isSeen="1" order="9" timePeriod="8" emailID="318" timeStamp="35580"/>
+    <emailSelect type="2" isSeen="1" order="1" timePeriod="9" emailID="347" timeStamp="36931"/>
+    <emailSelect type="2" isSeen="0" order="5" timePeriod="9" emailID="343" timeStamp="37014"/>
+    <emailSelect type="2" isSeen="1" order="10" timePeriod="9" emailID="338" timeStamp="37087"/>
+    <emailSelect type="2" isSeen="1" order="13" timePeriod="9" emailID="335" timeStamp="37168"/>
+    <emailSelect type="2" isSeen="1" order="15" timePeriod="9" emailID="333" timeStamp="37239"/>
+    <emailSelect type="2" isSeen="1" order="17" timePeriod="9" emailID="331" timeStamp="37315"/>
+    <emailSelect type="2" isSeen="1" order="18" timePeriod="9" emailID="330" timeStamp="37377"/>
+    <emailSelect type="2" isSeen="1" order="19" timePeriod="9" emailID="329" timeStamp="37450"/>
+    <emailSelect type="2" isSeen="1" order="20" timePeriod="9" emailID="328" timeStamp="37531"/>
+    <emailSelect type="2" isSeen="0" order="9" timePeriod="9" emailID="339" timeStamp="37881"/>
+    <emailSelect type="2" isSeen="1" order="6" timePeriod="9" emailID="342" timeStamp="37949"/>
+    <emailSelect type="2" isSeen="1" order="3" timePeriod="9" emailID="345" timeStamp="38018"/>
+    <emailSelect type="2" isSeen="1" order="0" timePeriod="9" emailID="348" timeStamp="38188"/>
+    <emailSelect type="2" isSeen="1" order="1" timePeriod="9" emailID="347" timeStamp="38442"/>
+    <emailSelect type="2" isSeen="1" order="2" timePeriod="9" emailID="346" timeStamp="38504"/>
+    <emailSelect type="2" isSeen="0" order="11" timePeriod="9" emailID="337" timeStamp="38652"/>
+    <emailSelect type="2" isSeen="1" order="13" timePeriod="9" emailID="335" timeStamp="38718"/>
+    <emailSelect type="2" isSeen="0" order="16" timePeriod="9" emailID="332" timeStamp="38813"/>
+    <emailSelect type="2" isSeen="1" order="17" timePeriod="9" emailID="331" timeStamp="38888"/>
+    <emailSelect type="2" isSeen="0" order="14" timePeriod="9" emailID="334" timeStamp="39232"/>
+    <emailSelect type="2" isSeen="1" order="8" timePeriod="9" emailID="340" timeStamp="39325"/>
+    <emailSelect type="2" isSeen="1" order="7" timePeriod="9" emailID="341" timeStamp="39645"/>
+    <emailSelect type="2" isSeen="1" order="5" timePeriod="9" emailID="343" timeStamp="39789"/>
+    <emailSelect type="2" isSeen="1" order="6" timePeriod="9" emailID="342" timeStamp="41126"/>
+    <emailSelect type="2" isSeen="1" order="9" timePeriod="9" emailID="339" timeStamp="41479"/>
+    <emailSelect type="2" isSeen="1" order="10" timePeriod="9" emailID="338" timeStamp="41558"/>
+    <emailSelect type="2" isSeen="1" order="18" timePeriod="9" emailID="330" timeStamp="42619"/>
+    <emailSelect type="2" isSeen="1" order="19" timePeriod="9" emailID="329" timeStamp="42755"/>
+    <emailSelect type="2" isSeen="1" order="20" timePeriod="9" emailID="328" timeStamp="42838"/>
+    <emailSelect type="1" isSeen="1" order="29" timePeriod="14" emailID="451" timeStamp="53303"/>
+    <emailSelect type="1" isSeen="1" order="0" timePeriod="12" emailID="432" timeStamp="53305"/>
+    <emailSelect type="1" isSeen="1" order="6" timePeriod="12" emailID="426" timeStamp="53308"/>
+    <emailSelect type="1" isSeen="1" order="7" timePeriod="12" emailID="425" timeStamp="53310"/>
+    <emailSelect type="1" isSeen="1" order="21" timePeriod="12" emailID="411" timeStamp="53313"/>
+    <emailSelect type="1" isSeen="1" order="12" timePeriod="11" emailID="398" timeStamp="53317"/>
+    <emailSelect type="1" isSeen="1" order="19" timePeriod="11" emailID="391" timeStamp="53318"/>
+    <emailSelect type="1" isSeen="1" order="24" timePeriod="11" emailID="386" timeStamp="53321"/>
+    <emailSelect type="1" isSeen="1" order="25" timePeriod="11" emailID="385" timeStamp="53323"/>
+    <emailSelect type="1" isSeen="1" order="28" timePeriod="11" emailID="382" timeStamp="53326"/>
+    <emailSelect type="1" isSeen="1" order="7" timePeriod="10" emailID="368" timeStamp="53327"/>
+    <emailSelect type="1" isSeen="1" order="8" timePeriod="9" emailID="340" timeStamp="53331"/>
+    <emailSelect type="1" isSeen="0" order="20" timePeriod="6" emailID="282" timeStamp="54346"/>
+    <emailSelect type="1" isSeen="0" order="11" timePeriod="6" emailID="291" timeStamp="54342"/>
+    <emailSelect type="1" isSeen="1" order="21" timePeriod="6" emailID="281" timeStamp="54348"/>
+    <emailSelect type="1" isSeen="1" order="5" timePeriod="8" emailID="322" timeStamp="55427"/>
+    <emailSelect type="1" isSeen="1" order="8" timePeriod="9" emailID="340" timeStamp="59317"/>
+    <emailSelect type="1" isSeen="1" order="12" timePeriod="9" emailID="336" timeStamp="59320"/>
+    <emailSelect type="1" isSeen="1" order="18" timePeriod="9" emailID="330" timeStamp="59322"/>
+    <emailSelect type="1" isSeen="1" order="7" timePeriod="10" emailID="368" timeStamp="74541"/>
+    <emailSelect type="1" isSeen="0" order="8" timePeriod="10" emailID="367" timeStamp="74542"/>
+    <emailSelect type="1" isSeen="0" order="11" timePeriod="10" emailID="364" timeStamp="74546"/>
+    <emailSelect type="1" isSeen="0" order="17" timePeriod="10" emailID="358" timeStamp="74547"/>
+    <emailSelect type="1" isSeen="0" order="23" timePeriod="10" emailID="352" timeStamp="74550"/>
+    <emailSelect type="1" isSeen="0" order="24" timePeriod="10" emailID="351" timeStamp="74553"/>
+    <emailSelect type="1" isSeen="1" order="19" timePeriod="11" emailID="391" timeStamp="102326"/>
+    <emailSelect type="1" isSeen="1" order="24" timePeriod="11" emailID="386" timeStamp="102329"/>
+    <emailSelect type="1" isSeen="1" order="25" timePeriod="11" emailID="385" timeStamp="102332"/>
+    <emailSelect type="1" isSeen="1" order="28" timePeriod="11" emailID="382" timeStamp="102335"/>
+    <emailSelect type="1" isSeen="1" order="12" timePeriod="11" emailID="398" timeStamp="102322"/>
+  </emailEvents>
+  <doubleClicks>doubleClicks
+    <doubleClick order="24" timePeriod="10" date="201001" attachment="0" timeStamp="123538">
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+      <theTag isPerson="1" tagID="paul.kaufman"/>
+      <theTag isPerson="1" tagID="susan.mara"/>
+      <theTag isPerson="1" tagID="alan.comnes"/>
+      <theTag isPerson="1" tagID="richard.shapiro"/>
+      <theTag isPerson="1" tagID="dan.leff"/>
+      <theTag isPerson="1" tagID="steve.swain"/>
+      <theTag isPerson="1" tagID="tim.belden"/>
+      <theTag isPerson="1" tagID="p..o'neil"/>
+      <theTag isPerson="1" tagID="vicki.sharp"/>
+      <theTag isPerson="1" tagID="jeff.richter"/>
+      <theTag isPerson="1" tagID="janet.dietrich"/>
+      <theTag isPerson="1" tagID="lamar.frazier"/>
+      <theTag isPerson="1" tagID="david.delainey"/>
+      <theTag isPerson="1" tagID="david.parquet"/>
+      <theTag isPerson="1" tagID="f..calger"/>
+      <theTag isPerson="1" tagID="j..kean"/>
+      <theTag isPerson="1" tagID="diann.huddleson"/>
+      <theTag isPerson="1" tagID="evan.hughes"/>
+      <theTag isPerson="1" tagID="joseph.alamo"/>
+      <theTag isPerson="1" tagID="f..herod"/>
+      <theTag isPerson="1" tagID="jeremy.blachman"/>
+      <theTag isPerson="1" tagID="d..steffes"/>
+      <theTag isPerson="1" tagID="karen.denne"/>
+    </doubleClick>
+    <doubleClick order="24" timePeriod="11" date="291001" attachment="0" timeStamp="140081">
+      <theTag isPerson="1" tagID="jeff.dasovich"/>
+    </doubleClick>
+  </doubleClicks>
+  <sessionID id="OS-B10"/>
+  <end timeStamp="141928" success="1"/>
+</emailLog>

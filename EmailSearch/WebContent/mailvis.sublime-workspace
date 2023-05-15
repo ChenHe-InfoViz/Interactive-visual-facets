@@ -1,0 +1,1511 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"time",
+				"timeColor"
+			],
+			[
+				"DOub",
+				"doubleClickEvent"
+			],
+			[
+				"not",
+				"notYetDisplayed"
+			],
+			[
+				"person",
+				"personIsPressed"
+			],
+			[
+				"subjec",
+				"subjectWidth"
+			],
+			[
+				"body",
+				"bodyXPos"
+			],
+			[
+				"start",
+				"startTime"
+			],
+			[
+				"Displ",
+				"DisplayedENodesText"
+			],
+			[
+				"top",
+				"moveToTop"
+			],
+			[
+				"bae",
+				"baseline"
+			],
+			[
+				"filter",
+				"filterBar"
+			],
+			[
+				"mouse",
+				"mouseout"
+			],
+			[
+				"pop",
+				"popUpWin"
+			],
+			[
+				"date",
+				"dateSuggestions"
+			],
+			[
+				"email",
+				"emailID"
+			],
+			[
+				"scroll",
+				"scrollBar"
+			],
+			[
+				"content",
+				"contentLayer"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"vis",
+				"visMode"
+			],
+			[
+				"index",
+				"indexPath"
+			],
+			[
+				"set",
+				"setCookie"
+			],
+			[
+				"get",
+				"getCookie"
+			],
+			[
+				"mail",
+				"mailQuantity"
+			],
+			[
+				"ofLin",
+				"ofSetLineWidth"
+			],
+			[
+				"displa",
+				"m_displayPosition"
+			],
+			[
+				"end",
+				"endPos"
+			],
+			[
+				"m_sho",
+				"m_show"
+			],
+			[
+				"no",
+				"ofNoFill"
+			],
+			[
+				"remove",
+				"removeItem"
+			],
+			[
+				"seen",
+				"getSeenLevel"
+			],
+			[
+				"of",
+				"ofVec2f"
+			],
+			[
+				"getDi",
+				"getPolarDisplay"
+			],
+			[
+				"m",
+				"m_show"
+			],
+			[
+				"is",
+				"isFocus"
+			],
+			[
+				"incl",
+				"includeKeyword"
+			],
+			[
+				"include",
+				"includeText"
+			],
+			[
+				"key",
+				"keyReleased"
+			],
+			[
+				"REcent",
+				"recentLooked"
+			],
+			[
+				"reent",
+				"recentLooked"
+			],
+			[
+				"recent",
+				"recentLooked"
+			],
+			[
+				"ofs",
+				"ofSetLineWidth"
+			],
+			[
+				"m_is",
+				"m_isCooc"
+			],
+			[
+				"m_show",
+				"m_showFixed"
+			],
+			[
+				"new",
+				"newLink"
+			],
+			[
+				"dista",
+				"distanceGaze"
+			],
+			[
+				"the",
+				"theBackEnd"
+			],
+			[
+				"add",
+				"addItem"
+			],
+			[
+				"lis",
+				"listSize"
+			],
+			[
+				"fontLis",
+				"fontListTitle"
+			],
+			[
+				"string",
+				"stringHeight"
+			],
+			[
+				"list",
+				"listLimit"
+			],
+			[
+				"Of",
+				"ofVec2f"
+			],
+			[
+				"en",
+				"endl"
+			],
+			[
+				"m_Pol",
+				"m_polarPosition"
+			],
+			[
+				"s_",
+				"s_rTouch"
+			],
+			[
+				"m_",
+				"m_weight"
+			],
+			[
+				"keyword",
+				"keywordCounter"
+			],
+			[
+				"num",
+				"numQueryRange"
+			],
+			[
+				"ofC",
+				"ofVec2f"
+			],
+			[
+				"color",
+				"colorDifference"
+			],
+			[
+				"gaz",
+				"gazeX"
+			],
+			[
+				"eyePo",
+				"eyePositionX"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"sort",
+				"sortByTime"
+			],
+			[
+				"pa",
+				"pathOfJsp"
+			],
+			[
+				"console",
+				"consoleprint"
+			],
+			[
+				"Displayedenode",
+				"DisplayedENodesBackGround"
+			],
+			[
+				"result",
+				"resultString"
+			],
+			[
+				"len",
+				"lengthString"
+			],
+			[
+				"replace",
+				"replaceString"
+			],
+			[
+				"noO",
+				"noOfDisplayed"
+			],
+			[
+				"nodes",
+				"nodePositionsReverse"
+			],
+			[
+				"Displa",
+				"DisplayedENodes"
+			],
+			[
+				"rect",
+				"rectGhost"
+			],
+			[
+				"_",
+				"_screenHeight"
+			],
+			[
+				"ratio",
+				"ratioUpperBar"
+			],
+			[
+				"newSea",
+				"newSearchToExpandHiddenPeriod"
+			],
+			[
+				"border-top",
+				"border-top-color"
+			],
+			[
+				"border-bottom",
+				"border-bottom-color"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"timeco",
+				"timeColor"
+			],
+			[
+				"month",
+				"monthHeight"
+			],
+			[
+				"rever",
+				"reverseMonth"
+			],
+			[
+				"move",
+				"moveToTop"
+			],
+			[
+				"theT",
+				"theTimeFrameDate"
+			],
+			[
+				"fanc",
+				"fancyFontStyle"
+			],
+			[
+				"mon",
+				"monthTopPadding"
+			],
+			[
+				"back",
+				"backgroundColor"
+			],
+			[
+				"nodepositi",
+				"nodePositionsReverse"
+			],
+			[
+				"deselect",
+				"deselectTime"
+			],
+			[
+				"tag",
+				"tagMargin"
+			],
+			[
+				"keywo",
+				"keywordPersonFontSize"
+			],
+			[
+				"Font",
+				"fontSize"
+			],
+			[
+				"No",
+				"NodePos"
+			],
+			[
+				"shad",
+				"shadowColor"
+			],
+			[
+				"x",
+				"xMargin"
+			],
+			[
+				"ali",
+				"alignDirection"
+			],
+			[
+				"noof",
+				"noOfTimeFrame"
+			],
+			[
+				"screen",
+				"_screenHeight"
+			],
+			[
+				"node",
+				"nodePositions"
+			],
+			[
+				"nodePo",
+				"nodePositionsReverse"
+			],
+			[
+				"timefa",
+				"TimeFrameObj"
+			],
+			[
+				"getpo",
+				"getPointerPosition"
+			],
+			[
+				"length",
+				"length-1"
+			],
+			[
+				"Dis",
+				"DisplayedENodes"
+			],
+			[
+				"timecolo",
+				"timeColorSelected"
+			],
+			[
+				"background",
+				"backgroundColor"
+			],
+			[
+				"linear",
+				"linear-gradient"
+			],
+			[
+				"desec",
+				"deselectTime"
+			],
+			[
+				"before",
+				"beforeAfterHeight"
+			],
+			[
+				"colo",
+				"colorLightBlue"
+			],
+			[
+				"delete",
+				"deleteTemporaryKeywordsPersons"
+			],
+			[
+				"quer",
+				"queryBar"
+			],
+			[
+				"needed",
+				"neededBefore"
+			],
+			[
+				"neede",
+				"neededAfter"
+			],
+			[
+				"norma",
+				"normalGrey"
+			],
+			[
+				"smalles",
+				"smallestMonth"
+			],
+			[
+				"blue",
+				"blueColor"
+			],
+			[
+				"year",
+				"yearMargin"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"dese",
+				"deselectTime"
+			],
+			[
+				"lmi",
+				"limitReached"
+			],
+			[
+				"limit",
+				"limitReached"
+			],
+			[
+				"limi",
+				"limitReached"
+			],
+			[
+				"disp",
+				"displayPersonsKeywords"
+			],
+			[
+				"draw",
+				"drawPersons"
+			],
+			[
+				"reaa",
+				"rearrangeTags"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "graph/graph.html",
+			"settings":
+			{
+				"buffer_size": 161010,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/initialperson.jsp",
+			"settings":
+			{
+				"buffer_size": 7247,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/initialkeyword.jsp",
+			"settings":
+			{
+				"buffer_size": 8043,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/initialmsgid.jsp",
+			"settings":
+			{
+				"buffer_size": 7687,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/keyword.jsp",
+			"settings":
+			{
+				"buffer_size": 8416,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/msgid.jsp",
+			"settings":
+			{
+				"buffer_size": 9279,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/person.jsp",
+			"settings":
+			{
+				"buffer_size": 8167,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/rangekeyword.jsp",
+			"settings":
+			{
+				"buffer_size": 8475,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/rangemsgid.jsp",
+			"settings":
+			{
+				"buffer_size": 8591,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/rangeperson.jsp",
+			"settings":
+			{
+				"buffer_size": 7816,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/deleteindex.jsp",
+			"settings":
+			{
+				"buffer_size": 1684,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/savelog.jsp",
+			"settings":
+			{
+				"buffer_size": 13597,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/checkindex.jsp",
+			"settings":
+			{
+				"buffer_size": 314,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/createindexfolder.jsp",
+			"settings":
+			{
+				"buffer_size": 17365,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/index.html",
+			"settings":
+			{
+				"buffer_size": 4994,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "graph/popup.html",
+			"settings":
+			{
+				"buffer_size": 5466,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/graph.html",
+		"/C/Email/EmailSearch/WebContent/graph/variables",
+		"/C/Email/EmailSearch/WebContent/graph/createindexfolder.jsp",
+		"/C/Email/EmailSearch/WebContent/graph/checkindex.jsp",
+		"/C/Email/EmailSearch/WebContent/graph/savelog.jsp",
+		"/C/Email/EmailSearch/WebContent/graph/createindexfolder.jsp.save",
+		"/C/Email/EmailSearch/WebContent/graph/gravity.html",
+		"/C/Email/EmailSearch/WebContent/graph/savequestion.jsp",
+		"/C/Email/EmailSearch/WebContent/graph/logout.html",
+		"/C/Email/EmailSearch/WebContent/index.html",
+		"/C/Users/serim/bio20/index.html",
+		"/C/Users/serim/bio12/app.js",
+		"/C/Users/serim/bio12/candi_prototype1.js",
+		"/C/Users/serim/bio20/ui/js/candi_main.js",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/ResultFetcher.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/bin/output.json",
+		"/C/Users/serim/Documents/EmailSearch/createindexfolder.jsp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/Gaze.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/Gaze.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/History.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/History.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/sprites.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/UINode.h",
+		"/C/Users/serim/mouse.py",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/Graph.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/Graph.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/Dock.h",
+		"/C/Users/serim/Dropbox/fimm/bio/json_converter/combined.json",
+		"/C/Users/serim/Dropbox/fimm/bio/json_converter/data/Mutation.csv",
+		"/C/Users/serim/index.html",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/UINode.cpp",
+		"/C/Users/serim/gaze.py",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/Dock.cpp",
+		"/C/Users/serim/Dropbox/mindsee/proto/src_eski/sprites.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/bin/latest.json",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/Cluster.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/Cluster.cpp",
+		"/C/Users/serim/Desktop/deneme.html",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/main.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/ofApp.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/ofApp.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/ResultFetcher.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/sprites.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/TextInput.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/TextInput.cpp",
+		"/C/Users/serim/program/index.html",
+		"/C/Users/serim/helloworld.js",
+		"/C/Users/serim/server.js",
+		"/C/Email/EmailSearch/WebContent/graph/graph.html",
+		"/C/Users/serim/index.js",
+		"/C/Users/serim/Desktop/helloworld.js",
+		"/C/Users/serim/Desktop/program/miserables.json",
+		"/C/Users/serim/Desktop/deneme.js",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/src/List.cpp",
+		"/C/Users/serim/Dropbox/mindsee/proto/arxivli/src/ResultFetcher.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/mindsee/bin/output.txt",
+		"/C/Users/serim/Desktop/ekstra",
+		"/C/of_v0.8.1_win_cb_release/addons/ofxUI/src/ofxUITextInput.cpp",
+		"/C/of_v0.8.1_win_cb_release/addons/ofxUI/src/ofxUITextInput.h",
+		"/C/of_v0.8.1_win_cb_release/addons/ofxTableGestures/src/Core/TableApp.hpp",
+		"/C/of_v0.8.1_win_cb_release/addons/ofxTableGestures/src/Core/TableApp.cpp",
+		"/C/of_v0.8.1_win_cb_release/addons/ofxTableGestures/src/Simulator/Simulator.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/Cluster.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/Dock.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/Graph.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/main.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/ofApp.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/ofApp.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/ResultFetcher.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/ResultFetcher.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/sprites.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/sprites.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/UINode.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/UINode.h",
+		"/C/Users/serim/Desktop/yedek/Cluster.cpp",
+		"/C/Users/serim/Desktop/yedek/Dock.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/Graph.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/ReadingList.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/ReadingList.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/TextInput.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/TextInput.h",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/Cluster.cpp",
+		"/C/of_v0.8.1_win_cb_release/apps/myApps/querywallwincb_v04/src/Dock.cpp",
+		"/C/Users/serim/Dropbox/mindsee/proto/src_eski/Dock.cpp",
+		"/C/Users/serim/Dropbox/mindsee/proto/src_eski/Dock.h",
+		"/C/Users/serim/Dropbox/mindsee/proto/src_eski/Graph.cpp",
+		"/C/Users/serim/Dropbox/mindsee/proto/src_eski/UINode.cpp",
+		"/C/Users/serim/Dropbox/mindsee/proto/arxivli/src/Nodes.h",
+		"/C/Users/serim/Dropbox/mindsee/proto/src_eski/UINode.h",
+		"/C/Users/serim/Dropbox/mindsee/proto/src_eski/sprites.h",
+		"/C/Users/serim/Dropbox/email/logs/hk/hk01.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/hk01.xml",
+		"/C/Users/serim/Dropbox/mailVis_chi/EmailViz/SIGCHI2015LaTex/sigchi-sample.tex",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/analysis.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/matrices.xml",
+		"/C/Users/serim/Desktop/matrices.xml",
+		"/C/Users/serim/Desktop/deneme.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/as06.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/matrix.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/vo12.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/zs02.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/sy03.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/sb04.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/zs01.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/au02.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/au01.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/au06.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/au05.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/au04.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/at13.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/au03.xml",
+		"/C/Users/serim/Desktop/au/aukkonen1408519856832.xml",
+		"/C/Users/serim/Desktop/au/aukkonen1408521672289.xml",
+		"/C/Users/serim/Desktop/au/aukkonen1408520004808.xml",
+		"/C/Users/serim/Desktop/au/aukkonen1408520407318.xml",
+		"/C/Users/serim/Desktop/au/aukkonen1408521456956.xml",
+		"/C/Users/serim/Desktop/au/aukkonen1408520601272.xml",
+		"/C/Users/serim/Desktop/au/aukkonen1408521535173.xml",
+		"/C/Users/serim/Desktop/au/aukkonen1408520357584.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/hk10.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/pb03.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/pb04.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/zs03.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/zs04.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/zs05.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/zs06.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/zs08.xml",
+		"/C/Users/serim/Dropbox/email/sketch/logReader5_2/logs/vo17.xml"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Email\\EmailSearch\\WebContent\\graph",
+			"C:\\of_v0.8.1_win_cb_release\\apps\\myApps\\mindsee\\src",
+			"C:\\of_v0.8.1_win_cb_release\\apps\\myApps\\querywallwincb_v04\\src",
+			"C:\\Users\\serim\\Desktop\\logs_clean",
+			"C:\\Users\\serim\\Dropbox\\email\\sketch\\logReader5_2\\logs",
+			"C:\\Users\\serim\\Dropbox\\email\\logs",
+			"C:\\Users\\serim\\Desktop\\kopyalanacak",
+			"C:\\kopyalanacak",
+			"C:\\Users\\serim\\Desktop\\kopyalanacak",
+			"C:\\Email\\EmailSearch\\WebContent\\graph"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"rootPa",
+			"timeColor",
+			"drawENodes",
+			"newSearch()",
+			"timeColor",
+			"35",
+			"2390",
+			"ENodes.push",
+			"ENodes",
+			"drawEnode",
+			"ENodes",
+			"rootPat",
+			"name",
+			"Object",
+			"doubleCli",
+			"dblcli",
+			"initializeCOnten",
+			"lowerLimit",
+			"colorMonth",
+			"hideButtons()",
+			"hideButtons();",
+			"startlo",
+			"imgloader",
+			"session",
+			"NodePos",
+			"DisplayedENodes",
+			"mouseclick",
+			"doubleClick",
+			"doubleClic",
+			"popup",
+			"doubleClickEven",
+			"normalizeCOntent",
+			"timeColorSelected",
+			"deselectTim",
+			"mouseover",
+			"mouseon",
+			"doubleClickEve",
+			"= \"Sear",
+			"=\"Sear",
+			"#keyword",
+			"isDateSugges",
+			"#keyword",
+			"visual_space2",
+			"Search(",
+			"n Search()",
+			"Search()",
+			"balanceENodes()",
+			"update_time",
+			"initialSearch(",
+			"drawPerson",
+			"drawKeywo",
+			"drawKeywords",
+			"notYetDisplayed(temp_ENodesObj[i][u])",
+			"drawPersons",
+			"drawKeywords",
+			"notYetDisplayed",
+			"timeChange",
+			"drawKeyword",
+			"drawPersons",
+			"drawKeywords",
+			"timeSelected",
+			"drawKeyw",
+			"initializeConten",
+			"initializeContent",
+			"initializeCOnte",
+			"getWidt",
+			"startLog",
+			"checkTimeOut",
+			"checkTimeOu",
+			"sessionid",
+			"checkTimeOut()",
+			"getCookie",
+			"getCooki",
+			"setCookie(",
+			"savelog()",
+			"noOfDisplayed",
+			"no results",
+			"addPersonCluesDisplay",
+			"addperson",
+			"addkeyw",
+			"DisplayedENodesLineTo",
+			"DisplayedENodesLineFrom",
+			"addPersonCluesDisplay",
+			"addperson",
+			"doubleClick",
+			"addPersonCLue",
+			"DisplayedENodesLineTo",
+			"DisplayedENodesTextFrom",
+			"initializeContent",
+			"savelog()",
+			"mouseup",
+			"selectedperson",
+			"removeKeywordCluesDisplay()",
+			"addpersonClues",
+			"addPerson",
+			"addPersonClues",
+			"addkeywordCLuesDispla",
+			"addkeywordCLuesDisp",
+			"addkeywordCLuesDis",
+			"addKeywordCluesDisplay",
+			"DisplayedENodesText[i",
+			" addKeywordCluesDisplay",
+			"addKeywordCluesDisplay",
+			"addKeywordClues",
+			"addKeywordCluesDisplay",
+			"addKeywordClue",
+			"addKeywo",
+			"showSelectedEnod",
+			"addKeywo",
+			"addkeywor",
+			"addKeywo",
+			"addKey",
+			"selectedkeyword",
+			"showSelec",
+			"addKeywordClue",
+			"DisplayedENodesColor",
+			"getDisplayIn",
+			"selectedENodes",
+			"addkeywo",
+			"setcontentLayer",
+			"getDisplayedNode",
+			"addkeyw",
+			"DisplayedENodesTextSubject",
+			"getdispa",
+			"addkeyw",
+			"addKey",
+			"addkey",
+			"addkeyw"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"//balanceENodes()",
+			"Search(",
+			"Search",
+			"rootPath",
+			"int mailQuantity = 400;",
+			"int mailQuantity = 300;",
+			"Dock::",
+			"h",
+			"i",
+			"tomcat7/webapps/EmailSearch/",
+			"'",
+			"TimeFrame[noOftimeframe]",
+			"setFill(colorLightBlue)",
+			"keywordPersonFontSize",
+			"normalizeContentBackground(i)",
+			"seenNode",
+			".",
+			".setFillPriority('color')",
+			".setFillPriority('linear-gradient')",
+			"colorMonth",
+			"afterMonths",
+			"var R = measureUnit;",
+			"var H = betweenLimits;",
+			"timeSelected",
+			"drawPersons(EPersonsObj, EPersonsText)",
+			"thePersonsText",
+			"thePersons",
+			"drawKeywords(EKeywordsObj, EKeywordsText)",
+			"theKeywordsText",
+			"theKeywords",
+			"personsActive",
+			"keywordsActive",
+			"timeSelected",
+			"lowerLimit",
+			"mainBG_Y - filterBar",
+			"mainBG_Y - upperLimit",
+			"filterBar",
+			"upperLimit"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "graph/graph.html",
+					"settings":
+					{
+						"buffer_size": 161010,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 704.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "graph/initialperson.jsp",
+					"settings":
+					{
+						"buffer_size": 7247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "graph/initialkeyword.jsp",
+					"settings":
+					{
+						"buffer_size": 8043,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3343,
+								3343
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "graph/initialmsgid.jsp",
+					"settings":
+					{
+						"buffer_size": 7687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "graph/keyword.jsp",
+					"settings":
+					{
+						"buffer_size": 8416,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "graph/msgid.jsp",
+					"settings":
+					{
+						"buffer_size": 9279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "graph/person.jsp",
+					"settings":
+					{
+						"buffer_size": 8167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 407.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "graph/rangekeyword.jsp",
+					"settings":
+					{
+						"buffer_size": 8475,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "graph/rangemsgid.jsp",
+					"settings":
+					{
+						"buffer_size": 8591,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 924.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "graph/rangeperson.jsp",
+					"settings":
+					{
+						"buffer_size": 7816,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "graph/deleteindex.jsp",
+					"settings":
+					{
+						"buffer_size": 1684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1485,
+								1485
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "graph/savelog.jsp",
+					"settings":
+					{
+						"buffer_size": 13597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1138,
+								1138
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "graph/checkindex.jsp",
+					"settings":
+					{
+						"buffer_size": 314,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "graph/createindexfolder.jsp",
+					"settings":
+					{
+						"buffer_size": 17365,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3676,
+								3676
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java Server Pages (JSP).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1320.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "graph/index.html",
+					"settings":
+					{
+						"buffer_size": 4994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "graph/popup.html",
+					"settings":
+					{
+						"buffer_size": 5466,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4706,
+								4706
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 365.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 130.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

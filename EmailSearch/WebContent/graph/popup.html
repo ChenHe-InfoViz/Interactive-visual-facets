@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+<script src="js/kinetic-v4.7.4.js"></script>
+<script src="js/underscore.js"></script>
+<script type="text/javascript">
+
+/*
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET","general.xml",false);
+xmlhttp.send();
+var xmlDoc=xmlhttp.responseXML; 
+var pathname = xmlDoc.getElementsByTagName("PATH")[0].childNodes[0].nodeValue;
+*/
+var pathname = "/Users/chenhe/eclipse-workspace/EmailSearch/WebContent/graph/";
+
+    if(window.opener && !window.opener.closed){
+    	var data= window.opener.getData();
+    	var output = "From   : "+data.from+"<br>"+
+    				 "To     : "+data.to+"<br>"+
+    				 "Date   : "+data.text+"<br>"+
+    				 "Subject: "+data.subject+"<br>"+
+    				 "Content:  <br>"+
+    				 data.content+"<br>";
+    	//alert(output);
+   		//document.write(output);
+
+
+        document.getElementById("from").innerHTML = "<b>From: </b>" + data.from;
+        document.getElementById("to").innerHTML = "<b>To: </b>" + data.to;
+        document.getElementById("date").innerHTML = "<b>Date: </b>" + data.text;
+        document.getElementById("subject").innerHTML = "<b>" + data.subject + "</b>";
+        document.getElementById("content").innerHTML = data.content;
+
+    }
+    
+    function refreshParent() {
+        window.opener.location.reload();
+    }
+
+    /*
+    function savelog () {
+    	//alert("yes");
+    	var name = getCookie("username");
+    	var timestamp = getCookie("timestamp");
+    	//var string = {filename:"tomcat7/webapps/EmailSearch/logs/"+getCookie("username")+""+getCookie("timestamp")+".xml", value:"success", timestamp:((new Date()).getTime()-timestamp)+"", sessionid:getCookie("sessionid") };
+        var string = {filename:"C:/Email/EmailSearch/WebContent/graph/logs/"+getCookie("username")+""+getCookie("timestamp")+".xml", value:"success", timestamp:((new Date()).getTime()-timestamp)+"", sessionid:getCookie("sessionid") };
+    	var type = "combinelogs";
+    	$.ajax({
+    	    type: 'GET',
+    	    url: 'savelog.jsp',
+    	    data: {"name": name, "content":JSON.stringify(string), "type": type},
+    	    cache: false,
+    	    async: false,
+    	    success: function(msg) {
+    	    	//alert("yes");
+    	    	setCookie("timestamp",msg.trim(),1);
+    	    	setCookie("sessionid","",1);
+    	        window.onunload = refreshParent;
+    	    	window.close();
+    		}
+    	});
+	}
+    */
+    function savelog () {
+        //alert("yes");
+        var thesessionid = getCookie("sessionid");
+        if(thesessionid!="" && thesessionid!=null){
+            var name = getCookie("username");
+            var timestamp = getCookie("timestamp");
+            var string = {filename: pathname + "logs/"+getCookie("username")+""+getCookie("timestamp")+".xml", value:"success", timestamp:((new Date()).getTime()-timestamp)+"", sessionid: getCookie("sessionid") };
+            console.log(1);
+            var type = "combinelogs";
+            $.ajax({
+                type: 'GET',
+                url: 'savelog.jsp',
+                data: {"name": name, "content":JSON.stringify(string), "type": type},
+                cache: false,
+                async: false,
+                success: function(msg) {
+                    //alert("yes");
+                    //setCookie("timestamp",msg.trim(),1);
+                    console.log(2);
+                    setCookie("sessionid","",1);
+                    window.onunload = refreshParent;
+                    window.close();
+                }
+            });
+        }
+        else{
+            alert("There is no active session to be saved");
+        }
+    }
+
+     function consoleprint() {
+
+        console.log(getCookie("timestamp"));
+        console.log(getCookie("sessionid"));
+        console.log(pathname);
+     }
+     
+    function getCookie(cname)
+    {
+    	var name = cname + "=";
+    	var ca = document.cookie.split(';');
+    	for(var i=0; i<ca.length; i++) 
+    	  {
+    	  var c = ca[i].trim();
+    	  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+    	  }
+    	return "";
+    }
+    function setCookie(cname,cvalue,exdays)
+    {
+    	var d = new Date();
+    	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+    	var expires = "expires="+d.toGMTString();
+    	document.cookie = cname+"="+cvalue+"; "+expires;
+    }
+</script>
+<style type="text/css">
+#from{ font-family: Helvetica, arial; font-size: 14px;}
+#to{ font-family: Helvetica, arial; font-size: 14px;}
+#date{ font-family: Helvetica, arial; font-size: 14px;}
+#subject{ font-family: Helvetica, arial; font-size: 16px;}
+#content{ font-family: Helvetica, arial; font-size: 14px; line-height: 150%;}
+</style>
+
+</head>
+<body>
+<button id="savelog" onclick="savelog()" value="This is correct email"> This is correct email </button>
+<p id="from"></p>
+<p id="to"></p>
+<p id="date"></p>
+<p id="subject"></p>
+<p id="content"></p>
+<script>
+if(window.opener && !window.opener.closed){
+    var data= window.opener.getData();
+    document.getElementById("from").innerHTML = "<b>from: </b>" + data.from;
+    document.getElementById("to").innerHTML = "<b>to: </b>" + data.to;
+    document.getElementById("date").innerHTML = "<b>" + data.day + " " + window.opener.reverseMonth(data.month) + " " + data.year + "</b>";
+    document.getElementById("subject").innerHTML = "<b>" + data.subject + "</b>";
+    document.getElementById("content").innerHTML = data.content;
+}
+</script>
+</body>
+</html>

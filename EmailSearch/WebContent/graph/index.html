@@ -1,0 +1,209 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Email Search Graph</title>
+<script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+<script src="js/kinetic-v4.7.4.js"></script>
+<script src="js/underscore.js"></script>
+<script defer>
+var username;
+var password;
+var server;
+var rootpath ="/Users/chenhe/eclipse-workspace/EmailSearch/WebContent/graph/";
+
+if(getCookie("username")!="") {
+	$("#username").val(getCookie("username"));
+	$("#password").val("password");
+}
+$(document).ready( function() {
+	if(getCookie("username")!="") {
+		//window.location.replace('graph.html');
+	}
+	$('#wait').hide();
+	//$("#keyword").val("Search");
+	//$("#keyword").val("Search");
+	$("form#myform").submit(function(event) {
+		event.preventDefault();
+		username = $("#username").val();
+		password = $("#password").val();
+		server = $("#server").val();
+		$('#wait').show();
+		//alert(username);
+		requestResult();
+	});
+})
+
+function requestResult()
+{
+	$.ajax({
+	    type: 'POST',
+	    url: 'createindexfolder.jsp',
+	    data: {"username": username , "password": password, "server": server, "rootpath": rootpath},
+	    success: function(msg) {
+	    	msg = msg.trim();
+	    	if( msg.split("_")[0]=="success")
+	    	{
+	    		setCookie("username",$("#username").val(),5);
+	    		var timestamp = msg.split("_")[1];
+	    		setCookie("timestamp",timestamp,5);
+	    		window.location.replace('graph.html');
+	    	}
+	    	else 
+	    	{
+	    		alert(msg);
+	    	}
+	    },
+	    complete: function(){
+	        $('#wait').hide();
+	    }
+	});
+
+}
+
+function setCookie(cname,cvalue,exdays)
+{
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+function getCookie(cname)
+{
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) 
+	  {
+	  var c = ca[i].trim();
+	  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	  }
+	return "";
+}
+  //<option value="enron">@enron.com</option>
+
+    function nullUser(){
+  	if(document.getElementById("username").value=="Username")
+  	document.getElementById("username").value = "";
+  	//console.log(1);
+  }
+
+      function nullPassword(){
+  	if(document.getElementById("password").value=="Password")
+  document.getElementById("password").value = "";
+document.getElementById("password").type = "password";
+  	//console.log(1);
+  }
+
+</script>
+<style>
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('font/inconsolata-bold-webfont.eot');
+    src: url('font/inconsolata-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/inconsolata-bold-webfont.woff') format('woff'),
+         url('font/inconsolata-bold-webfont.ttf') format('truetype'),
+         url('font/inconsolata-bold-webfont.svg#inconsolatabold') format('svg');
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('font/inconsolata-regular-webfont.eot');
+    src: url('font/inconsolata-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/inconsolata-regular-webfont.woff') format('woff'),
+         url('font/inconsolata-regular-webfont.ttf') format('truetype'),
+         url('font/inconsolata-regular-webfont.svg#inconsolataregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html
+{
+  height: 100%;
+  width: 100%;
+
+}
+
+table{
+	position: absolute;
+	top:45%;
+	left: 30%;
+}
+body
+{
+	background-color: #333333;
+  height: 100%;
+  width: 100%;
+}
+
+
+#password, #server, #username{
+	padding: 4px;
+	float: left;
+	font-size: 18px;
+	font-family: Inconsolata;
+	font-weight: normal;
+	border: none;
+	color: #000000;
+    background-color: #FFFFFF;
+}
+
+#mysubmit{
+	float: left;
+	font-size: 20px;
+	font-family: Inconsolata;
+	font-weight: bold;
+	border: none;
+	color: #FFFFFF;
+    background-color: #2E9AFE;
+}
+
+#mytitle{
+		position: absolute;
+	top:35%;
+	left: 30%;
+	float: left;
+	font-size: 40px;
+	font-family: Inconsolata;
+	font-weight: bold;
+	border: none;
+	color: #FFFFFF;
+}
+
+
+</style>
+</head>
+<body>
+<div  align="left">
+<p id="mytitle">mailVis</p>
+<table>
+<tr>
+<th>
+<form id="myform" method="post">
+
+<input type="text" list="usernames" name="username" value="Username" id="username" onmousedown="nullUser()" size="20">
+<datalist id="usernames">
+    <option value="barry.tycholiz">
+	<option value="jeff.skilling">
+	<option value="jeff.dasovich">
+	<option value="larry.may">
+	<option value="kenneth.lay">
+</datalist>
+<select name="server" id="server">
+  <option value="enron">@enron.com</option>
+</select>
+ 
+ <br><input type="" name="password" value="Password" id="password" onfocus="nullPassword()" size="18"> 
+
+ <br> <br> <br><input style="text-align:center" type="submit" id="mysubmit" value="Login" >
+<img id="wait" style="height:20px" src="Picture/bigloader.gif"/>
+</form>
+</th>
+</tr>
+</table>
+</div>
+</body>
+</html>

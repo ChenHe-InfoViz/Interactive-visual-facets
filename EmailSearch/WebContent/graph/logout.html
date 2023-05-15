@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Email Search Graph</title>
+<script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+<script src="js/kinetic-v4.7.4.js"></script>
+<script src="js/underscore.js"></script>
+<script defer>
+$(document).ready( function() {
+	$.ajax({
+	    type: 'GET',
+	    url: 'deleteindex.jsp',
+	    data: {"username": getCookie("username"), "timestamp": getCookie("timestamp")},
+	    asycn: false,
+	    success: function(msg) {
+	    	///alert(msg);
+	    	console.log(1);
+	    	setCookie("username","", -1);
+		setCookie("timestamp","", -1);
+	    	setCookie("sessionid","",-1);
+	    	window.location.replace('index.html');
+	    }
+	});
+})
+function setCookie(cname,cvalue,exdays)
+{
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname+"="+cvalue+"; "+expires;
+}
+function getCookie(cname)
+{
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0; i<ca.length; i++) 
+	  {
+	  var c = ca[i].trim();
+	  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+	  }
+	return "";
+}
+</script>
+<style>
+html, body, table
+{
+  height: 100%;
+  width: 100%;
+}
+</style>
+</head>
+<body>
+</body>
+</html>
